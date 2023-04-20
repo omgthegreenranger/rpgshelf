@@ -1,12 +1,9 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+import pikepdf
+import fs
 
 api = Flask(__name__)
 
-@api.route('/profile')
-def my_profile():
-    response_body = {
-        "name": "Stephen Cardie",
-        "about" :"Hello! I'm totally the rockin' dude."
-    }
-
-    return response_body
+@app.route('/readfile', methods=["POST"])
+def add_guide():
+    title = request.json['title']
