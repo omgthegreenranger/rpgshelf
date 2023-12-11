@@ -6,26 +6,16 @@ export default function LocalFiles() {
     const [searchFile, setSearchFile] = useState();
     const searchAPI = async (event) => {
        setSearchFile("/home/shaggy/Documents/Star Trek/startrekadventures_playersguide.pdf");
+    axios.post('/readfile', {
+        path: searchFile
+    })
+    .then(function(response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
 
-       let headersList = {
-            "Accept": "*/*",
-            "Content-Type": "application/json",
-            "Acess-Control-Allow-Origin": "*"
-       }
-        
-       let bodyContent = JSON.stringify({
-            "path": searchFile
-       });
-        
-       let reqOptions = {
-            url: "http://127.0.0.1:5000/readfile",
-            method: "POST",
-            headers: headersList,
-            data: bodyContent,
-       }
-       
-       let response = await axios.request(reqOptions);
-       console.log(response.data);
     }
 
     return(
