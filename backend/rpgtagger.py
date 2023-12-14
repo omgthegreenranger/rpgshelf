@@ -6,7 +6,7 @@
 
 # Initial Search Program
 
-import getFiles
+from apiSearch import broadSearch, narrowSearch, exactSearch
 import pdfreader
 import configparser
 import sqlite
@@ -14,40 +14,59 @@ import sqlite
 args = {}
 sel = 0
 
-# pdfreader.pdfsearch()
-# print(pdfreader.qsearchterms)
-
 # search and select game
 def init() :
-    search()
+    singleSearch()
     return
 
+# standard single-book search function
+def singleSearch() :
+    b_loop = False
 
-def search() :
-    qmethod = "search"
-    rsearch = 1
-    #search for game system
-    qsearch = 0
-    qsearchterms = input("Enter RPG name: ")
-    args = [qmethod, qsearch, qsearchterms, rsearch]
-    qresult = getFiles.broadSearch(*args)
+    while b_loop == False:
+        #set initial parameters for broad search
+        bmethod = "search"
+        bsearch = 0
+
+        #initial search prompt - look for parent game
+        bsearchterms = input("Enter RPG name: ")
+        bargs = [bmethod, bsearch, bsearchterms]
+        bresult = broadSearch(*bargs)
+        # print(bresult)
+        if int(bresult['@total']) == 0 :
+            print("Hello this failed.")
+        else :
+            b_loop = True
+            bresult = bresult['item']
 
 
-    # search for specific book
-    gsearchterm = input("Please select game:")
-
-    # search and select book - preserve list for have/missing 
-    
+    # with that done, search for specific book to this one file
+    # set parameters
     nsearch = 0
     nmethod = "family"
-    gresult = getFiles.narrowSearch(nmethod, nsearch, qresult[int(gsearchterm)], rsearch)
-          
-    # gselected = [gresult['item'][int(gsearchterm)]["@id"], rpg_dict['item'][int(gsearchterm)]['name']['@value']]
-    # print(sqlite.sqlAdd(qresult, gresult[0], gresult[1]))
+    # narrow search prompt - find the book from the list
+    nsearchterm = input("Please select game:")
+    b_found = bresult[int(nsearchterm)]
+    print(b_found['@id'])
+    nargs = [nmethod, nsearch, int(b_found['@id'])]
+    nresult = narrowSearch(*nargs)
+    
+    esearchterm = input("Please select book:")
+    eselected = nresult[int(esearchterm)]["@id"], nresult[int(esearchterm)]['@value']
 
+    eargs = eselected
+    eresult = exactSearch(*eargs)
+    eresult_name = eresult["name"]
+    eresult_links = eresult["link"]
 
-# rpg_selector = getFiles.apiSelect()
-# print(qresult)
+    print(eresult_name["@value"])
+    
+    for x in eresult_links : 
+        if x['@type'] == 'rpgcategory' : 
+        
+            print("Okay", x['@value'])
 
+    print("Broad found", b_found)
+    print("Exact found", eselected)
 
 init()

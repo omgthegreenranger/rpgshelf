@@ -13,3 +13,7 @@ def sqlAdd(game, book, library) :
     print(res.fetchall())
     
     return
+    
+
+# CREATE TABLE games(gid, name, rid, system, rules, publisher, year)
+# CREATE TABLE library(gid, bid, brid, type, path, image)
