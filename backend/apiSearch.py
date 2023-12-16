@@ -76,4 +76,10 @@ def exactSearch(*args) :
     e_rpg_dict = xmltodict.parse(e_rpg.text)["items"]["item"]
     e_rpg_json_parse = json.dumps(e_rpg_dict)
 
+    # Uncomment this if you want all results exported to JSON for a missing list
+    # rpgjson = open("JSONtest.json", "w")
+    # rpgjson.write(e_rpg_json_parse)
+    # rpgjson.close()
+
+
     return e_rpg_dict

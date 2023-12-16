@@ -9,7 +9,7 @@
 from apiSearch import broadSearch, narrowSearch, exactSearch
 import pdfreader
 import configparser
-import sqlite
+import sqlite_scripts
 
 args = {}
 sel = 0
@@ -23,7 +23,7 @@ def init() :
 def singleSearch() :
     b_loop = False
 
-    while b_loop == False:
+    while b_loop != True:
         #set initial parameters for broad search
         bmethod = "search"
         bsearch = 0
@@ -32,41 +32,45 @@ def singleSearch() :
         bsearchterms = input("Enter RPG name: ")
         bargs = [bmethod, bsearch, bsearchterms]
         bresult = broadSearch(*bargs)
-        # print(bresult)
-        if int(bresult['@total']) == 0 :
+
+        if int(bresult['@total']) == 0 : # if total results in response = 0, return to prompt
             print("Hello this failed.")
-        else :
+        
+        else : # otherwise, set b_loop to True and pass dict filtered to "item"
             b_loop = True
             bresult = bresult['item']
 
 
-    # with that done, search for specific book to this one file
-    # set parameters
+    # ----- Narrow Prompt Search
     nsearch = 0
     nmethod = "family"
-    # narrow search prompt - find the book from the list
+
+        # provide list of assets related to this game
+
     nsearchterm = input("Please select game:")
     b_found = bresult[int(nsearchterm)]
     print(b_found['@id'])
     nargs = [nmethod, nsearch, int(b_found['@id'])]
     nresult = narrowSearch(*nargs)
     
+        # narrow search prompt from above list.
     esearchterm = input("Please select book:")
     eselected = nresult[int(esearchterm)]["@id"], nresult[int(esearchterm)]['@value']
 
     eargs = eselected
     eresult = exactSearch(*eargs)
-    eresult_name = eresult["name"]
-    eresult_links = eresult["link"]
-
-    print(eresult_name["@value"])
     
-    for x in eresult_links : 
-        if x['@type'] == 'rpgcategory' : 
-        
-            print("Okay", x['@value'])
+    submitobject = sqlite_scripts.sqlObject(eresult, bresult)
+
+    print("*** book object title ***")
+    print(submitobject.sqlBook()['@value'])
+
+    print("******", "******")
+    print("*****", "*****")
+    print("**** Categories ****")
+    # print(eresults_categories)
 
     print("Broad found", b_found)
-    print("Exact found", eselected)
+    # print("Exact found", eselected)
 
 init()
