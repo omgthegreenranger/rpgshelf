@@ -1,0 +1,108 @@
+{
+  "@termsofuse": "https://boardgamegeek.com/xmlapi/termsofuse",
+  "item": {
+    "@type": "rpgitem",
+    "@id": "285191",
+    "thumbnail": "https://cf.geekdo-images.com/sUjnJ1VdWfHjTr7sSADk9w__thumb/img/mAbzTpjt1cUmD-dY5dSL8ZWQjDg=/fit-in/200x150/filters:strip_icc()/pic5293345.png",
+    "image": "https://cf.geekdo-images.com/sUjnJ1VdWfHjTr7sSADk9w__original/img/jPGOPnzg4oppVj0M1DJrczMMpr0=/0x0/filters:format(png)/pic5293345.png",
+    "name": {
+      "@type": "primary",
+      "@sortindex": "1",
+      "@value": "Alpha Quadrant Sourcebook"
+    },
+    "link": [
+      { "@type": "rpg", "@id": "37049", "@value": "Star Trek Adventures" },
+      {
+        "@type": "rpggenre",
+        "@id": "162",
+        "@value": "Science Fiction (Space Opera)"
+      },
+      { "@type": "rpgsetting", "@id": "2274", "@value": "Star Trek Universe" },
+      {
+        "@type": "rpgcategory",
+        "@id": "2107",
+        "@value": "Campaign Setting (game world)"
+      },
+      {
+        "@type": "rpgcategory",
+        "@id": "2108",
+        "@value": "Sourcebook (rules/options to enhance play)"
+      },
+      {
+        "@type": "rpgmechanic",
+        "@id": "2101",
+        "@value": "Attribute/Stat Based (STR, CON, PER, etc)"
+      },
+      {
+        "@type": "rpgmechanic",
+        "@id": "2088",
+        "@value": "Dice (Primarily d20)"
+      },
+      {
+        "@type": "rpgmechanic",
+        "@id": "2124",
+        "@value": "Lifepath Character Generation (Character starts at birth)"
+      },
+      {
+        "@type": "rpgmechanic",
+        "@id": "2138",
+        "@value": "Progression Tree (Skills, professions, magic abilities, etc.)"
+      },
+      {
+        "@type": "rpgmechanic",
+        "@id": "2094",
+        "@value": "Skill Based (buy or gain skills)"
+      },
+      {
+        "@type": "rpgpublisher",
+        "@id": "22226",
+        "@value": "Modiphius Entertainment"
+      },
+      {
+        "@type": "rpgdesigner",
+        "@id": "119669",
+        "@value": "Derek Tyler Attico"
+      },
+      { "@type": "rpgdesigner", "@id": "119670", "@value": "Ryan Britt" },
+      {
+        "@type": "rpgdesigner",
+        "@id": "48074",
+        "@value": "Elizabeth Chaipraditkul"
+      },
+      { "@type": "rpgdesigner", "@id": "98257", "@value": "Rachael Cruz" },
+      { "@type": "rpgdesigner", "@id": "94758", "@value": "Keith Garrett" },
+      { "@type": "rpgdesigner", "@id": "113254", "@value": "Jack Geiger" },
+      { "@type": "rpgdesigner", "@id": "21134", "@value": "Jim Johnson" },
+      { "@type": "rpgdesigner", "@id": "51481", "@value": "Shoshana Kessock" },
+      { "@type": "rpgdesigner", "@id": "60073", "@value": "Aaron Pollyea" },
+      { "@type": "rpgdesigner", "@id": "90380", "@value": "Marco Rafal\u00e1" },
+      { "@type": "rpgartist", "@id": "103482", "@value": "Chris Adamek" },
+      { "@type": "rpgartist", "@id": "79074", "@value": "Matthew Comben" },
+      { "@type": "rpgartist", "@id": "39953", "@value": "Michal E. Cross" },
+      { "@type": "rpgartist", "@id": "102657", "@value": "Richard L. Gale" },
+      { "@type": "rpgartist", "@id": "77292", "@value": "Toma Feizo Gas" },
+      { "@type": "rpgartist", "@id": "18355", "@value": "Nick Greenwood" },
+      { "@type": "rpgartist", "@id": "89349", "@value": "Vincent La\u00efk" },
+      { "@type": "rpgartist", "@id": "88828", "@value": "Thomas Marrone" },
+      { "@type": "rpgartist", "@id": "103483", "@value": "David Metlesits" },
+      { "@type": "rpgartist", "@id": "16924", "@value": "M. Wayne Miller" },
+      { "@type": "rpgartist", "@id": "40735", "@value": "Grzegorz Pedrycz" },
+      { "@type": "rpgartist", "@id": "60218", "@value": "Paolo Puggioni" },
+      { "@type": "rpgartist", "@id": "101988", "@value": "Tobias Richter" },
+      { "@type": "rpgproducer", "@id": "39953", "@value": "Michal E. Cross" },
+      { "@type": "rpgproducer", "@id": "102657", "@value": "Richard L. Gale" },
+      { "@type": "rpgproducer", "@id": "21134", "@value": "Jim Johnson" },
+      { "@type": "rpgproducer", "@id": "103480", "@value": "Scott Pearson" },
+      {
+        "@type": "rpgproducer",
+        "@id": "113255",
+        "@value": "Mateusz P\u0142oszczyca"
+      },
+      { "@type": "rpgproducer", "@id": "119671", "@value": "Katya Thomas" },
+      { "@type": "rpgproducer", "@id": "99393", "@value": "Sam Webb" }
+    ],
+    "description": "From publisher blurb:&#10;&#10;HOME, SWEET HOME&#10;WE ARE ALL EXPLORERS DRIVEN TO KNOW WHAT'S OVER THE HORIZON, WHAT'S BEYOND OUR OWN SHORES.&#10; The Alpha Quadrant Sourcebook provides Gamemasters and Players with a wealth of information to aid in playing or running adventures set within the Star Trek universe.&#10;&#10;The Alpha Quadrant Sourcebook contains: &#10;&#10;    Eleven new alien species Player can choose from during character generation, including Aurelians, Caitians, Edosians, and Ferengi.&#10;    A selection of alien starships from the Cardassian Union, the Ferengi Alliance, the Breen Confederacy, and the Tholian Assembly.&#10;    Guidance for the Gamemaster on running missions and continuing voyages in the Alpha Quadrant, along with a selection of plot components to help plan adventures and several new Non-Player Characters to enhance encounters.&#10;    Details on the Federation&rsquo;s presence in the Alpha Quadrant up to 2372, and details on the homeworlds of Betazed, Denobula, Tellar Prime, and Trill.&#10;    Material about the people, history, and culture of Bajor and the Cardassian Union, including details on Cardassia Prime and other worlds.&#10;    Information about the Ferengi Alliance, the Tzenkethi Coalition, the Breen Confederacy, and the Tholian Assembly.&#10;&#10;&#10;",
+    "yearpublished": { "@value": "2019" },
+    "seriescode": { "@value": "" }
+  }
+}

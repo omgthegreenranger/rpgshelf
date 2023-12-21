@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# RPGShelf (temporary name)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Have you collected *far* too many TTRPG rulebooks, supplements, modules, maps, tokens, errata, and more? Do they clutter up your hard drive?
 
-## Available Scripts
+Did you buy a Humble Bundle, or an Itch.io sale, and now you have a dozen (or more) vaguely labelled files in a folder?
 
-In the project directory, you can run:
+The RPGshelf aims to be a way to clean this up and serve the files to you via a self-hosted solution accessible from anywhere, and share the files as needed to your players.
 
-### `npm start`
+## But how do we do this?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Simple - the plan is to start with tagging and organizing your library. We use rpggeek.com for the API, as there is nowhere else that provides access.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    - tell us where your library is located and optionally where you want your library to be.
+    - add a game to your library. We'll create a folder for you.
+    - find the book on your hard drive, and tell us which book in the system it is.
+    - we will move the file (or copy if you would prefer) to the folder, into a subfolder if desired (for "Core," "Module," "Supplement," etc. as you can define), rename it to something standardized, and list the file in an SQLite database to include more data.
 
-### `npm test`
+## Where are you getting this data?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See, most supplements don't have ISBNs, or a bunch of stuff comes off of Itch.io as self-published material. You wouldn't find them on Amazon, and you might find them on DriveThruRPG.
 
-### `npm run build`
+And yet, RPGGeek seems to be the *only* open api that can provide access to all the assets for tabletop games, and their database seems pretty damn *exhaustive.* They seem to be good folks, so go give them a gander.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## This is fantastic, where did you get the idea?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The idea similar to the myriad other media organizers, particularly taking inspiration from the various comic book libraries such as Komga, Kavita, etc., but with tagging and organization for TTRPGs specifically.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The basic idea is inspired by ComicTagger, a useful tagging tool that pulls data from an external source and writes the CBR metadata.
 
-### `npm run eject`
+PDFs don't have much metadata, though, so we'll use an SQLite database to provide extended data for later access.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## This app doesn't look like it does all that yet.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Well, it doesn't. This is still in early stages, and I'm learning Python for the backend as I go.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I plan to eventually:
+    - include a lovely JavaScript frontend.
+    - add a file reader
+    - add custom notes and campaigns
+    - hopefully set up integration with FoundryVTT
+    - the ability to insert/indicate errata on the appropriate asset/page.
+    - and much, much more.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+But see, this is one of my early projects, and as I say: my ambition usually outweights my abilities. Wish me luck, though!
 
-## Learn More
+## I mean, you're a splendid coder and your idea is great. Can I contribute?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Absolutely you can. I am [OMGtheGreenRanger](https://github.com/omgthegreenranger), and the repository is [here](https://github.com/omgthegreenranger/rpgshelf). If this whole thing gets some eyes and people are interested, I'll absolutely need some help to get better.

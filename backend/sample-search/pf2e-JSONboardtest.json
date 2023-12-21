@@ -1,0 +1,59 @@
+[
+  {
+    "@type": "rpg",
+    "@id": "2791",
+    "name": { "@type": "primary", "@value": "Pathfinder 1E Compatible Product" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "56973",
+    "name": { "@type": "primary", "@value": "Pathfinder 2E Compatible Product" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "71115",
+    "name": { "@type": "primary", "@value": "Pathfinder for Savage Worlds" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "41499",
+    "name": {
+      "@type": "primary",
+      "@value": "Pathfinder Live Action Role Playing"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "49384",
+    "name": { "@type": "primary", "@value": "Pathfinder Playtest" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "1627",
+    "name": {
+      "@type": "primary",
+      "@value": "Pathfinder Roleplaying Game (1st Edition)"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "56388",
+    "name": {
+      "@type": "primary",
+      "@value": "Pathfinder Roleplaying Game (2nd Edition)"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "22117",
+    "name": { "@type": "primary", "@value": "PathfinderLITE" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "64133",
+    "name": {
+      "@type": "alternate",
+      "@value": "Solo-player Party-based Pathfinder Game System"
+    }
+  }
+]

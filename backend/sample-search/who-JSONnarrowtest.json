@@ -1,0 +1,441 @@
+[
+  {
+    "@type": "rpg",
+    "@id": "304823",
+    "@value": "Unauthorized Adventures in Time and Space: 1st Doctor Expanded Universe Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304832",
+    "@value": "Unauthorized Adventures in Time and Space: 1st Doctor Expanded Universe Sourcebook 2016 Addendum",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304825",
+    "@value": "Unauthorized Adventures in Time and Space: 2nd Doctor Expanded Universe Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304833",
+    "@value": "Unauthorized Adventures in Time and Space: 2nd Doctor Expanded Universe Sourcebook 2017 Addendum",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304826",
+    "@value": "Unauthorized Adventures in Time and Space: 3rd Doctor Expanded Universe Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304834",
+    "@value": "Unauthorized Adventures in Time and Space: 3rd Doctor Expanded Universe Sourcebook 2018 Addendum",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304829",
+    "@value": "Unauthorized Adventures in Time and Space: 4th Doctor Expanded Universe Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304830",
+    "@value": "Unauthorized Adventures in Time and Space: 5th Doctor Expanded Universe Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304831",
+    "@value": "Unauthorized Adventures in Time and Space: 6th Doctor Expanded Universe Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "63654",
+    "@value": "Aliens and Creatures",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "189525",
+    "@value": "All of Time and Space Volume 1",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "203582",
+    "@value": "All the Strange, Strange Creatures Volume I",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "167914",
+    "@value": "Arrowdown",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "220111",
+    "@value": "The Black Archive",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "151965",
+    "@value": "Cat's Eye",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304835",
+    "@value": "The Dalek Empire",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379438",
+    "@value": "The Decay Ocean",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "63649",
+    "@value": "Defending the Earth: The UNIT Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "238185",
+    "@value": "Doctor Who Dice",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "189879",
+    "@value": "Doctor Who Roleplaying Game",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "215224",
+    "@value": "Doctor Who Roleplaying Game Gamemaster's Companion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "63655",
+    "@value": "Doctor Who: Adventures in Time and Space \u2013 Gamemaster's Screen (10th Doctor)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "156887",
+    "@value": "Doctor Who: Adventures in Time and Space \u2013 Limited Edition Rulebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "64055",
+    "@value": "Doctor Who: Adventures in Time and Space \u2013 Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "63652",
+    "@value": "Doctor Who: Adventures in Time and Space \u2013 The Roleplaying Game (10th Doctor)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "131059",
+    "@value": "Doctor Who: Adventures in Time and Space \u2013 The Roleplaying Game (11th Doctor)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "171559",
+    "@value": "The Eighth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "123651",
+    "@value": "Eleventh Doctor Edition Upgrade Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "191845",
+    "@value": "The Eleventh Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "157031",
+    "@value": "The Fifth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "139967",
+    "@value": "The First Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "153779",
+    "@value": "The Fourth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379437",
+    "@value": "Holiday Camp",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379440",
+    "@value": "Mardi Gras",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "151964",
+    "@value": "Medicine Man",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "376614",
+    "@value": "The Mind Relics",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379441",
+    "@value": "Nevermore",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "174795",
+    "@value": "The Ninth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379442",
+    "@value": "Palace of the Angels",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "207972",
+    "@value": "Paternoster Investigations",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "151963",
+    "@value": "The Ravens of Despair",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "143853",
+    "@value": "The Second Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "165656",
+    "@value": "The Seventh Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "198490",
+    "@value": "The Silurian Age: Dinosaurs and Spaceships",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "162278",
+    "@value": "The Sixth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379439",
+    "@value": "Something is Amiss",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "190158",
+    "@value": "The Tenth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "149405",
+    "@value": "The Third Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "387919",
+    "@value": "The Thirteenth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "67153",
+    "@value": "The Time Traveller's Companion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "302862",
+    "@value": "The Twelfth Doctor Sourcebook",
+    "@inbound": "true"
+  },
+  { "@type": "rpg", "@id": "2916", "@value": "Whoniverse", "@inbound": "true" },
+  {
+    "@type": "rpg",
+    "@id": "60843",
+    "@value": "The Doctor Expanded Universe Sourcebooks",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "60463",
+    "@value": "The Doctor Sourcebooks",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "112140",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 1 - Aug 2010)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "130830",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 13 - Nov 2011)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "130838",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 15 - Feb 2012)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "130844",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 16 - Mar 2012)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "130845",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 17 - Apr 2012)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "130885",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 18 - Jun 2012)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "112141",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 2 - Sep 2010)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "157949",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 21 - Jan 2014)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "112163",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 4 - Nov 2010)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "112164",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 5 - Dec 2010)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "112166",
+    "@value": "Diary of the Doctor Who Role-Playing Games (Issue 7 - Mar 2011)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "179818",
+    "@value": "Game Trade Magazine (Issue 165 - Nov 2013)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "148439",
+    "@value": "Gygax Magazine (Issue 2 - Autumn 2013)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "94286",
+    "@value": "Infinite Horizons (Issue 1 -  Mar 2011)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "151686",
+    "@value": "Knights of the Dinner Table Magazine (Issue 201 - 2013)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "318532",
+    "@value": "Polyglot (Volume 4, Issue 17 - Jun 2010)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "287433",
+    "@value": "RPG Review (Issue 43 - June 2019)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "92822",
+    "@value": "RPG Review (Issue 8 - Jun 2010)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "92848",
+    "@value": "RPG Review (Issue 9 - Sep 2010)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "348703",
+    "@value": "Tabletop Gaming (Issue 59 - Oct 2021)",
+    "@inbound": "true"
+  }
+]

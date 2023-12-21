@@ -1,0 +1,73 @@
+{
+  "@type": "rpgitem",
+  "@id": "157031",
+  "thumbnail": "https://cf.geekdo-images.com/g-GPw_SsJ61XW0xRx7w6ng__thumb/img/t7_cQxIf_TZNYoAawRBGaU5Y6Fg=/fit-in/200x150/filters:strip_icc()/pic1971015.jpg",
+  "image": "https://cf.geekdo-images.com/g-GPw_SsJ61XW0xRx7w6ng__original/img/ikOwfMHEFVYX8L5EIG8j2wRSM-s=/0x0/filters:format(jpeg)/pic1971015.jpg",
+  "name": {
+    "@type": "primary",
+    "@sortindex": "5",
+    "@value": "The Fifth Doctor Sourcebook"
+  },
+  "link": [
+    { "@type": "rpg", "@id": "4241", "@value": "Doctor Who Roleplaying Game" },
+    { "@type": "rpggenre", "@id": "946", "@value": "Modern (Pop Culture)" },
+    { "@type": "rpggenre", "@id": "962", "@value": "Multiverse" },
+    {
+      "@type": "rpggenre",
+      "@id": "924",
+      "@value": "Science Fiction (Time / Dimension Travel)"
+    },
+    { "@type": "rpgsetting", "@id": "2916", "@value": "Whoniverse" },
+    {
+      "@type": "rpgseries",
+      "@id": "60463",
+      "@value": "The Doctor Sourcebooks"
+    },
+    {
+      "@type": "rpgcategory",
+      "@id": "2108",
+      "@value": "Sourcebook (rules/options to enhance play)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2121",
+      "@value": "Action Table (table determines action outcomes)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2101",
+      "@value": "Attribute/Stat Based (STR, CON, PER, etc)"
+    },
+    { "@type": "rpgmechanic", "@id": "2112", "@value": "Dice (Primarily d6)" },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2100",
+      "@value": "Point Based (allocate points to get skills, powers, etc)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2094",
+      "@value": "Skill Based (buy or gain skills)"
+    },
+    {
+      "@type": "rpgpublisher",
+      "@id": "9762",
+      "@value": "Cubicle 7 Entertainment"
+    },
+    { "@type": "rpgdesigner", "@id": "15933", "@value": "Walt Ciechanowski" },
+    { "@type": "rpgdesigner", "@id": "20642", "@value": "Darren Watts" },
+    { "@type": "rpgartist", "@id": "14487", "@value": "Paul Bourne" },
+    { "@type": "rpgproducer", "@id": "14487", "@value": "Paul Bourne" },
+    { "@type": "rpgproducer", "@id": "13962", "@value": "Jon Hodgson" },
+    { "@type": "rpgproducer", "@id": "16442", "@value": "Andrew Kenrick" },
+    { "@type": "rpgproducer", "@id": "26930", "@value": "Dominic McDowall" },
+    {
+      "@type": "rpgproducer",
+      "@id": "13834",
+      "@value": "Gareth Ryder-Hanrahan"
+    }
+  ],
+  "description": "From publisher blurb:&#10;&#10;Celebrating the 50th anniversary year of Doctor Who, this Sourcebook explores the Fifth Doctor&rsquo;s adventures on Earth and beyond. With detailed information on all the allies, enemies, aliens and gadgets that he encounters, as well as examining each of his adventures, the book contains a wealth of material for the Doctor Who: Adventures in Time and Space RPG, and is also a fact-packed resource for fans of the show!&#10;&#10;Betrayed by the Master and left to die on Logopolis, the Doctor faced his most difficult regeneration yet &ndash; but it&rsquo;d be nothing compared to the heartbreak, betrayal and loss that was to come. Fly Concorde through time, re-enact the English civil war, play in a ripping game of cricket and race yachts around the Solar System for the greatest prize of all. Witness the return of some of the universe&rsquo;s greatest foes, restored and deadlier than ever, and thwart their machinations once more &hellip; but at a cost.&#10;&#10;Brave heart, my friends&hellip;&#10;&#10;",
+  "yearpublished": { "@value": "2014" },
+  "seriescode": { "@value": "" }
+}
