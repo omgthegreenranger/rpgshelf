@@ -9,15 +9,17 @@ import requests
 import xmltodict
 import json
 import xml
+import sqlite_scripts
+import classes
 
 global rpg_json_parse
 global rpg_dict
 search_path = "https://rpggeek.com/xmlapi2/"
-# qmethod = "search"
 rsearch = 1
 searchParams = ["rpg", "rpgitem", "family","thing"]
 
-# api search params = []
+
+# this object will be the gameObj itself. We're going to cross to the database and, if it isn't present, add it.
 
 def broadSearch(*args) :
     search = search_path + args[0]
@@ -25,7 +27,8 @@ def broadSearch(*args) :
     rpgg = requests.get(search, params=args)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]
     bsearched = []
-    qselect = rpg_dict
+    # qselect = rpg_dict
+    qselect = ''
     print(qselect)
     if int(rpg_dict['@total']) == 0 :
         # print("False!")
@@ -35,7 +38,7 @@ def broadSearch(*args) :
         if isinstance(rpg_dict['item'], list):
             # There are multiple items
             for item in rpg_dict['item']:
-                print(item)
+                # print(item)
                 id = item['@id']
                 name = item["name"]["@value"]
                 # qselect.append(item)
@@ -45,19 +48,18 @@ def broadSearch(*args) :
         else:
             # There is only one item
             item = rpg_dict['item']
-            print(item)
+            # print("One item", item)
             id = item['@id']
             name = item["name"]["@value"]
             # qselect.append(item)
             print(sel, name)
             bsearched.append(item)
 
-    print(bsearched)
+    # export to JSON
     rpgjson = open("JSONboardtest.json", "w")
     rpgjson.write(json.dumps(bsearched))
     rpgjson.close()
-
-    return bsearched
+    return qselect, bsearched, rpg_dict
 
 def narrowSearch(*args):
     print(args[2], searchParams[args[1]])

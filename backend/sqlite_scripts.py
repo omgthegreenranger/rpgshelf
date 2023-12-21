@@ -1,66 +1,45 @@
 import sqlite3
 import json
+import classes
 
 sqlcon = sqlite3.connect("rpgshelf.db")
 cur = sqlcon.cursor()
 
+
 # Don't forget to add in the check whether the game or book is already added
 # def sqlPrepare(*args) :
+
+def getGameObj(args) :
+    gameInfo = cur.execute("SELECT * FROM games WHERE rid = ?", (args,)).fetchall()
+    try :
+        libraryInfo = cur.execute("SELECT * FROM library WHERE gid = ?", (str(gameInfo['gid']),))
+    except : 
+        libraryInfo = []
+
+    print(gameInfo)
+    print(libraryInfo)
+
+    return {"game": gameInfo, "library": libraryInfo}
+
+
+
+def isPresent(args):
+    # this is the "exists checker" where True is present.
     
-class sqlObject :
-    def __init__(self, bookData, gameData) :
-        self.bookData = bookData,
-        self.gameData = gameData
+    print("Here!", args['@id'])
+    exec = cur.execute(
+        "SELECT * FROM games WHERE rid = ?", (str(args['@id']),)
+    ).fetchall()
+    if exec == []:
+        return False
+    elif exec != []:
+        return True
 
-    def sqlBook(self):
-        print(json.dumps(self.bookData['item']))
-        links = self.bookData['link']
-        categories = []
-        publishers = []
-        artists = []
-        designers = []
-        producers = []
-        book = { 
-            # 'name': bookData["name"]["@value"],
-            'categories': categories,
-            'publishers': publishers,
-            'designers': designers,
-            'artists': artists,
-            'producers': producers}
+def addGame(args):
+    # this adds the game to the games database
+    print(args)
+    print("*** Adding to database")
+    add = cur.execute("INSERT INTO games (gid,name,rid,system,rules,description,publisher,year) VALUES (?,?,?,?,?,?,?,?)")
 
-        for link in links :         
-            if link['@type'] == 'rpgcategory' : 
-                categories.append(link['@value'])
-            if link['@type'] == 'rpgpublisher' :
-                publishers.append(link['@value'])
-            if link['@type'] == 'rpgartist' :
-                artists.append(link['@value'])
-            if link['@type'] == 'rpgdesigner' :
-                designers.append(link['@value'])
-            if link['@type'] == 'rpgproducers' :
-                producers.append(link['@value'])
+    return
 
-    def printBook(self):
-        print(self.bookData)
-
-class sqlGame(sqlObject):
-    def __init__(self, gameData) :
-        super().__init_(gameData)
-        self.gameData = gameData
-
-    # def printGame(self):
-    #     print(self)
-
-
-# def sqlAdd(game, book, library) :
-#     print("Game", game)
-#     print("Book", book)
-#     print("Library", library)
-#     res = cur.execute("SELECT  FROM sqlite_master")
-#     print(res.fetchall())
-    
-#     return
-    
-
-# CREATE TABLE games(gid, name, rid, system, rules, publisher, year)
-# CREATE TABLE library(gid, bid, brid, type, path, image)
