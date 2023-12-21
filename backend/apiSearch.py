@@ -23,29 +23,41 @@ def broadSearch(*args) :
     search = search_path + args[0]
     args = {"query": args[2], "type": searchParams[0]}
     rpgg = requests.get(search, params=args)
-    print(rpgg.content)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]
-    # print(rpg_dict['@total'])
     bsearched = []
     qselect = rpg_dict
+    print(qselect)
     if int(rpg_dict['@total']) == 0 :
         # print("False!")
         return qselect
     else :
         sel = 0
-        for item in rpg_dict["item"]:
-            id = item["@id"]
+        if isinstance(rpg_dict['item'], list):
+            # There are multiple items
+            for item in rpg_dict['item']:
+                print(item)
+                id = item['@id']
+                name = item["name"]["@value"]
+                # qselect.append(item)
+                print(sel, name)
+                bsearched.append(item)
+                sel += 1
+        else:
+            # There is only one item
+            item = rpg_dict['item']
+            print(item)
+            id = item['@id']
             name = item["name"]["@value"]
             # qselect.append(item)
             print(sel, name)
             bsearched.append(item)
-            sel += 1
 
+    print(bsearched)
     rpgjson = open("JSONboardtest.json", "w")
     rpgjson.write(json.dumps(bsearched))
     rpgjson.close()
 
-    return qselect
+    return bsearched
 
 def narrowSearch(*args):
     print(args[2], searchParams[args[1]])

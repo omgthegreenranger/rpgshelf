@@ -48,6 +48,7 @@ def singleSearch() :
         # provide list of assets related to this game
 
     nsearchterm = input("Please select game:")
+    print(bresult[0])
     b_found = bresult[int(nsearchterm)]
     print(b_found['@id'])
     nargs = [nmethod, nsearch, int(b_found['@id'])]
