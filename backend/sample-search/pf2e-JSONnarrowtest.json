@@ -1,0 +1,2141 @@
+[
+  {
+    "@type": "rpg",
+    "@id": "368829",
+    "@value": "Read Magic: 1st Path Magic PF2E",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "408532",
+    "@value": "20 Curious Closets (PF2)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "363315",
+    "@value": "Abomination Vaults",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "329480",
+    "@value": "Abomination Vaults Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "329220",
+    "@value": "Abomination Vaults Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290594",
+    "@value": "Pathfinder 2 Society Scenario 1-01: The Absalom Initiation",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292688",
+    "@value": "Pathfinder Lost Omens: Absalom, City of Lost Omens",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315309",
+    "@value": "Advanced Player's Guide (PF2)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292691",
+    "@value": "Pathfinder #149: Against the Scarlet Triad",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379536",
+    "@value": "Bounty 21: Against the Unliving",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "285642",
+    "@value": "Age of Ashes Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342182",
+    "@value": "Pathfinder 2 Society Scenario 2-23: An Agent's Obligation",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "314100",
+    "@value": "Agents of Edgewatch Adventure Path Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "336704",
+    "@value": "Agents of Edgewatch Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "319804",
+    "@value": "Pathfinder #159: All or Nothing",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "310232",
+    "@value": "Pathfinder Flip-Mat: Ambush Sites Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292698",
+    "@value": "Pathfinder #156: The Apocalypse Prophet",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "300548",
+    "@value": "Pathfinder 2 Society Quest 06: Archaeology in Aspenthar",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "375190",
+    "@value": "Pathfinder Society Scenario #4-05: The Arclord Who Never Was",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "322187",
+    "@value": "Pathfinder #160: Assault on Hunting Lodge Seven",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "323245",
+    "@value": "Pathfinder 2 Society Scenario 2-05: Balancing the Scales",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290597",
+    "@value": "Pathfinder 2 Society Scenario 1-04: Bandits of Immenwood",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379522",
+    "@value": "Pathfinder Society Scenario #4-08: Battle for Star's Fate",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "323855",
+    "@value": "Pathfinder #161: Belly of the Black Whale",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "312273",
+    "@value": "Pathfinder Flip-Mat: Bigger Ancient Dungeon",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "325747",
+    "@value": "Pathfinder Flip-Mat: Bigger Pirate Ship",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "354492",
+    "@value": "Bounty 13: The Blackwood Abundance",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "369757",
+    "@value": "Bounty 14: The Blackwood Truce",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "324919",
+    "@value": "Pathfinder 2 Society Scenario 2-07: The Blakros Deception",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "404469",
+    "@value": "Blood Lords Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "320979",
+    "@value": "Bounty 02: Blood of the Beautiful",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "303223",
+    "@value": "Pathfinder 2 Society Scenario 1-15: The Blooming Catastrophe",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "369755",
+    "@value": "Bounty 16: Boom Town Betrayal",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339720",
+    "@value": "Pathfinder 2 Society Scenario 2-20: Breaking the Storm: Bastion in Embers",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342180",
+    "@value": "Pathfinder 2 Society Scenario 2-22: Breaking the Storm: Excising Ruination",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342181",
+    "@value": "Pathfinder 2 Society Scenario 2-24: Breaking the Storm: Parting Clouds",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292692",
+    "@value": "Pathfinder #150: Broken Promises",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "310935",
+    "@value": "Pathfinder 2 Society Quest 10: The Broken Scales",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355919",
+    "@value": "Pathfinder #175: Broken Tusk Moon",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "369767",
+    "@value": "Bounty 20: Burden in Bloodcove",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "300446",
+    "@value": "Pathfinder 2 Society Scenario 1-12: Burden of Envy",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355975",
+    "@value": "Pathfinder #177: Burning Tundra",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "312271",
+    "@value": "Pathfinder Flip-Mat: Castles Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "324921",
+    "@value": "Bounty 04: Cat's Cradle",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "320977",
+    "@value": "Pathfinder 2 Society Scenario 2-03: Catastrophe's Spark",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362891",
+    "@value": "Pathfinder Society Scenario #3-15: Cavern of the Sundered Song",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "381394",
+    "@value": "Pathfinder #190: The Choosing",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "319394",
+    "@value": "Pathfinder 2 Society Scenario 2-01: Citadel of Corruption",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292689",
+    "@value": "City of Lost Omens Poster Map Folio",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "330160",
+    "@value": "Pathfinder Flip-Mat: City Sites Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "332752",
+    "@value": "Bounty 07: Cleanup Duty",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "363460",
+    "@value": "Pathfinder #179: Cradle of Quartz",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "323246",
+    "@value": "Pathfinder 2 Society Scenario 2-06: The Crashing Wave",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373496",
+    "@value": "Pathfinder Flip-Mat: Crown of the Kobold King",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "380303",
+    "@value": "Crown of the Kobold King (PF2)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "288289",
+    "@value": "Pathfinder #146: Cult of Cinders",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "400028",
+    "@value": "Pathfinder #194: Cult of the Cave Worm",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "303221",
+    "@value": "Pathfinder 2 Society Quest 07: A Curious Claim",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362907",
+    "@value": "Pathfinder Society Scenario #3-18: Dacilane Academy's Delightful Disaster",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "404065",
+    "@value": "Pathfinder Society Scenario #4-16: Dacilane Academy's First Great Prank War",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "368448",
+    "@value": "Dark Archive",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "325754",
+    "@value": "Pathfinder Flip-Mat: The Dead God's Hand Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362895",
+    "@value": "Pathfinder Society Scenario #3-10: Delve the Pallid Depths",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342171",
+    "@value": "Pathfinder #166: Despair on Danger Island",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "381396",
+    "@value": "Pathfinder #191: The Destiny War",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "300547",
+    "@value": "Pathfinder 2 Society Scenario 1-13: Devil at the Crossroads",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "314101",
+    "@value": "Pathfinder #157: Devil at the Dreaming Palace",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362901",
+    "@value": "Pathfinder Society Scenario #3-04: The Devil-Wrought Disappearance",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339723",
+    "@value": "Pathfinder One-Shot 02: Dinner at Lionlodge",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339177",
+    "@value": "Pathfinder 2 Society Scenario 2-15: A Dirge for Sarkoris",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "312979",
+    "@value": "Pathfinder Society Season 1-22: Doom of Cassomir",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "350790",
+    "@value": "Pathfinder #173: Doorway to the Red Star",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "296744",
+    "@value": "Pathfinder 2 Society Quest 05: The Dragon Who Stole Evoking Day",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379519",
+    "@value": "Pathfinder #189: Dreamers of the Nameless Spires",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362906",
+    "@value": "Pathfinder Society Scenario #3-17: Dreams of a Dustbound Isle",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "313641",
+    "@value": "Pathfinder Flip-Tiles: Dungeon Mazes Expansion Set",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362903",
+    "@value": "Pathfinder Society Scenario #3-02: The East Hill Haunting",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362902",
+    "@value": "Pathfinder Society Scenario #3-03: Echoes of Desperation",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "397291",
+    "@value": "The Enmity Cycle",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "364900",
+    "@value": "Pathfinder Flip-Mat: Enormous Basic",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "368007",
+    "@value": "Pathfinder Flip-Mat: Enormous Dungeon",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "364899",
+    "@value": "Pathfinder Flip-Mat: Enormous Forest",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339719",
+    "@value": "Pathfinder 2 Society Scenario 2-19: Enter the Pallid Peak",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362905",
+    "@value": "Pathfinder Society Scenario #3-16: Escape from Oppara",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290596",
+    "@value": "Pathfinder 2 Society Scenario 1-03: Escaping the Grave",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "303012",
+    "@value": "Extinction Curse Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "336701",
+    "@value": "Pathfinder #165: Eyes of Empty Death",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315934",
+    "@value": "Pathfinder 2 Society Quest 13: Falcon's Descent",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280971",
+    "@value": "The Fall of Plaguestone",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280972",
+    "@value": "Pathfinder Flip-Mat: The Fall of Plaguestone",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339179",
+    "@value": "Pathfinder 2 Society Scenario 2-18: The Fanciful March of Urwal",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373154",
+    "@value": "Pathfinder Society Scenario #3-99: Fate in the Future",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "382280",
+    "@value": "A Few Flowers More",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "366054",
+    "@value": "Pathfinder #183: Field of Maidens",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "383192",
+    "@value": "Firebrands",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290786",
+    "@value": "Pathfinder #148: Fires of the Haunted City",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339173",
+    "@value": "Bounty 09: Fishing in Anthusis",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "363105",
+    "@value": "A Fistful of Flowers",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "383707",
+    "@value": "Fists of the Ruby Phoenix",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "347663",
+    "@value": "Fists of the Ruby Phoenix Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "344809",
+    "@value": "Fists of the Ruby Phoenix Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "296743",
+    "@value": "Pathfinder 2 Society Scenario 1-11: Flames of Rebellion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "293219",
+    "@value": "Pathfinder 2 Society Scenario 1-07: Flooded King's Court",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342170",
+    "@value": "Bounty 11: Forged Facade",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362897",
+    "@value": "Pathfinder Society Scenario #3-08: The Foundation's Price",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339176",
+    "@value": "Pathfinder 2 Society Scenario 2-16: Freedom for Wishes",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "369758",
+    "@value": "Bounty 18: From Family Lost",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "324920",
+    "@value": "Pathfinder 2 Society Scenario 2-08: A Frosty Mug",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362893",
+    "@value": "Pathfinder Society Scenario #3-12: Fury's Toll",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "303391",
+    "@value": "GameMastery Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "366057",
+    "@value": "Pathfinder #186: Ghost King's Rage",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "380447",
+    "@value": "Pathfinder Flip-Mat: Ghost Towns",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "366055",
+    "@value": "Pathfinder #184: The Ghouls Hunger",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "332750",
+    "@value": "Pathfinder 2 Society Scenario 2-13: A Gilded Test",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "349485",
+    "@value": "Grand Bazaar",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "366053",
+    "@value": "Pathfinder #182: Graveclaw",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "293220",
+    "@value": "Pathfinder 2 Society Quest 03: Grehunde's Gorget",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315932",
+    "@value": "Pathfinder Society Season 1-25: Grim Symphony",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362890",
+    "@value": "Bounty 19: Grim Tidings",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362904",
+    "@value": "Pathfinder Society Scenario #3-13: The Guardian's Covenant",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "332388",
+    "@value": "Pathfinder #164: Hands of the Devil",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "325749",
+    "@value": "Pathfinder Flip-Mat: Haunted Dungeons Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "313806",
+    "@value": "Pathfinder Flip-Tiles: Haunted Woodlands Expansion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "361874",
+    "@value": "Pathfinder One-Shot 03: Head-Shot the Rot",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "307681",
+    "@value": "Healing Potion Cards",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "401231",
+    "@value": "Pathfinder #195: Heavy is the Crown",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280970",
+    "@value": "Pathfinder #145: Hellknight Hill",
+    "@inbound": "true"
+  },
+  { "@type": "rpg", "@id": "393418", "@value": "Highhelm", "@inbound": "true" },
+  {
+    "@type": "rpg",
+    "@id": "339722",
+    "@value": "Bounty 10: Hillcross Roundup",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "349479",
+    "@value": "Pathfinder #171: Hurricane's Howl",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "374599",
+    "@value": "Impossible Lands",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "327958",
+    "@value": "Pathfinder 2 Society Scenario 2-10: In Burning Dawn",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342179",
+    "@value": "Pathfinder 2 Society Scenario 2-21: In Pursuit of Water",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362900",
+    "@value": "Pathfinder Society Scenario #3-05: Inheritor's Rite",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "364228",
+    "@value": "Pathfinder Society Scenario #4-01: Intro: Year of Boundless Wonder",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "308522",
+    "@value": "Pathfinder Society Season 1-19: Iolite Squad Alpha",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "344806",
+    "@value": "Pathfinder #169: Kindled Magic",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "316172",
+    "@value": "Pathfinder 2 Society Scenario 2-00: King in Thorns (Levels 1 - 2)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "316173",
+    "@value": "Pathfinder 2 Society Scenario 2-00: King in Thorns (Levels 3 - 6)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "316174",
+    "@value": "Pathfinder 2 Society Scenario 2-00: King in Thorns (Levels 7 - 8)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342173",
+    "@value": "Pathfinder #168: King of the Mountain",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373499",
+    "@value": "Pathfinder Flip-Mat: Kingmaker Adventure Path Campsite Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373497",
+    "@value": "Pathfinder Flip-Mat: Kingmaker Adventure Path Noble Manor Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373498",
+    "@value": "Pathfinder Flip-Mat: Kingmaker Adventure Path River Kingdoms Ruins Multi-Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "393938",
+    "@value": "Kingmaker Companion Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "405272",
+    "@value": "Kingmaker Player's Guide (PF2)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "360903",
+    "@value": "Pathfinder Lost Omens: Knights of Lastwall",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292694",
+    "@value": "Pathfinder #152: Legacy of the Lost God",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "405147",
+    "@value": "Pathfinder #197: Let the Leaves Fall",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292695",
+    "@value": "Pathfinder #153: Life's Long Shadows",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315931",
+    "@value": "Pathfinder Society Season 1-24: Lightning Strikes, Stars Fall",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373157",
+    "@value": "Pathfinder Society Scenario #4-03: Linnorm's Legacy",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "303222",
+    "@value": "Pathfinder 2 Society Scenario 1-14: Lions of Katapesh",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315335",
+    "@value": "Little Trouble in Big Absalom",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362898",
+    "@value": "Pathfinder Society Scenario #3-07: The Locked Lodge",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "308521",
+    "@value": "Pathfinder Society Season 1-18: Lodge of the Living God",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292697",
+    "@value": "Pathfinder #155: Lord of the Black Sands",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "332751",
+    "@value": "Pathfinder 2 Society Scenario 2-14: Lost In Flames",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "310404",
+    "@value": "Pathfinder Society Season 1-20: The Lost Legend",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339178",
+    "@value": "Pathfinder 2 Society Scenario 2-17: Lost Maid of Anactoria",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355974",
+    "@value": "Pathfinder #176: Lost Mammoth Valley",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292685",
+    "@value": "Lost Omens Character Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "354116",
+    "@value": "Lost Omens Monsters of Myth",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "322468",
+    "@value": "Lost Omens Pathfinder Society Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "369748",
+    "@value": "Lost Omens Travel Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280973",
+    "@value": "Lost Omens World Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "325566",
+    "@value": "Lost Omens: Ancestry Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292687",
+    "@value": "Lost Omens: Gods & Magic",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315308",
+    "@value": "Lost Omens: Legends",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342175",
+    "@value": "Lost Omens: The Mwangi Expanse",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "293217",
+    "@value": "Pathfinder 2 Society Scenario 1-06: Lost on the Spirit Road",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342176",
+    "@value": "Malevolence",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "397261",
+    "@value": "Pathfinder #193: Mantle of Gold",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "361873",
+    "@value": "Pathfinder One-Shot 04: Mark of the Mantis",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362908",
+    "@value": "Pathfinder Society Scenario #3-19: Mean Streets of Shadow Absalom",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "310936",
+    "@value": "Pathfinder Society Season 1-21: Mistress of the Maze",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "375192",
+    "@value": "Pathfinder Flip-Tiles: Monster Lairs",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290595",
+    "@value": "Pathfinder 2 Society Scenario 1-02: The Mosquito Witch",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379521",
+    "@value": "Pathfinder Society Scenario #4-07: A Most Wondrous Exchange!",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "319395",
+    "@value": "Pathfinder 2 Society Scenario 2-02: Mountain of Sea and Sky",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "360561",
+    "@value": "Pathfinder Flip-Mat: Night of the Gray Death",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "365345",
+    "@value": "Night of the Gray Death",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "405148",
+    "@value": "Pathfinder #198: No Breath to Cry",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362894",
+    "@value": "Pathfinder Society Scenario #3-11: No Time For Treason",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290593",
+    "@value": "Pathfinder 2 Society Scenario 1-00: Origin of the Open Road",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "400500",
+    "@value": "Outlaws of Alkenstar Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "312977",
+    "@value": "Pathfinder 2 Society Quest 11: A Parchment Tree",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "320978",
+    "@value": "Pathfinder 2 Society Scenario 2-04: Path of Kings",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "323865",
+    "@value": "Pathfinder 2 Roleplaying Game: Beginner Box",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373477",
+    "@value": "Pathfinder Advanced GM Screen",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315763",
+    "@value": "Pathfinder Advanced Player's Guide Spell Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "303454",
+    "@value": "Pathfinder Adventure Gear Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315753",
+    "@value": "Pathfinder Arcane Spell Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280969",
+    "@value": "Pathfinder Bestiary (2nd Edition)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "311229",
+    "@value": "Pathfinder Bestiary 2 (2nd Edition)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315759",
+    "@value": "Pathfinder Bestiary 2 Battle Cards",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "318310",
+    "@value": "Pathfinder Bestiary 2 Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "336703",
+    "@value": "Pathfinder Bestiary 3 (2nd Edition)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339370",
+    "@value": "Pathfinder Bestiary 3 Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304045",
+    "@value": "Pathfinder Bestiary Battle Cards",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "300726",
+    "@value": "Pathfinder Bestiary Pawn Box",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "360897",
+    "@value": "Pathfinder Book of the Dead",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280975",
+    "@value": "Pathfinder Character Sheet Pack",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315751",
+    "@value": "Pathfinder Chase Cards",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280976",
+    "@value": "Pathfinder Combat Pad",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280974",
+    "@value": "Pathfinder Condition Card Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280968",
+    "@value": "Pathfinder Core Rulebook (2nd Edition)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315752",
+    "@value": "Pathfinder Critical Fumble Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290609",
+    "@value": "Pathfinder Critical Hit Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379258",
+    "@value": "Pathfinder Deck of Endless NPCs",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315754",
+    "@value": "Pathfinder Divine Spell Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "363399",
+    "@value": "Pathfinder Flip-Tiles: Pathfinder Flip-Tiles: Campsites",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355882",
+    "@value": "Pathfinder Flip-Tiles: Pathfinder Flip-Tiles: Dungeon Crypts Expansion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "363106",
+    "@value": "Pathfinder Flip-Tiles: Pathfinder Flip-Tiles: Fortress Chambers Expansion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355885",
+    "@value": "Pathfinder Flip-Tiles: Pathfinder Flip-Tiles: Fortress Starter Set",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355884",
+    "@value": "Pathfinder Flip-Tiles: Pathfinder Flip-Tiles: Fortress Walls & Towers Expansion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339337",
+    "@value": "Pathfinder Flip-Tiles: Urban Waterfront Expansion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "337828",
+    "@value": "Pathfinder Flip-Tiles: Wilderness Perils Expansion",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315755",
+    "@value": "Pathfinder Focus Spell Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "310900",
+    "@value": "Pathfinder Gamemastery Guide NPC Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "406941",
+    "@value": "Pathfinder GM Core",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "280978",
+    "@value": "Pathfinder GM Screen",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "349483",
+    "@value": "Pathfinder Guns & Gears",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315760",
+    "@value": "Pathfinder Hero Point Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "375504",
+    "@value": "Pathfinder Kingmaker Adventure Path",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315761",
+    "@value": "Pathfinder Magic Armaments Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315764",
+    "@value": "Pathfinder NPC Battle Cards",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315756",
+    "@value": "Pathfinder Occult Spell Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "306777",
+    "@value": "Pathfinder Pawns: Age of Ashes Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "320112",
+    "@value": "Pathfinder Pawns: Extinction Curse",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "406940",
+    "@value": "Pathfinder Player Core",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "326794",
+    "@value": "Pathfinder Potions & Talismans",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315758",
+    "@value": "Pathfinder Primal Spell Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290601",
+    "@value": "Pathfinder Second Edition Conversion Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "330050",
+    "@value": "Pathfinder 2 Society Scenario 2-11: The Pathfinder Trials",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "303453",
+    "@value": "Pathfinder Weapons & Armor Deck",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "305675",
+    "@value": "Pathfinder 2 Society Scenario 1-16: The Perennial Crown Part 1, Opal of Bhopan",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "305677",
+    "@value": "Pathfinder 2 Society Scenario 1-17: The Perennial Crown Part 2, The Thorned Monarch",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "316562",
+    "@value": "PF2E Iconics Pregenerated Characters",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "375193",
+    "@value": "Pathfinder Flip-Mat: Planar Tavern",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "327022",
+    "@value": "Player Character Pawn Collection",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "295429",
+    "@value": "Pathfinder 2 Society Quest 04: Port Peril Pub Crawl",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "361541",
+    "@value": "Pathfinder #178: Punks in a Powder Keg",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315933",
+    "@value": "Pathfinder 2 Society Quest 12: Putrid Seeds",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355977",
+    "@value": "Quest for the Frozen Flame Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "397264",
+    "@value": "Rage of Elements",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "342172",
+    "@value": "Pathfinder #167: Ready? Fight!",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373155",
+    "@value": "Pathfinder Society Scenario #4-02: Return to the Grave",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "295427",
+    "@value": "Pathfinder 2 Society Scenario 1-08: Revolution on the Riverside",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "330051",
+    "@value": "Bounty 06: The Road From Otari",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "329218",
+    "@value": "Pathfinder #163: Ruins of Gauntlight",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "326627",
+    "@value": "Pathfinder #162: Ruins of the Radiant Siege",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "304046",
+    "@value": "Pathfinder Flip-Mat: The Rusty Dragon Inn",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290599",
+    "@value": "Pathfinder 2 Society Quest 01: The Sandstone Secret",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "404466",
+    "@value": "Season of Ghosts Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362896",
+    "@value": "Pathfinder Society Scenario #3-09: The Secluded Siege",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "354281",
+    "@value": "The Second Confirmation",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "346264",
+    "@value": "Secrets of Magic",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "349480",
+    "@value": "Pathfinder #172: Secrets of the Temple-City",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "327957",
+    "@value": "Pathfinder 2 Society Scenario 2-09: The Seven Secrets of Dacilane Academy",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379008",
+    "@value": "Pathfinder #187: The Seventh Arch",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "323247",
+    "@value": "Bounty 03: Shadows and Scarecrows",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "364734",
+    "@value": "Pathfinder Flip-Mat: Shadows at Sundown",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "365342",
+    "@value": "Shadows at Sundown",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "355976",
+    "@value": "Pathfinder #174: Shadows of the Ancients",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "305673",
+    "@value": "Pathfinder 2 Society Quest 08: Shadows of the Black Sovereign",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "363167",
+    "@value": "Pathfinder Flip-Mat: Shattered Dungeon",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "343308",
+    "@value": "Pathfinder Flip-Mat: Shipwrecks",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292693",
+    "@value": "Pathfinder #151: The Show Must Go On",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292696",
+    "@value": "Pathfinder #154: Siege of the Dinosaurs",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379520",
+    "@value": "Pathfinder Society Scenario #4-06: Signal from the Electric Laboratory",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "318100",
+    "@value": "Pathfinder #158: Sixty Feet Under",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "404467",
+    "@value": "Sky King's Tomb Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315935",
+    "@value": "The Slithering",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "325752",
+    "@value": "Pathfinder Flip-Mat: The Slithering",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "365899",
+    "@value": "Pathfinder #180: The Smoking Gun",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "332749",
+    "@value": "Pathfinder 2 Society Scenario 2-12: Snakes in the Grass",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "369754",
+    "@value": "Bounty 17: Sodden Stories",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "343913",
+    "@value": "Bounty 12: Somewhere Below",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "346266",
+    "@value": "Pathfinder #170: Spoken on the Song Wind",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "312980",
+    "@value": "Pathfinder Society Season 1-23: Star-Crossed Court",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "295428",
+    "@value": "Pathfinder 2 Society Scenario 1-09: Star-Crossed Voyages",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "344808",
+    "@value": "Strength of Thousands Player's Guide",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362899",
+    "@value": "Pathfinder Society Scenario #3-06: Struck by Shadows",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "402957",
+    "@value": "Pathfinder #196: The Summer That Never Was",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "333303",
+    "@value": "Pathfinder One-Shot 01: Sundered Waves",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "407433",
+    "@value": "Sunken Secrets of the Serra",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "296742",
+    "@value": "Pathfinder 2 Society Scenario 1-10: Tarnbreaker's Trail",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "366056",
+    "@value": "Pathfinder #185: A Taste of Ashes",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "379518",
+    "@value": "Pathfinder #188: They Watched the Stars",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "345177",
+    "@value": "Threshold of Knowledge",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "339174",
+    "@value": "Bounty 08: The Tireless Path",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "405149",
+    "@value": "Pathfinder #199: To Bloom Below the Web",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "373158",
+    "@value": "Pathfinder Society Scenario #4-04: To Seek the Heart of Calamity",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "362892",
+    "@value": "Pathfinder Society Scenario #3-14: The Tomb Between Worlds",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290149",
+    "@value": "Pathfinder #147: Tomorrow Must Burn",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "316561",
+    "@value": "Torment and Legacy: A Pathfinder Second Edition Demo Adventure",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290598",
+    "@value": "Pathfinder 2 Society Scenario 1-05: Trailblazers' Bounty",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "369756",
+    "@value": "Bounty 15: Treasure off the Coast",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "380947",
+    "@value": "Treasure Vault",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "354080",
+    "@value": "Troubles in Otari",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290600",
+    "@value": "Pathfinder 2 Society Quest 02: Unforgiving Fire",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "354280",
+    "@value": "United in Purpose",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "370455",
+    "@value": "Pathfinder Flip-Tiles: Villain Lairs Starter Set",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "308524",
+    "@value": "Pathfinder 2 Society Quest 09: Wayfinder Origins",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "318735",
+    "@value": "Bounty 01: The Whitefang Wyrm",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "327956",
+    "@value": "Bounty 05: Witch's Winter Holiday",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "381395",
+    "@value": "Pathfinder #192: The Worst of All Possible Worlds",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "354491",
+    "@value": "Pathfinder Society Intro: Year of Shattered Sanctuaries",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "366052",
+    "@value": "Pathfinder #181: Zombie Feast",
+    "@inbound": "true"
+  },
+  { "@type": "rpg", "@id": "1897", "@value": "Golarion", "@inbound": "true" },
+  {
+    "@type": "rpg",
+    "@id": "68293",
+    "@value": "Abomination Vaults",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "57036",
+    "@value": "Age of Ashes",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "62920",
+    "@value": "Agents of Edgewatch",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "76266",
+    "@value": "Blood Lords",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "58466",
+    "@value": "Extinction Curse",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "71311",
+    "@value": "Fists of the Ruby Phoenix",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "78537",
+    "@value": "Gatewalkers",
+    "@inbound": "true"
+  },
+  { "@type": "rpg", "@id": "3399", "@value": "Kingmaker", "@inbound": "true" },
+  {
+    "@type": "rpg",
+    "@id": "78536",
+    "@value": "Outlaws of Alkenstar",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "63146",
+    "@value": "Pathfinder 2 Cards & Decks",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "57854",
+    "@value": "Pathfinder 2 Society Scenario Season 1",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "63193",
+    "@value": "Pathfinder 2 Society Scenario Season 2",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "75769",
+    "@value": "Pathfinder 2 Society Scenario Season 3",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "75938",
+    "@value": "Pathfinder 2 Society Scenario Season 4",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "2481",
+    "@value": "Pathfinder Adventure Path",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "66554",
+    "@value": "Pathfinder Bounties",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "48737",
+    "@value": "Pathfinder Flip-Tiles",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "58465",
+    "@value": "Pathfinder Lost Omens",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "70999",
+    "@value": "Pathfinder One-Shot",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "19542",
+    "@value": "Pathfinder Quests",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "60925",
+    "@value": "The Perennial Crown",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "74906",
+    "@value": "Quest for the Frozen Flame",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "99947",
+    "@value": "Season of Ghosts",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "99946",
+    "@value": "Sky King's Tomb",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "78974",
+    "@value": "Stolen Fate",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "71974",
+    "@value": "Strength of Thousands",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "287436",
+    "@value": "Alarums & Excursions (Issue 526 - Sep 2019)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "290151",
+    "@value": "Alarums & Excursions (Issue 527 - Oct 2019)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "292657",
+    "@value": "Alarums & Excursions (Issue 528 - Nov 2019)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "299616",
+    "@value": "Alarums & Excursions (Issue 531 - Feb 2020)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "306035",
+    "@value": "Casus Belli (v4, Issue 32 - Jan/Feb 2020)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "314443",
+    "@value": "Casus Belli (v4, Issue 33 - Apr/May 2020)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "399133",
+    "@value": "Casus Belli (v4, Issue 44 - \u00c9t\u00e9 2023)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "283042",
+    "@value": "Game Trade Magazine (Issue 231 - May 2019)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "317028",
+    "@value": "Game Trade Magazine (Issue 243 - May 2020)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "330024",
+    "@value": "Game Trade Magazine (Issue 252 - Feb 2021)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "372362",
+    "@value": "Game Trade Magazine (Issue 271 - Sep 2022)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "393227",
+    "@value": "Game Trade Magazine (Issue 281 - Jul 2023)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "407312",
+    "@value": "Game Trade Magazine (Issue 286 - Dec 2023)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "407316",
+    "@value": "Meeple Monthly (Issue 127 - Oct 2023)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "288544",
+    "@value": "Meeple Monthly (Issue 79 - Sep 2019)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "367892",
+    "@value": "Never Mind the Dice Rolls (Issue 011 - Jul 2022)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "320353",
+    "@value": "Parallel Worlds (Issue 10 - Sep 2020)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "319000",
+    "@value": "Tabletop Gaming - Dungeon Master's Guide to Roleplaying, Volume One",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "331298",
+    "@value": "Tabletop Gaming (Issue 21 - Aug 2018)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "315917",
+    "@value": "Tabletop Gaming (Issue 33 - Aug 2019)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "313015",
+    "@value": "Tabletop Gaming (Issue 44 - Jul 2020)",
+    "@inbound": "true"
+  },
+  {
+    "@type": "rpg",
+    "@id": "352177",
+    "@value": "Tabletop Gaming (Issue 61 - Dec 2021) The Best Games of 2021",
+    "@inbound": "true"
+  }
+]

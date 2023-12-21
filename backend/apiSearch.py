@@ -23,8 +23,10 @@ def broadSearch(*args) :
     search = search_path + args[0]
     args = {"query": args[2], "type": searchParams[0]}
     rpgg = requests.get(search, params=args)
+    print(rpgg.content)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]
     # print(rpg_dict['@total'])
+    bsearched = []
     qselect = rpg_dict
     if int(rpg_dict['@total']) == 0 :
         # print("False!")
@@ -36,7 +38,12 @@ def broadSearch(*args) :
             name = item["name"]["@value"]
             # qselect.append(item)
             print(sel, name)
+            bsearched.append(item)
             sel += 1
+
+    rpgjson = open("JSONboardtest.json", "w")
+    rpgjson.write(json.dumps(bsearched))
+    rpgjson.close()
 
     return qselect
 
@@ -60,9 +67,9 @@ def narrowSearch(*args):
             sel += 1
 
     # Uncomment this if you want all results exported to JSON for a missing list
-    # rpgjson = open("JSONtest.json", "w")
-    # rpgjson.write(json.dumps(rsearched))
-    # rpgjson.close()
+    rpgjson = open("JSONnarrowtest.json", "w")
+    rpgjson.write(json.dumps(rsearched))
+    rpgjson.close()
 
     return rsearched
 
@@ -72,14 +79,13 @@ def exactSearch(*args) :
     search = search_path + searchParams[3]
     eargs = {"id" : args[0]}
     e_rpg = requests.get(search, params=eargs)
-
     e_rpg_dict = xmltodict.parse(e_rpg.text)["items"]["item"]
     e_rpg_json_parse = json.dumps(e_rpg_dict)
 
     # Uncomment this if you want all results exported to JSON for a missing list
-    # rpgjson = open("JSONtest.json", "w")
-    # rpgjson.write(e_rpg_json_parse)
-    # rpgjson.close()
+    rpgjson = open("JSONexacttest.json", "w")
+    rpgjson.write(e_rpg_json_parse)
+    rpgjson.close()
 
 
     return e_rpg_dict

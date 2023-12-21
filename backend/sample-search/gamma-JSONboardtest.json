@@ -1,0 +1,45 @@
+[
+  {
+    "@type": "rpg",
+    "@id": "261",
+    "name": { "@type": "primary", "@value": "Gamma World (1st Edition)" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "262",
+    "name": { "@type": "primary", "@value": "Gamma World (2nd Edition)" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "263",
+    "name": { "@type": "primary", "@value": "Gamma World (3rd Edition)" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "264",
+    "name": { "@type": "primary", "@value": "Gamma World (4th Edition)" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "2687",
+    "name": { "@type": "primary", "@value": "Gamma World (5th Edition)" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "265",
+    "name": { "@type": "primary", "@value": "Gamma World d20 (6th Edition)" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "28527",
+    "name": { "@type": "primary", "@value": "Gamma World D6" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "4472",
+    "name": {
+      "@type": "primary",
+      "@value": "Gamma World Roleplaying Game (7th Edition)"
+    }
+  }
+]
