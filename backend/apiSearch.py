@@ -26,7 +26,7 @@ def broadSearch(*args) :
     rpg_dict = xmltodict.parse(rpgg.text)["items"]
     bsearched = []
     qselect = rpg_dict
-    print(qselect)
+
     if int(rpg_dict['@total']) == 0 :
         # print("False!")
         return qselect
@@ -35,7 +35,7 @@ def broadSearch(*args) :
         if isinstance(rpg_dict['item'], list):
             # There are multiple items
             for item in rpg_dict['item']:
-                print(item)
+
                 id = item['@id']
                 name = item["name"]["@value"]
                 # qselect.append(item)
@@ -45,7 +45,6 @@ def broadSearch(*args) :
         else:
             # There is only one item
             item = rpg_dict['item']
-            print(item)
             id = item['@id']
             name = item["name"]["@value"]
             # qselect.append(item)
@@ -57,7 +56,7 @@ def broadSearch(*args) :
     rpgjson.write(json.dumps(bsearched))
     rpgjson.close()
 
-    return bsearched
+    return qselect['@total'], bsearched
 
 def narrowSearch(*args):
     print(args[2], searchParams[args[1]])

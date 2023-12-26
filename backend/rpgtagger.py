@@ -23,7 +23,7 @@ def init() :
 def singleSearch() :
     b_loop = False
 
-    while b_loop != True:
+    while b_loop is not True:
         #set initial parameters for broad search
         bmethod = "search"
         bsearch = 0
@@ -32,13 +32,15 @@ def singleSearch() :
         bsearchterms = input("Enter RPG name: ")
         bargs = [bmethod, bsearch, bsearchterms]
         bresult = broadSearch(*bargs)
-
-        if int(bresult['@total']) == 0 : # if total results in response = 0, return to prompt
+        b_total = bresult[0]
+        b_results = bresult[1]
+        print(b_results)
+        if int(b_total[0]) == 0 : # if total results in response = 0, return to prompt
             print("Hello this failed.")
         
         else : # otherwise, set b_loop to True and pass dict filtered to "item"
             b_loop = True
-            bresult = bresult['item']
+            bresult = b_results['item']
 
 
     # ----- Narrow Prompt Search
