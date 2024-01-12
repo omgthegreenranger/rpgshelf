@@ -35,15 +35,15 @@ def singleSearch():
         bsearchterms = input("Enter RPG name: ")
         bargs = [bmethod, bsearch, bsearchterms]
         bresult = broadSearch(*bargs)
-
         if (
-            int(bresult[2]["@total"]) == 0
+            int(bresult["@total"]) == 0
         ):  # if total results in response = 0, return to prompt
             print("Hello this failed.")
 
         else:  # otherwise, set b_loop to True and pass dict filtered to "item"
+            broadSearchResults(bresult)
             b_loop = True
-            bresult = bresult[1]
+            # bresult = bresult
 
         ## we should add the RPG system search to the database for storage
 
@@ -58,7 +58,7 @@ def singleSearch():
 
     game_obj = classes.gameObj(b_found)
     # selectGame = sqlite_scripts.GameDB.isPresent([b_found["@id"], "games"])
-    print("OBject!", game_obj)
+    print("Object!", game_obj)
     nargs = [nmethod, nsearch, int(b_found["@id"])]
     nresult = narrowSearch(*nargs)
 
@@ -82,5 +82,26 @@ def singleSearch():
     # print("Broad found", b_found)
     # # print("Exact found", eselected)
 
+
+def broadSearchResults(bresult):
+        sel = 0
+        if isinstance(bresult['item'], list):
+            # There are multiple items
+            for item in bresult['item']:
+                # print(item)
+                id = item['@id']
+                name = item["name"]["@value"]
+                # qselect.append(item)
+                print(sel, name)
+                sel += 1
+        else:
+            # There is only one item
+            item = bresult['item']
+            # print("One item", item)
+            id = item['@id']
+            name = item["name"]["@value"]
+            # qselect.append(item)
+            print(sel, name)
+        return
 
 init()

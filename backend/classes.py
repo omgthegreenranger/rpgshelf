@@ -9,7 +9,7 @@ class gameTop:
         return
 
 class gameObj(gameTop):
-    def __init__(self, game) :
+    def __init__(self, game):
         super().__init__(game)
         print("ARGS", game)
         # super().__init_(gameTop)
