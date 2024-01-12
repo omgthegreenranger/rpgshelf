@@ -16,11 +16,11 @@ class gameObj(gameTop):
         self.name = game['name']
         # self.gid = gid
         self.rid = game['@id']
-        self.system = system
-        self.rules = rules
-        self.description = description
-        self.publisher = publisher
-        self.year = year
+        # self.system = system
+        # self.rules = rules
+        # self.description = description
+        # self.publisher = publisher
+        # self.year = year
         return
     
     def checkGame(args):

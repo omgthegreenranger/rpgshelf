@@ -43,7 +43,6 @@ def singleSearch():
         else:  # otherwise, set b_loop to True and pass dict filtered to "item"
             broadSearchResults(bresult)
             b_loop = True
-            # bresult = bresult
 
         ## we should add the RPG system search to the database for storage
 
@@ -52,9 +51,9 @@ def singleSearch():
     nmethod = "family"
 
     # provide list of assets related to this game
-
+    print(bresult["item"])
     nsearchterm = input("Please select game:")
-    b_found = bresult[int(nsearchterm)]
+    b_found = bresult["item"][int(nsearchterm)]
 
     game_obj = classes.gameObj(b_found)
     # selectGame = sqlite_scripts.GameDB.isPresent([b_found["@id"], "games"])
