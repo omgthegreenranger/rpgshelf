@@ -1,0 +1,59 @@
+{
+  "@type": "rpgitem",
+  "@id": "317294",
+  "thumbnail": "https://cf.geekdo-images.com/t2vj71GA3rZVglbwGFQ59g__thumb/img/o02hNYeV5Xvjb7ragRnVb0WWL3M=/fit-in/200x150/filters:strip_icc()/pic5604558.jpg",
+  "image": "https://cf.geekdo-images.com/t2vj71GA3rZVglbwGFQ59g__original/img/hzOO6Z_ve_tGGqvEYzAtEX5jA4g=/0x0/filters:format(jpeg)/pic5604558.jpg",
+  "name": {
+    "@type": "primary",
+    "@sortindex": "1",
+    "@value": "Shepherd Spell Cards"
+  },
+  "link": [
+    { "@type": "rpg", "@id": "28061", "@value": "Pugmire" },
+    {
+      "@type": "rpggenre",
+      "@id": "1103",
+      "@value": "Animal (Anthropomorphic)"
+    },
+    { "@type": "rpggenre", "@id": "155", "@value": "Fantasy (High Fantasy)" },
+    { "@type": "rpgsetting", "@id": "56222", "@value": "Realms of Pugmire" },
+    { "@type": "rpgseries", "@id": "63563", "@value": "Pugmire Cards" },
+    {
+      "@type": "rpgcategory",
+      "@id": "2086",
+      "@value": "Accessory (dice, maps, screens, cards)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2101",
+      "@value": "Attribute/Stat Based (STR, CON, PER, etc)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2095",
+      "@value": "Class Based (Pilot, Wizard, Scientist, etc)"
+    },
+    { "@type": "rpgmechanic", "@id": "2088", "@value": "Dice (Primarily d20)" },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2133",
+      "@value": "Race Based (Player Race/Species affects gameplay)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2094",
+      "@value": "Skill Based (buy or gain skills)"
+    },
+    {
+      "@type": "rpgpublisher",
+      "@id": "23335",
+      "@value": "Onyx Path Publishing"
+    },
+    { "@type": "rpgdesigner", "@id": "3", "@value": "(Uncredited)" },
+    { "@type": "rpgartist", "@id": "3", "@value": "(Uncredited)" },
+    { "@type": "rpgproducer", "@id": "3", "@value": "(Uncredited)" }
+  ],
+  "description": "Publisher's Blurb&#10;&#10;Enhance your Pugmire game with this set of player aid cards! These helpful visual aids make your Pugmire gaming easier! Lay them out next to your sheet for ease of reference during play, and to keep track of what spells you have available.&#10;&#10;",
+  "yearpublished": { "@value": "2017" },
+  "seriescode": { "@value": "Set Three" }
+}

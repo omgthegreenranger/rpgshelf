@@ -15,6 +15,13 @@ Simple - the plan is to start with tagging and organizing your library. We use r
     - find the book on your hard drive, and tell us which book in the system it is.
     - we will move the file (or copy if you would prefer) to the folder, into a subfolder if desired (for "Core," "Module," "Supplement," etc. as you can define), rename it to something standardized, and list the file in an SQLite database to include more data.
 
+## How can I use this?
+
+- Create a .venv in the directory
+- Run `pip install -r constraints.txt` to install all required dependencies.
+- run `python rpgtagger.py` in /backend and follow prompts.
+
+
 ## Where are you getting this data?
 
 See, most supplements don't have ISBNs, or a bunch of stuff comes off of Itch.io as self-published material. You wouldn't find them on Amazon, and you might find them on DriveThruRPG.
