@@ -39,7 +39,7 @@ def broadSearch(*args) :
     return rpg_dict
 
 def narrowSearch(*args):
-    print(args[2], searchParams[args[1]])
+    # print(args[2], searchParams[args[1]])
     search = search_path + args[0]
     args = {"id" : args[2], "type": searchParams[args[1]]}
 
@@ -61,11 +61,11 @@ def narrowSearch(*args):
     # rpgjson = open("JSONnarrowtest.json", "w")
     # rpgjson.write(json.dumps(rsearched))
     # rpgjson.close()
-
+    # print(rpg_dict)
     return rpg_dict
 
 def exactSearch(*args) : 
-    print("Exact Search begins", args)
+    print("Exact Search begins")
 
     search = search_path + searchParams[3]
     eargs = {"id" : args[0], type : args[2]}
@@ -78,5 +78,5 @@ def exactSearch(*args) :
     # rpgjson = open("JSONexacttest.json", "w")
     # rpgjson.write(e_rpg_json_parse)
     # rpgjson.close()
-
+    # print(e_rpg_dict)
     return e_rpg_dict

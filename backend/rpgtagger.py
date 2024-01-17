@@ -16,10 +16,6 @@ args = {}
 sel = 0
 gameID = ''
 
-
-
-
-
 # search and select game
 def init():
     singleSearch()
@@ -49,7 +45,7 @@ def singleSearch():
             broadSearchResults(bresult)
             b_loop = True
 
-        ## we should add the RPG system search to the database for storage
+        ## TODO: we should add the RPG system search to the database for storage
 
     # ----- Narrow Prompt Search
     nsearch = 0
@@ -68,9 +64,9 @@ def singleSearch():
     # print("Object!", game_obj)
     nargs = [nmethod, nsearch, int(b_found["@id"])]
     nresult = narrowSearch(*nargs)
-    # print(nresult)
     nresult_items = nresult["link"]
-    
+    system_obj = classes.systemObj(nresult)
+
     # take nresult
     # to provide prompt.
     sel = 0
@@ -85,13 +81,11 @@ def singleSearch():
     # narrow search prompt from above list.
     esearchterm = input("Please select book:")
     eselected = nresult_items[int(esearchterm)]["@id"], nresult_items[int(esearchterm)]["@value"], "rpgitem"
-    # print(eselected)
+
     eargs = eselected
     eresult = exactSearch(*eargs)
-    # print(eresult)
-
-    game_obj = classes.gameObj(nresult, nresult_items, eresult)
-    print(game_obj.__dict__)
+    book_obj = system_obj.addBook(eresult)
+    print(system_obj.__dict__)
     # submitobject = sqlite_scripts.sqlObject(eresult, bresult)
 
     # print("*** book object title ***")
