@@ -5,9 +5,9 @@ import sqlite_scripts
 class systemObj():
     def __init__(self, data):
         self.name = data['name'][0]['@value']
-        self.gid = data['@id']
+        self.rid = data['@id']
         self.library = []
-        # self.rid = game['@id']
+        # self.gid = 
         self.system = []
         for x in data['link'] :
             if x['@type'] == 'rpgsystem' :
@@ -15,7 +15,16 @@ class systemObj():
         self.description = data['description']
         return
     
-    def addBook(self, book) :
+    def systemRetriever(self) : # access the system data from the library, if present
+        return
+
+    def bookRetrieve(self) : #use this to retrive library for game
+        return
+
+    def addGame(self, data) : # to add a new game system/create new object
+        return
+
+    def addBook(self, book) : # to add a new book to the object's library
         publishers = []
         designers = []
         artists = []
@@ -31,6 +40,7 @@ class systemObj():
                 producers.append(bookData['@value'])
         self.library.append(
             [{
+                "rid" : rid,
                 "name": book['name']['@value'],
                 "bid": book['@id'],
                 "publisher": publishers,
@@ -46,14 +56,5 @@ class systemObj():
 
         return
 
-    def checkGame(args):
-        check = sqlite_scripts.isPresent(args)
-        print(check)
-        return check
-    
-
-# this class is for the book itself - we'll link it to the game class.
-class bookObj():
-    def __init__(self, data, gameID) :
-        
-        return
+class campaignObj() : #TODO: this is the object created for whatever campaign is being used.
+    return
