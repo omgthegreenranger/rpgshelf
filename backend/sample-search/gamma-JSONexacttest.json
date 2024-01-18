@@ -1,0 +1,64 @@
+{
+  "@type": "rpgitem",
+  "@id": "66317",
+  "thumbnail": "https://cf.geekdo-images.com/b_MwOIsVjcLUX9m1cCun4A__thumb/img/qN-DP2oXiGJKjZZzLX1ItV5KKg4=/fit-in/200x150/filters:strip_icc()/pic2778275.jpg",
+  "image": "https://cf.geekdo-images.com/b_MwOIsVjcLUX9m1cCun4A__original/img/llQtMCRD7rx7RsPGZGQJkWDHacQ=/0x0/filters:format(jpeg)/pic2778275.jpg",
+  "name": {
+    "@type": "primary",
+    "@sortindex": "1",
+    "@value": "Gamma World Expansion Pack: Famine in Far-go"
+  },
+  "link": [
+    {
+      "@type": "rpg",
+      "@id": "4472",
+      "@value": "Gamma World Roleplaying Game (7th Edition)"
+    },
+    { "@type": "rpggenre", "@id": "185", "@value": "Comedy / Satire" },
+    {
+      "@type": "rpggenre",
+      "@id": "165",
+      "@value": "Science Fiction (Post Apocalypse)"
+    },
+    { "@type": "rpgsetting", "@id": "8161", "@value": "Gamma Terra" },
+    {
+      "@type": "rpgcategory",
+      "@id": "2084",
+      "@value": "Scenario / Adventure / Module"
+    },
+    {
+      "@type": "rpgcategory",
+      "@id": "2108",
+      "@value": "Sourcebook (rules/options to enhance play)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2101",
+      "@value": "Attribute/Stat Based (STR, CON, PER, etc)"
+    },
+    { "@type": "rpgmechanic", "@id": "3057", "@value": "Cards (Specialized)" },
+    { "@type": "rpgmechanic", "@id": "2088", "@value": "Dice (Primarily d20)" },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2134",
+      "@value": "Random Attribute Generation (during Character Creation)"
+    },
+    { "@type": "rpgpublisher", "@id": "13", "@value": "Wizards of the Coast" },
+    { "@type": "rpgdesigner", "@id": "14128", "@value": "Peter Schaefer" },
+    { "@type": "rpgdesigner", "@id": "10891", "@value": "Stephen Schubert" },
+    { "@type": "rpgdesigner", "@id": "13240", "@value": "Robert J. Schwalb" },
+    { "@type": "rpgdesigner", "@id": "13261", "@value": "Rodney Thompson" },
+    { "@type": "rpgartist", "@id": "12193", "@value": "Jared Blando" },
+    { "@type": "rpgartist", "@id": "9234", "@value": "Steve Ellis (I)" },
+    { "@type": "rpgartist", "@id": "37517", "@value": "Michael Faille" },
+    { "@type": "rpgartist", "@id": "37518", "@value": "Victoria Maderna" },
+    { "@type": "rpgartist", "@id": "22939", "@value": "Federico Piatti" },
+    { "@type": "rpgartist", "@id": "19123", "@value": "Keven Smith" },
+    { "@type": "rpgproducer", "@id": "19620", "@value": "Torah Cottrill" },
+    { "@type": "rpgproducer", "@id": "18454", "@value": "Cal Moore" },
+    { "@type": "rpgproducer", "@id": "19398", "@value": "Ray Vallese" }
+  ],
+  "description": "Publisher Blurb:&#10;&#10;A new adventure and more monstrous mutants for your D&amp;D Gamma World game!&#10;&#10;The radioactive wastelands of Earth are home to many bizarre and barbaric creatures. The apocalypse hasn&rsquo;t exactly made the world a better place. It&rsquo;s survival of the fittest. Time to build a new food chain.&#10;&#10;This game expansion presents a menagerie of mutant creatures and a ready-to-play adventure. The monsters presented herein can also be pulled over and used in the Dungeons &amp; Dragons Fantasy Roleplaying Game.&#10;&#10;This product includes:&#10;&#10;&#10;    160-page adventure book, including new mutant monsters&#10;    4 sheets of die-cut mutant monster tokens&#10;    A fold-out battle map&#10;&#10;&#10;",
+  "yearpublished": { "@value": "2010" },
+  "seriescode": { "@value": "" }
+}

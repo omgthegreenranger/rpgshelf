@@ -1,0 +1,78 @@
+[
+  {
+    "@type": "rpg",
+    "@id": "26696",
+    "name": {
+      "@type": "primary",
+      "@value": "Alea:Est Il Gioco di Ruolo di Star Trek"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "2447",
+    "name": {
+      "@type": "primary",
+      "@value": "Enterprise - Role Play Game in Star Trek"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "51858",
+    "name": { "@type": "primary", "@value": "The Fantasy Guide to Star Trek" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "37049",
+    "name": { "@type": "primary", "@value": "Star Trek Adventures" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "1481",
+    "name": { "@type": "primary", "@value": "Star Trek Roleplaying Game" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "706",
+    "name": {
+      "@type": "primary",
+      "@value": "Star Trek:  The Next Generation Roleplaying Game"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "705",
+    "name": {
+      "@type": "primary",
+      "@value": "Star Trek:  The Original Series Roleplaying Game"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "1622",
+    "name": {
+      "@type": "primary",
+      "@value": "Star Trek: Adventure Gaming in the Final Frontier"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "41468",
+    "name": { "@type": "primary", "@value": "Star Trek: Alpha Quadrant" }
+  },
+  {
+    "@type": "rpg",
+    "@id": "707",
+    "name": {
+      "@type": "primary",
+      "@value": "Star Trek: Deep Space Nine Roleplaying Game"
+    }
+  },
+  {
+    "@type": "rpg",
+    "@id": "353",
+    "name": {
+      "@type": "primary",
+      "@value": "Star Trek: The Role Playing Game (FASA)"
+    }
+  }
+]

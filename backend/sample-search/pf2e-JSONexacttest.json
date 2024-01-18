@@ -1,0 +1,162 @@
+{
+  "@type": "rpgitem",
+  "@id": "280968",
+  "thumbnail": "https://cf.geekdo-images.com/lExI-cG558vN0C2GsMiyHQ__thumb/img/qTo2Vy3V5h4JgGKGobBGdKcb7Po=/fit-in/200x150/filters:strip_icc()/pic4878066.png",
+  "image": "https://cf.geekdo-images.com/lExI-cG558vN0C2GsMiyHQ__original/img/nVPtmqxmm-EKtcIbOQOm3y7HppQ=/0x0/filters:format(png)/pic4878066.png",
+  "name": [
+    {
+      "@type": "primary",
+      "@sortindex": "1",
+      "@value": "Pathfinder Core Rulebook (2nd Edition)"
+    },
+    {
+      "@type": "alternate",
+      "@sortindex": "1",
+      "@value": "Pathfinder 2\u00aa ed.:  Reglas b\u00e1sicas"
+    },
+    {
+      "@type": "alternate",
+      "@sortindex": "1",
+      "@value": "Pathfinder Segunda Edici\u00f3n Reglas B\u00e1sicas"
+    }
+  ],
+  "link": [
+    {
+      "@type": "rpg",
+      "@id": "56388",
+      "@value": "Pathfinder Roleplaying Game (2nd Edition)"
+    },
+    { "@type": "rpggenre", "@id": "155", "@value": "Fantasy (High Fantasy)" },
+    { "@type": "rpgsetting", "@id": "1897", "@value": "Golarion" },
+    {
+      "@type": "rpgcategory",
+      "@id": "2083",
+      "@value": "Core Rules (min needed to play)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2101",
+      "@value": "Attribute/Stat Based (STR, CON, PER, etc)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2095",
+      "@value": "Class Based (Pilot, Wizard, Scientist, etc)"
+    },
+    { "@type": "rpgmechanic", "@id": "2122", "@value": "Dice (Various)" },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2096",
+      "@value": "Level Based (Earn XP and level up)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2133",
+      "@value": "Race Based (Player Race/Species affects gameplay)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2134",
+      "@value": "Random Attribute Generation (during Character Creation)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2094",
+      "@value": "Skill Based (buy or gain skills)"
+    },
+    { "@type": "rpgpublisher", "@id": "2366", "@value": "Devir" },
+    { "@type": "rpgpublisher", "@id": "4238", "@value": "Paizo Publishing" },
+    { "@type": "rpgpublisher", "@id": "17075", "@value": "SmiteWorks" },
+    { "@type": "rpgdesigner", "@id": "12994", "@value": "Logan Bonner" },
+    { "@type": "rpgdesigner", "@id": "9801", "@value": "Jason Bulmahn" },
+    { "@type": "rpgdesigner", "@id": "24107", "@value": "Adam Daigle" },
+    { "@type": "rpgdesigner", "@id": "14164", "@value": "James Jacobs" },
+    { "@type": "rpgdesigner", "@id": "18841", "@value": "Lyz Liddell" },
+    { "@type": "rpgdesigner", "@id": "15235", "@value": "Erik Mona" },
+    {
+      "@type": "rpgdesigner",
+      "@id": "18121",
+      "@value": "Stephen Radney-MacFarland"
+    },
+    { "@type": "rpgdesigner", "@id": "65925", "@value": "Mark Seifter" },
+    { "@type": "rpgartist", "@id": "79806", "@value": "Giorgio Baroni" },
+    { "@type": "rpgartist", "@id": "111699", "@value": "Yanis Cardin" },
+    { "@type": "rpgartist", "@id": "94506", "@value": "Sergio Cosmai" },
+    { "@type": "rpgartist", "@id": "60432", "@value": "Biagio D'Alessandro" },
+    { "@type": "rpgartist", "@id": "112089", "@value": "Michele Esposito" },
+    { "@type": "rpgartist", "@id": "119854", "@value": "Giorgio Falconi" },
+    { "@type": "rpgartist", "@id": "69286", "@value": "Taylor Fischer" },
+    { "@type": "rpgartist", "@id": "18700", "@value": "Mariusz Gandzel" },
+    { "@type": "rpgartist", "@id": "77578", "@value": "Igor Grechanyi" },
+    { "@type": "rpgartist", "@id": "96565", "@value": "Hai Hoang" },
+    {
+      "@type": "rpgartist",
+      "@id": "87749",
+      "@value": "Roman Roland Kuteynikov"
+    },
+    { "@type": "rpgartist", "@id": "68381", "@value": "Setiawan Lee" },
+    { "@type": "rpgartist", "@id": "99868", "@value": "Valeria Lutfullina" },
+    { "@type": "rpgartist", "@id": "38179", "@value": "Damien Mammoliti" },
+    { "@type": "rpgartist", "@id": "119855", "@value": "Rob McCaleb" },
+    {
+      "@type": "rpgartist",
+      "@id": "73882",
+      "@value": "Andrea Tentori Montalto"
+    },
+    { "@type": "rpgartist", "@id": "34328", "@value": "Stefano Moroni" },
+    { "@type": "rpgartist", "@id": "64997", "@value": "Sonja Morris" },
+    { "@type": "rpgartist", "@id": "65397", "@value": "Federico Musetti" },
+    { "@type": "rpgartist", "@id": "48461", "@value": "Alexander Nanitchkov" },
+    { "@type": "rpgartist", "@id": "81856", "@value": "Mirco Paganessi" },
+    {
+      "@type": "rpgartist",
+      "@id": "78040",
+      "@value": "Mary Jane Dizon Pajaron"
+    },
+    { "@type": "rpgartist", "@id": "93871", "@value": "Jose Parodi" },
+    { "@type": "rpgartist", "@id": "108858", "@value": "Angelo Peluso" },
+    { "@type": "rpgartist", "@id": "30740", "@value": "Roberto Pitturru" },
+    { "@type": "rpgartist", "@id": "85469", "@value": "Konstantin Porubov" },
+    { "@type": "rpgartist", "@id": "12316", "@value": "Wayne Reynolds" },
+    { "@type": "rpgartist", "@id": "75569", "@value": "Kiki Moch Rizky" },
+    { "@type": "rpgartist", "@id": "16598", "@value": "Sarah Robinson" },
+    { "@type": "rpgartist", "@id": "80348", "@value": "Riccardo Rullo" },
+    { "@type": "rpgartist", "@id": "60120", "@value": "Bryan Sola" },
+    { "@type": "rpgartist", "@id": "70015", "@value": "Matteo Spirito" },
+    { "@type": "rpgartist", "@id": "29693", "@value": "Matias Tapia" },
+    { "@type": "rpgartist", "@id": "67716", "@value": "Rogier van de Beek" },
+    { "@type": "rpgartist", "@id": "16453", "@value": "Ben Wootten" },
+    { "@type": "rpgartist", "@id": "70821", "@value": "Sam Yang" },
+    { "@type": "rpgproducer", "@id": "36215", "@value": "Judy Bauer" },
+    { "@type": "rpgproducer", "@id": "22918", "@value": "Christopher Carey" },
+    { "@type": "rpgproducer", "@id": "112264", "@value": "James Case" },
+    { "@type": "rpgproducer", "@id": "20453", "@value": "Joaquim Dorca" },
+    { "@type": "rpgproducer", "@id": "80783", "@value": "Jaym Gates" },
+    { "@type": "rpgproducer", "@id": "109174", "@value": "Leo Glass" },
+    { "@type": "rpgproducer", "@id": "14164", "@value": "James Jacobs" },
+    { "@type": "rpgproducer", "@id": "22469", "@value": "Jason Keeley" },
+    { "@type": "rpgproducer", "@id": "109175", "@value": "Avi Kool" },
+    { "@type": "rpgproducer", "@id": "18841", "@value": "Lyz Liddell" },
+    { "@type": "rpgproducer", "@id": "70245", "@value": "Luis Loza" },
+    { "@type": "rpgproducer", "@id": "15235", "@value": "Erik Mona" },
+    { "@type": "rpgproducer", "@id": "64997", "@value": "Sonja Morris" },
+    { "@type": "rpgproducer", "@id": "100547", "@value": "Adrian Ng" },
+    {
+      "@type": "rpgproducer",
+      "@id": "119852",
+      "@value": "Amirali Attar Olyaee"
+    },
+    { "@type": "rpgproducer", "@id": "100548", "@value": "Lacy Pellazar" },
+    { "@type": "rpgproducer", "@id": "16598", "@value": "Sarah Robinson" },
+    {
+      "@type": "rpgproducer",
+      "@id": "91727",
+      "@value": "Elsa Sjunneson-Henry"
+    },
+    { "@type": "rpgproducer", "@id": "33090", "@value": "Jason Tondro" },
+    { "@type": "rpgproducer", "@id": "53343", "@value": "Jordi Zamarre\u00f1o" }
+  ],
+  "description": "Publisher blurb:&#10;&#10;This comprehensive 640-page guide to the Pathfinder roleplaying game provides everything you need to set out on a world of limitless fantasy adventure! Choose from ancestries like elf, human, and goblin and classes like alchemist, fighter, and sorcerer to create a hero of your own design destined to become a legend! Based on more than 20 years of active development and playtest feedback from more than 125,000 gamers, the new Pathfinder rules are easy to learn and exciting to master! This indispensable volume contains all rules for players and Game Masters, and is your first step on a heroic new journey!&#10;&#10;The Pathfinder Core Rulebook includes:&#10;&#10;&#10;     More than 600 pages of game rules, advice, character options, treasure, and more for players and Game Masters!&#10;     Six heroic player character ancestries, including elf, dwarf, gnome, goblin, halfling, and human, with variant heritages for half-elf and half-orc!&#10;     More than 30 backgrounds like bartender, soldier, or apprentice to further immerse yourself in your hero's backstory!&#10;     Twelve character classes, including the alchemist, barbarian, bard, champion, cleric, druid, fighter, monk, ranger, rogue, sorcerer, and wizard!&#10;     Hundreds and hundreds of spells, class feats, and other exciting abilities to help you customize your character to become the hero YOU envision her to be!&#10;     Streamlined and revised rules to help ease new players into the game while providing the depth of character options and tactical interest that have defined Pathfinder from the beginning!&#10;&#10;&#10;",
+  "yearpublished": { "@value": "2019" },
+  "seriescode": { "@value": "" }
+}
