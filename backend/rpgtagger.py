@@ -14,7 +14,7 @@ import classes
 
 args = {}
 sel = 0
-
+gameID = ''
 
 # search and select game
 def init():
@@ -35,6 +35,7 @@ def singleSearch():
         bsearchterms = input("Enter RPG name: ")
         bargs = [bmethod, bsearch, bsearchterms]
         bresult = broadSearch(*bargs)
+
         if (
             int(bresult["@total"]) == 0
         ):  # if total results in response = 0, return to prompt
@@ -44,30 +45,47 @@ def singleSearch():
             broadSearchResults(bresult)
             b_loop = True
 
-        ## we should add the RPG system search to the database for storage
+        ## TODO: we should add the RPG system search to the database for storage
 
     # ----- Narrow Prompt Search
     nsearch = 0
     nmethod = "family"
 
     # provide list of assets related to this game
-    print(bresult["item"])
+    # print(bresult["item"])
     nsearchterm = input("Please select game:")
     b_found = bresult["item"][int(nsearchterm)]
 
-    game_obj = classes.gameObj(b_found)
+    # put details of 
+
+    # print("DETAILS", game_details)
+
     # selectGame = sqlite_scripts.GameDB.isPresent([b_found["@id"], "games"])
-    print("Object!", game_obj)
+    # print("Object!", game_obj)
     nargs = [nmethod, nsearch, int(b_found["@id"])]
     nresult = narrowSearch(*nargs)
+    nresult_items = nresult["link"]
+    system_obj = classes.systemObj(nresult)
 
+    # take nresult
+    # to provide prompt.
+    sel = 0
+    for item in nresult_items:
+        if item["@type"] == "rpg":
+            id = item["@id"]
+            name = item["@value"]
+            bselect = [name, id]
+            print(sel, name)
+            # rsearched.append(item)
+            sel += 1
     # narrow search prompt from above list.
     esearchterm = input("Please select book:")
-    eselected = nresult[int(esearchterm)]["@id"], nresult[int(esearchterm)]["@value"]
+    eselected = nresult_items[int(esearchterm)]["@id"], nresult_items[int(esearchterm)]["@value"], "rpgitem"
 
     eargs = eselected
     eresult = exactSearch(*eargs)
-
+    book_obj = system_obj.addBook(eresult)
+    print(system_obj.__dict__)
     # submitobject = sqlite_scripts.sqlObject(eresult, bresult)
 
     # print("*** book object title ***")
@@ -83,24 +101,29 @@ def singleSearch():
 
 
 def broadSearchResults(bresult):
+    if int(bresult["@total"]) == 0:
+        print("False!")
+        return
+    else:
         sel = 0
-        if isinstance(bresult['item'], list):
+        if isinstance(bresult["item"], list):
             # There are multiple items
-            for item in bresult['item']:
+            for item in bresult["item"]:
                 # print(item)
-                id = item['@id']
+                id = item["@id"]
                 name = item["name"]["@value"]
                 # qselect.append(item)
                 print(sel, name)
                 sel += 1
         else:
             # There is only one item
-            item = bresult['item']
+            item = bresult["item"]
             # print("One item", item)
-            id = item['@id']
+            id = item["@id"]
             name = item["name"]["@value"]
             # qselect.append(item)
             print(sel, name)
         return
+
 
 init()

@@ -1,33 +1,60 @@
 import sqlite_scripts
 
-class gameTop:
-    def __init__(self, args) :
-        print("CHECK", args)
-        gameInfo = sqlite_scripts.getGameObj(args['@id'])
-        self.game = gameInfo['game']
-        self.library = gameInfo['library']
-        return
 
-class gameObj(gameTop):
-    def __init__(self, game):
-        super().__init__(game)
-        print("ARGS", game)
-        # super().__init_(gameTop)
-        self.name = game['name']
-        # self.gid = gid
-        self.rid = game['@id']
-        # self.system = system
-        # self.rules = rules
-        # self.description = description
-        # self.publisher = publisher
-        # self.year = year
+#this is the game (i.e. the actual system) being used.
+class systemObj():
+    def __init__(self, data):
+        self.name = data['name'][0]['@value']
+        self.rid = data['@id']
+        self.library = []
+        # self.gid = 
+        self.system = []
+        for x in data['link'] :
+            if x['@type'] == 'rpgsystem' :
+                self.system = x['@value']
+        self.description = data['description']
         return
     
-    def checkGame(args):
-        check = sqlite_scripts.isPresent(args)
-        print(check)
-        return check
-
-class bookObj(gameObj):
-    def __init__(self, bid, brid, type, description, path, image) :
+    def systemRetriever(self) : # access the system data from the library, if present
         return
+
+    def bookRetrieve(self) : #use this to retrive library for game
+        return
+
+    def addGame(self, data) : # to add a new game system/create new object
+        return
+
+    def addBook(self, book) : # to add a new book to the object's library
+        publishers = []
+        designers = []
+        artists = []
+        producers = []
+        for bookData in book['link'] :
+            if bookData['@type'] == 'rpgpublisher' :
+                publishers.append(bookData['@value'])
+            if bookData['@type'] == 'rpgdesigner' :
+                designers.append(bookData['@value'])
+            if bookData['@type'] == 'rpgartist' :
+                artists.append(bookData['@value'])
+            if bookData['@type'] == 'rpgproducer' :
+                producers.append(bookData['@value'])
+        self.library.append(
+            [{
+                "rid" : rid,
+                "name": book['name']['@value'],
+                "bid": book['@id'],
+                "publisher": publishers,
+                "designers": designers,
+                "artists": artists,
+                "producers": producers,
+                "year": book['yearpublished'],
+                "description": book['description']
+            }
+            ]
+        )
+
+
+        return
+
+class campaignObj() : #TODO: this is the object created for whatever campaign is being used.
+    return
