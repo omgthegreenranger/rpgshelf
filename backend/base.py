@@ -4,9 +4,12 @@ import fs
 from fs.osfs import OSFS
 import os
 from flask_cors import CORS
+from flask_vite import Vite
 
 app = Flask(__name__)
 CORS(app)
+vite = Vite()
+vite.init_app(app)
 
 @app.route('/readfile', methods=["POST"])
 def read_file():
@@ -19,3 +22,6 @@ def read_file():
     )
     response.headers.add('access-control-allow-origin', '*')
     return response
+
+# @app.route('/library', methods=["GET"])
+

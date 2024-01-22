@@ -1,27 +1,36 @@
-import sqlite_scripts
+import db.sqlite_scripts
 
 
 #this is the game (i.e. the actual system) being used.
 class systemObj():
-    def __init__(self, data):
-        self.name = data['name'][0]['@value']
-        self.rid = data['@id']
-        self.library = []
-        # self.gid = 
-        self.system = []
-        for x in data['link'] :
-            if x['@type'] == 'rpgsystem' :
-                self.system = x['@value']
-        self.description = data['description']
+    def __init__(self, data, method):
+        if method == "api" :
+            self.name = data['name'][0]['@value']
+            self.rid = data['@id']
+            self.library = []
+            # self.gid = 
+            self.system = []
+            for x in data['link'] :
+                if x['@type'] == 'rpgsystem' :
+                    self.system = x['@value']
+            self.description = data['description']
+        if method == "db" :
+            self.name = data["game"]["name"]
+            self.rid = data["game"]["rid"]
+            self.library = data['library']
+            # self.gid = 
+            self.system = data["game"]["system"]
+            self.description = data['description']
         return
     
-    def systemRetriever(self) : # access the system data from the library, if present
+    def systemGet(self) : # access the system data from the library, if present
         return
 
-    def bookRetrieve(self) : #use this to retrive library for game
+    def bookGet(self) : #use this to retrive library for game
         return
 
-    def addGame(self, data) : # to add a new game system/create new object
+    def systemAdd(self, data) : # to add a new game system/create new object
+        # this requires all of the data to add the new system.
         return
 
     def addBook(self, book) : # to add a new book to the object's library
@@ -40,14 +49,14 @@ class systemObj():
                 producers.append(bookData['@value'])
         self.library.append(
             [{
-                "rid" : rid,
+                "rid" : self.rid,
                 "name": book['name']['@value'],
                 "bid": book['@id'],
                 "publisher": publishers,
                 "designers": designers,
                 "artists": artists,
                 "producers": producers,
-                "year": book['yearpublished'],
+                "year": book['yearpublished']['@value'],
                 "description": book['description']
             }
             ]
@@ -56,5 +65,5 @@ class systemObj():
 
         return
 
-class campaignObj() : #TODO: this is the object created for whatever campaign is being used.
-    return
+# class campaignObj(): #TODO: this is the object created for whatever campaign is being used.
+#     return

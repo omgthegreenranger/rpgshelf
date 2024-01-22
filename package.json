@@ -1,0 +1,14 @@
+{
+  "name": "lore",
+  "version": "1.0.0",
+  "description": "Have you collected *far* too many TTRPG rulebooks, supplements, modules, maps, tokens, errata, and more? Do they clutter up your hard drive?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

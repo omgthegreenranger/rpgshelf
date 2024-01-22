@@ -9,7 +9,7 @@
 from apiSearch import broadSearch, narrowSearch, exactSearch
 import pdfreader
 import configparser
-import sqlite_scripts
+import db.sqlite_scripts
 import classes
 
 args = {}
@@ -52,20 +52,70 @@ def singleSearch():
     nmethod = "family"
 
     # provide list of assets related to this game
-    # print(bresult["item"])
     nsearchterm = input("Please select game:")
     b_found = bresult["item"][int(nsearchterm)]
 
-    # put details of 
-
-    # print("DETAILS", game_details)
 
     # selectGame = sqlite_scripts.GameDB.isPresent([b_found["@id"], "games"])
     # print("Object!", game_obj)
     nargs = [nmethod, nsearch, int(b_found["@id"])]
     nresult = narrowSearch(*nargs)
     nresult_items = nresult["link"]
-    system_obj = classes.systemObj(nresult)
+    
+    # search SQL database for existing game, and load that data instead
+
+    gameInfo = db.sqlite_scripts.getGameObj(nresult['@id'])
+#     gameInfo = {
+#   "game": {
+#   "name": "Star Trek Adventures",
+#   "rid": "37049",
+#   "system": "2d20 System"
+#   },
+#   "library": [
+#     [
+#       {
+#         "name": "Deep Space Nine Player Characters",
+#         "bid": "261888",
+#         "publisher": [
+#           "Modiphius Entertainment"
+#         ],
+#         "designers": [
+#           "Nathan Dowdell",
+#           "Jacob Ross"
+#         ],
+#         "artists": [
+#           "Matthew Comben"
+#         ],
+#         "producers": [
+#           "Salwa Azar",
+#           "Chris Birch",
+#           "Michal E. Cross",
+#           "Steve Daldry",
+#           "Sam Webb"
+#         ],
+#         "year": "2018",
+#         "description": "From publisher blurb:&#10;&#10;This PDF contains statistics for the crew and residents of Deep Space 9, including Captain Sisko, Major Kira Nerys, Lt. Commander Worf, Chief Miles O'Brien, Lieutenant Jadzia Dax, Dr. Julian Bashir, Constable Odo, Quark, and Elim Garak as well as the game statistics for the Deep Space 9 and the U.S.S. Defiant, and rules for Changelings and Ferengi as playable species.&#10;&#10;"
+#       }
+#     ]
+#   ],
+#   "system": [],
+#   "description": "Description from the publisher:&#10;&#10;Star Trek Adventures uses the Modiphius 2d20 game system (Mutant Chronicles, Infinity, Conan, John Carter of Mars) designed by Jay Little (Star Wars: Edge of the Empire, X-Wing Miniatures Game). Modiphius is also sculpting an accompanying Star Trek miniature figure line, the first to be produced in seventeen years. Resin and metal 32mm-scale hobby figures will feature classic Star Trek characters and crews, boarding parties, and away teams. Geomorphic tile maps of burning Federation ships, mysterious colonies and embattled Klingon cruisers will set the scene for dramatic new voyages in the Final Frontier.&#10; Under license by CBS Consumer Products, Star Trek Adventures is slated for a mid-2017 release and the playtest crews will be listed in the Star Trek Adventures book manifest.&#10;&#10;"
+# }
+
+    # TODO: Make this better, I don't like the hacky way it works.
+
+    system_result = []
+    method = ''
+    if gameInfo['game'] == [] :
+        system_result = nresult
+        print("New one!")
+        method = "api"
+    else :
+        system_result = gameInfo
+        print("Yessir!")
+        method = "db"
+    
+    system_obj = classes.systemObj(system_result, method)
 
     # take nresult
     # to provide prompt.

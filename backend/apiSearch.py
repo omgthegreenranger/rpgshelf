@@ -9,7 +9,7 @@ import requests
 import xmltodict
 import json
 import xml
-import sqlite_scripts
+import db.sqlite_scripts
 import classes
 
 global rpg_json_parse

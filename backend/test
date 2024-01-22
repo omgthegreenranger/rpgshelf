@@ -1,6 +1,6 @@
 {
   "name": "Star Trek Adventures",
-  "gid": "37049",
+  "rid": "37049",
   "library": [
     [
       {
@@ -28,8 +28,31 @@
         },
         "description": "From publisher blurb:&#10;&#10;This PDF contains statistics for the crew and residents of Deep Space 9, including Captain Sisko, Major Kira Nerys, Lt. Commander Worf, Chief Miles O'Brien, Lieutenant Jadzia Dax, Dr. Julian Bashir, Constable Odo, Quark, and Elim Garak as well as the game statistics for the Deep Space 9 and the U.S.S. Defiant, and rules for Changelings and Ferengi as playable species.&#10;&#10;"
       }
+    ],
+    [
+      {
+        "rid": "37049",
+        "name": "Fury of the Hive",
+        "bid": "386784",
+        "publisher": [
+          "Modiphius Entertainment"
+        ],
+        "designers": [
+          "Jacob Ross"
+        ],
+        "artists": [
+          "(Uncredited)"
+        ],
+        "producers": [
+          "(Uncredited)"
+        ],
+        "year": {
+          "@value": "2018"
+        },
+        "description": "A Living Campaign Mission for 2269&#10;&#10;From the introduction:&#10;&#10;Remote mining colony Coriolanus IV failed to send its last scheduled status update, so Starfleet Command wants the Lexington to check in. It&rsquo;s the lone ship in the area, so the crew must operate without access to further support. Coriolanus IV is a mining colony that recently discovered one of the largest deposits of dilithium ever recorded, so it is critical to discover what happened and protect the deposits.&#10;&#10;"
+      }
     ]
   ],
-  "system": [],
+  "system": "2d20 System",
   "description": "Description from the publisher:&#10;&#10;Star Trek Adventures uses the Modiphius 2d20 game system (Mutant Chronicles, Infinity, Conan, John Carter of Mars) designed by Jay Little (Star Wars: Edge of the Empire, X-Wing Miniatures Game). Modiphius is also sculpting an accompanying Star Trek miniature figure line, the first to be produced in seventeen years. Resin and metal 32mm-scale hobby figures will feature classic Star Trek characters and crews, boarding parties, and away teams. Geomorphic tile maps of burning Federation ships, mysterious colonies and embattled Klingon cruisers will set the scene for dramatic new voyages in the Final Frontier.&#10; Under license by CBS Consumer Products, Star Trek Adventures is slated for a mid-2017 release and the playtest crews will be listed in the Star Trek Adventures book manifest.&#10;&#10;"
 }

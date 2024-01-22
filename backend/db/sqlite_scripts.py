@@ -16,9 +16,8 @@ def getGameObj(args) :
     except : 
         libraryInfo = []
 
-    print(gameInfo)
-    print(libraryInfo)
-
+    # print(gameInfo)
+    # print(libraryInfo)
     return {"game": gameInfo, "library": libraryInfo}
 
 
