@@ -48,7 +48,7 @@ class systemObj():
             if bookData['@type'] == 'rpgproducer' :
                 producers.append(bookData['@value'])
         self.library.append(
-            [{
+            {
                 "rid" : self.rid,
                 "name": book['name']['@value'],
                 "bid": book['@id'],
@@ -59,11 +59,14 @@ class systemObj():
                 "year": book['yearpublished']['@value'],
                 "description": book['description']
             }
-            ]
+            
         )
 
 
         return
+    def __repr__(self) :
+        return f"Node {self.name, self.library}"
+
 
 # class campaignObj(): #TODO: this is the object created for whatever campaign is being used.
 #     return

@@ -1,1 +1,14 @@
 import "./src/styles.css";
+import React from '@vitejs/plugin-react';
+import ReactDOM from 'react-dom/client';
+import Root from '/src/components/root';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+    root.render(
+      <React.StrictMode>
+        <Root />
+    </React.StrictMode>
+
+    );

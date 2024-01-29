@@ -11,7 +11,7 @@ import pdfreader
 import configparser
 import db.sqlite_scripts
 import classes
-
+import treelib
 args = {}
 sel = 0
 gameID = ''
@@ -65,43 +65,6 @@ def singleSearch():
     # search SQL database for existing game, and load that data instead
 
     gameInfo = db.sqlite_scripts.getGameObj(nresult['@id'])
-#     gameInfo = {
-#   "game": {
-#   "name": "Star Trek Adventures",
-#   "rid": "37049",
-#   "system": "2d20 System"
-#   },
-#   "library": [
-#     [
-#       {
-#         "name": "Deep Space Nine Player Characters",
-#         "bid": "261888",
-#         "publisher": [
-#           "Modiphius Entertainment"
-#         ],
-#         "designers": [
-#           "Nathan Dowdell",
-#           "Jacob Ross"
-#         ],
-#         "artists": [
-#           "Matthew Comben"
-#         ],
-#         "producers": [
-#           "Salwa Azar",
-#           "Chris Birch",
-#           "Michal E. Cross",
-#           "Steve Daldry",
-#           "Sam Webb"
-#         ],
-#         "year": "2018",
-#         "description": "From publisher blurb:&#10;&#10;This PDF contains statistics for the crew and residents of Deep Space 9, including Captain Sisko, Major Kira Nerys, Lt. Commander Worf, Chief Miles O'Brien, Lieutenant Jadzia Dax, Dr. Julian Bashir, Constable Odo, Quark, and Elim Garak as well as the game statistics for the Deep Space 9 and the U.S.S. Defiant, and rules for Changelings and Ferengi as playable species.&#10;&#10;"
-#       }
-#     ]
-#   ],
-#   "system": [],
-#   "description": "Description from the publisher:&#10;&#10;Star Trek Adventures uses the Modiphius 2d20 game system (Mutant Chronicles, Infinity, Conan, John Carter of Mars) designed by Jay Little (Star Wars: Edge of the Empire, X-Wing Miniatures Game). Modiphius is also sculpting an accompanying Star Trek miniature figure line, the first to be produced in seventeen years. Resin and metal 32mm-scale hobby figures will feature classic Star Trek characters and crews, boarding parties, and away teams. Geomorphic tile maps of burning Federation ships, mysterious colonies and embattled Klingon cruisers will set the scene for dramatic new voyages in the Final Frontier.&#10; Under license by CBS Consumer Products, Star Trek Adventures is slated for a mid-2017 release and the playtest crews will be listed in the Star Trek Adventures book manifest.&#10;&#10;"
-# }
-
     # TODO: Make this better, I don't like the hacky way it works.
 
     system_result = []
@@ -135,19 +98,9 @@ def singleSearch():
     eargs = eselected
     eresult = exactSearch(*eargs)
     book_obj = system_obj.addBook(eresult)
-    print(system_obj.__dict__)
+    print(system_obj)
     # submitobject = sqlite_scripts.sqlObject(eresult, bresult)
 
-    # print("*** book object title ***")
-    # print(submitobject.sqlBook()['@value'])
-
-    # print("******", "******")
-    # print("*****", "*****")
-    # print("**** Categories ****")
-    # # print(eresults_categories)
-
-    # print("Broad found", b_found)
-    # # print("Exact found", eselected)
 
 
 def broadSearchResults(bresult):

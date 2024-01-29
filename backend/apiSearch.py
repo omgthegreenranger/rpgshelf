@@ -22,7 +22,11 @@ searchParams = ["rpg", "rpgitem", "family","thing"]
 # this object will be the gameObj itself. We're going to cross to the database and, if it isn't present, add it.
 # TODO: add more search options (author, publisher, etc., or do narrow title search)
 
-def broadSearch(*args) :
+def broadSearch(*args) : # current args: 
+    # - method (search, family, thing)
+    # - search (digit for searchParams)
+    # - searchitems(terms for searching *SEARCH METHOD ONLY*)
+    
     search = search_path + args[0]
     args = {"query": args[2], "type": searchParams[0]}
     rpgg = requests.get(search, params=args)

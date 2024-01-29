@@ -23,5 +23,12 @@ def read_file():
     response.headers.add('access-control-allow-origin', '*')
     return response
 
-# @app.route('/library', methods=["GET"])
+@app.route('/library', methods=["GET", "POST"])
+def library():
+    print('path')
+    response = make_response( 
+        jsonify({'title': meta['dc:title']})
+    )
+    response.headers.add('access-control-allow-origin', '*')
+
 
