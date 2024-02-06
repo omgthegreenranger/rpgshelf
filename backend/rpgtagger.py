@@ -10,12 +10,17 @@ from apiSearch import broadSearch, narrowSearch, exactSearch
 import pdfreader
 import configparser
 import db.sqlite_scripts
+import db.sqlalchemy_models
 import classes
+from sqlalchemy.orm import sessionmaker
 import treelib
 args = {}
 sel = 0
 gameID = ''
 
+
+systemsObj = db.sqlalchemy_models.System
+bookObj = db.sqlalchemy_models.Book
 # search and select game
 def init():
     singleSearch()
@@ -61,25 +66,44 @@ def singleSearch():
     nargs = [nmethod, nsearch, int(b_found["@id"])]
     nresult = narrowSearch(*nargs)
     nresult_items = nresult["link"]
-    
+    # print(nresult)
     # search SQL database for existing game, and load that data instead
 
-    gameInfo = db.sqlite_scripts.getGameObj(nresult['@id'])
+    # gameInfo = db.sqlite_scripts.getGameObj(nresult['@id'])
+    gameInfo = []
     # TODO: Make this better, I don't like the hacky way it works.
 
     system_result = []
     method = ''
-    if gameInfo['game'] == [] :
-        system_result = nresult
-        print("New one!")
-        method = "api"
-    else :
-        system_result = gameInfo
-        print("Yessir!")
-        method = "db"
+    # if gameInfo['game'] == [] :
+    #     system_result = nresult
+    #     print("New one!")
+    #     method = "api"
+    # else :
+    #     system_result = gameInfo
+    #     print("Yessir!")
+    #     method = "db"
     
-    system_obj = classes.systemObj(system_result, method)
+    
+    # system_obj = classes.systemObj(system_result, method)
 
+    system =''
+    for x in nresult_items :
+        if x['@type'] == 'rpgsystem' :
+            system = x['@value']
+
+    systemobj = systemsObj(
+        system_name = nresult['name'][0]['@value'],
+        rid = nresult['@id'],
+        system = system,
+        description = nresult['description']
+    )
+
+
+    db.sqlalchemy_models.session.add(systemobj)
+    db.sqlalchemy_models.session.commit()
+    system_gid = systemobj.gid
+    print(system_gid)
     # take nresult
     # to provide prompt.
     sel = 0
@@ -97,8 +121,39 @@ def singleSearch():
 
     eargs = eselected
     eresult = exactSearch(*eargs)
-    book_obj = system_obj.addBook(eresult)
-    print(system_obj)
+
+    publishers = []
+    designers = []
+    artists = []
+    producers = []
+    for bookData in eresult['link'] :
+        if bookData['@type'] == 'rpgpublisher' :
+            publishers.append(bookData['@value'])
+        if bookData['@type'] == 'rpgdesigner' :
+            designers.append(bookData['@value'])
+        if bookData['@type'] == 'rpgartist' :
+            artists.append(bookData['@value'])
+        if bookData['@type'] == 'rpgproducer' :
+            producers.append(bookData['@value']),
+
+
+    book_obj = bookObj(        
+        brid = eresult['@id'],
+        system_gid = systemobj.gid,
+        book_title= eresult['name']['@value'],
+        publisher = publishers,
+        designers = designers,
+        artists = artists,
+        producers = producers,
+        year = eresult['yearpublished']['@value'],
+        description = eresult['description'])
+
+    # print(book_obj)
+    db.sqlalchemy_models.session.add(book_obj)
+    # print(systemobj in db.sqlalchemy_models.session, )
+    db.sqlalchemy_models.session.commit(book_obj)
+
+    # db.sqlalchemy_models.submitBook()
     # submitobject = sqlite_scripts.sqlObject(eresult, bresult)
 
 
@@ -127,6 +182,6 @@ def broadSearchResults(bresult):
             # qselect.append(item)
             print(sel, name)
         return
-
+    
 
 init()

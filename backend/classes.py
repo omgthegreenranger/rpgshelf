@@ -1,9 +1,11 @@
 import db.sqlite_scripts
+import db.sqlalchemy_models
 
 
 #this is the game (i.e. the actual system) being used.
 class systemObj():
     def __init__(self, data, method):
+        super().__class__
         if method == "api" :
             self.name = data['name'][0]['@value']
             self.rid = data['@id']
@@ -25,7 +27,7 @@ class systemObj():
     
     def systemGet(self) : # access the system data from the library, if present
         return
-
+        
     def bookGet(self) : #use this to retrive library for game
         return
 

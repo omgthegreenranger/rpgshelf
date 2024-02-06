@@ -11,6 +11,7 @@ import json
 import xml
 import db.sqlite_scripts
 import classes
+import db.sqlalchemy_models
 
 global rpg_json_parse
 global rpg_dict

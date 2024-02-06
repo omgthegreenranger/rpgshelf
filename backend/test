@@ -1,58 +1,110 @@
 {
-  "name": "Star Trek Adventures",
-  "rid": "37049",
-  "library": [
-    [
-      {
-        "title": "Deep Space Nine Player Characters",
-        "brid": "261888",
-        "publisher": [
-          "Modiphius Entertainment"
-        ],
-        "designers": [
-          "Nathan Dowdell",
-          "Jacob Ross"
-        ],
-        "artists": [
-          "Matthew Comben"
-        ],
-        "producers": [
-          "Salwa Azar",
-          "Chris Birch",
-          "Michal E. Cross",
-          "Steve Daldry",
-          "Sam Webb"
-        ],
-        "year": {
-          "@value": "2018"
-        },
-        "description": "From publisher blurb:&#10;&#10;This PDF contains statistics for the crew and residents of Deep Space 9, including Captain Sisko, Major Kira Nerys, Lt. Commander Worf, Chief Miles O'Brien, Lieutenant Jadzia Dax, Dr. Julian Bashir, Constable Odo, Quark, and Elim Garak as well as the game statistics for the Deep Space 9 and the U.S.S. Defiant, and rules for Changelings and Ferengi as playable species.&#10;&#10;"
-      }
-    ],
-    [
-      {
-        "rid": "37049",
-        "name": "Fury of the Hive",
-        "bid": "386784",
-        "publisher": [
-          "Modiphius Entertainment"
-        ],
-        "designers": [
-          "Jacob Ross"
-        ],
-        "artists": [
-          "(Uncredited)"
-        ],
-        "producers": [
-          "(Uncredited)"
-        ],
-        "year": {
-          "@value": "2018"
-        },
-        "description": "A Living Campaign Mission for 2269&#10;&#10;From the introduction:&#10;&#10;Remote mining colony Coriolanus IV failed to send its last scheduled status update, so Starfleet Command wants the Lexington to check in. It&rsquo;s the lone ship in the area, so the crew must operate without access to further support. Coriolanus IV is a mining colony that recently discovered one of the largest deposits of dilithium ever recorded, so it is critical to discover what happened and protect the deposits.&#10;&#10;"
-      }
-    ]
+  "@type": "rpgitem",
+  "@id": "261888",
+  "thumbnail": "https://cf.geekdo-images.com/UNinnJKrRz_yHOKuQJVQ1Q__thumb/img/QYXXDkVGEqoKm9RAEBqWglJyPF4=/fit-in/200x150/filters:strip_icc()/pic4334076.jpg",
+  "image": "https://cf.geekdo-images.com/UNinnJKrRz_yHOKuQJVQ1Q__original/img/ehw052YFI0hYW9MDJRIhERFobz8=/0x0/filters:format(jpeg)/pic4334076.jpg",
+  "name": {
+    "@type": "primary",
+    "@sortindex": "1",
+    "@value": "Deep Space Nine Player Characters"
+  },
+  "link": [
+    {
+      "@type": "rpg",
+      "@id": "37049",
+      "@value": "Star Trek Adventures"
+    },
+    {
+      "@type": "rpggenre",
+      "@id": "162",
+      "@value": "Science Fiction (Space Opera)"
+    },
+    {
+      "@type": "rpgsetting",
+      "@id": "2274",
+      "@value": "Star Trek Universe"
+    },
+    {
+      "@type": "rpgcategory",
+      "@id": "2108",
+      "@value": "Sourcebook (rules/options to enhance play)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2101",
+      "@value": "Attribute/Stat Based (STR, CON, PER, etc)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2088",
+      "@value": "Dice (Primarily d20)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2124",
+      "@value": "Lifepath Character Generation (Character starts at birth)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2138",
+      "@value": "Progression Tree (Skills, professions, magic abilities, etc.)"
+    },
+    {
+      "@type": "rpgmechanic",
+      "@id": "2094",
+      "@value": "Skill Based (buy or gain skills)"
+    },
+    {
+      "@type": "rpgpublisher",
+      "@id": "22226",
+      "@value": "Modiphius Entertainment"
+    },
+    {
+      "@type": "rpgdesigner",
+      "@id": "41145",
+      "@value": "Nathan Dowdell"
+    },
+    {
+      "@type": "rpgdesigner",
+      "@id": "52214",
+      "@value": "Jacob Ross"
+    },
+    {
+      "@type": "rpgartist",
+      "@id": "79074",
+      "@value": "Matthew Comben"
+    },
+    {
+      "@type": "rpgproducer",
+      "@id": "102867",
+      "@value": "Salwa Azar"
+    },
+    {
+      "@type": "rpgproducer",
+      "@id": "14473",
+      "@value": "Chris Birch"
+    },
+    {
+      "@type": "rpgproducer",
+      "@id": "39953",
+      "@value": "Michal E. Cross"
+    },
+    {
+      "@type": "rpgproducer",
+      "@id": "105673",
+      "@value": "Steve Daldry"
+    },
+    {
+      "@type": "rpgproducer",
+      "@id": "99393",
+      "@value": "Sam Webb"
+    }
   ],
-  "system": "2d20 System",
-  "description": "Description from the publisher:&#10;&#10;Star Trek Adventures uses the Modiphius 2d20 game system (Mutant Chronicles, Infinity, Conan, John Carter of Mars) designed by Jay Little (Star Wars: Edge of the Empire, X-Wing Miniatures Game). Modiphius is also sculpting an accompanying Star Trek miniature figure line, the first to be produced in seventeen years. Resin and metal 32mm-scale hobby figures will feature classic Star Trek characters and crews, boarding parties, and away teams. Geomorphic tile maps of burning Federation ships, mysterious colonies and embattled Klingon cruisers will set the scene for dramatic new voyages in the Final Frontier.&#10; Under license by CBS Consumer Products, Star Trek Adventures is slated for a mid-2017 release and the playtest crews will be listed in the Star Trek Adventures book manifest.&#10;&#10;"
+  "description": "From publisher blurb:&#10;&#10;This PDF contains statistics for the crew and residents of Deep Space 9, including Captain Sisko, Major Kira Nerys, Lt. Commander Worf, Chief Miles O'Brien, Lieutenant Jadzia Dax, Dr. Julian Bashir, Constable Odo, Quark, and Elim Garak as well as the game statistics for the Deep Space 9 and the U.S.S. Defiant, and rules for Changelings and Ferengi as playable species.&#10;&#10;",
+  "yearpublished": {
+    "@value": "2018"
+  },
+  "seriescode": {
+    "@value": ""
+  }
 }
