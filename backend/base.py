@@ -4,12 +4,13 @@ import fs
 from fs.osfs import OSFS
 import os
 from flask_cors import CORS
-from flask_vite import Vite
+from apiSearch import broadSearch, narrowSearch, exactSearch
+#from flask_vite import Vite
 
 app = Flask(__name__)
 CORS(app)
-vite = Vite()
-vite.init_app(app)
+#vite = Vite()
+#vite.init_app(app)
 
 @app.route('/readfile', methods=["POST"])
 def read_file():
@@ -23,5 +24,15 @@ def read_file():
     response.headers.add('access-control-allow-origin', '*')
     return response
 
-# @app.route('/library', methods=["GET"])
-
+@app.route('/search', methods=["GET"])
+def search():
+    search_type = request.args.get('search_type')
+    search_string = request.args.get('search_string')
+    print(search_type, search_string)
+    search_result = broadSearch("search", "0", search_string)
+    print(search_result)
+    response = make_response(
+        jsonify(search_result)
+    )
+    response.headers.add('access-control-allow-origin', '*')
+    return response
