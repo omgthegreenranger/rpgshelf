@@ -9,9 +9,9 @@
             "database": "${workspaceFolder:rpgshelf}/backend/rpgshelf.db"
         }
     ],
-    "python.testing.pytestArgs": [
-        "backend"
-    ],
+    // "python.testing.pytestArgs": [
+    //     "backend"
+    // ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "python.testing.unittestArgs": [
@@ -20,5 +20,6 @@
         ".",
         "-p",
         "test_*.py"
-    ]
+    ],
+    "python.defaultInterpreterPath": "backend/.venv/bin/python",
 }
