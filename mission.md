@@ -46,3 +46,22 @@ Table *library*
     - type # setting, core rules, supplement, module, etc.
     - path # path on disk
     - image # title image
+
+
+### How does the user do this?
+
+1. Search for a game name
+    - by doing this, the system will add the game to the database and create the Objects along with the full library.
+2. List books for selection
+    - the system should also do a search in the existing directory/prompt for file selection
+3. Move/rename book into new folder
+
+Note: Any files not matched, either manually or automatically, we should prompt to do a fuzzy search for the book on RPGGeek as well.
+
+
+Functions: 
+
+1. Add System
+2. Add Book
+3. Select System
+    a. Select Book

@@ -1,7 +1,7 @@
 import db.sqlite_scripts
 
-
 #this is the game (i.e. the actual system) being used.
+
 class systemObj():
     def __init__(self, data, method):
         if method == "api" :
@@ -38,6 +38,7 @@ class systemObj():
         designers = []
         artists = []
         producers = []
+        bookName = ""
         for bookData in book['link'] :
             if bookData['@type'] == 'rpgpublisher' :
                 publishers.append(bookData['@value'])
@@ -47,10 +48,21 @@ class systemObj():
                 artists.append(bookData['@value'])
             if bookData['@type'] == 'rpgproducer' :
                 producers.append(bookData['@value'])
+
+        # Do a check in case the book has alternate titles
+        # TODO FOR UI: allow for selection of title to use.
+
+        if isinstance(book['name'], list) == True :
+            for bookData in book['name'] :
+                if bookData['@type'] == 'primary' :
+                    bookName = bookData['@value']
+        if isinstance(book['name'], list) == False : 
+            bookName = book['name']['@value']
+
         self.library.append(
             [{
                 "rid" : self.rid,
-                "name": book['name']['@value'],
+                "name": bookName,
                 "bid": book['@id'],
                 "publisher": publishers,
                 "designers": designers,
