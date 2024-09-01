@@ -26,7 +26,7 @@ def broadSearch(*args) :
     search = search_path + args[0]
     args = {"query": args[2], "type": searchParams[0]}
     rpgg = requests.get(search, params=args)
-    #print(rpgg.text)
+    print(rpgg.url)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]
     bsearched = []
 
@@ -45,7 +45,7 @@ def narrowSearch(*args):
 
     rpgg = requests.get(search, params=args)
     print(rpgg.url)
-    print(rpgg.text)
+    # print(rpgg.text)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]["item"]
     rpg_json_parse = json.dumps(rpg_dict)
 

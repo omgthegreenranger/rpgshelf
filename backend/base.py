@@ -29,7 +29,10 @@ def search():
     search_type = request.args.get('search_type')
     search_string = request.args.get('search_string')
     print(search_type, search_string)
-    search_result = broadSearch("search", "0", search_string)
+    if (search_type == "system") :        
+        search_result = broadSearch("search", "0", search_string)
+    if (search_type == "family") :
+        search_result = narrowSearch("family", 0, search_string)
     print(search_result)
     response = make_response(
         jsonify(search_result)
