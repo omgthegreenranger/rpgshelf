@@ -11,6 +11,7 @@ import json
 import xml
 import db.sqlite_scripts
 import classes
+import helpers
 
 global rpg_json_parse
 global rpg_dict
@@ -31,7 +32,7 @@ def broadSearch(*args) :
     bsearched = []
 
     qselect = ''
-
+    # rpg_response = helpers.clean_names(rpg_dict)
     # # export to JSON for testing
     # rpgjson = open("JSONboardtest.json", "w")
     # rpgjson.write(json.dumps(bsearched))
@@ -47,6 +48,7 @@ def narrowSearch(*args):
     print(rpgg.url)
     # print(rpgg.text)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]["item"]
+    rpg_response = helpers.clean_names(rpg_dict)
     rpg_json_parse = json.dumps(rpg_dict)
 
     # Exported to JSON for a missing list or testing
