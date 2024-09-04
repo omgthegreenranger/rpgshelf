@@ -8,7 +8,9 @@ export default function Search({searchResult, setSearchResult, searchChoice, set
     const [searchIsLoading, setSearchIsLoading] = useState();
     const [apiResponse, setApiResponse] = useState({});
     const [familyResults, setFamilyResults] = useState({});
-    const [familyIsLoading, setFamilyIsLoading] = useState()
+    const [familyIsLoading, setFamilyIsLoading] = useState();
+    const [exactIsLoading, setExactIsLoading] = useState();
+    const [exactResults, setExactResults] = useState({});
 
     async function api_call (search_type, search_term) {
         const returnData = await axios.get(API_ENDPOINT + "/search?" + "search_type=" + search_type + "&search_string=" + search_term)
@@ -29,6 +31,10 @@ export default function Search({searchResult, setSearchResult, searchChoice, set
                 setFamilyResults(returnData);
                 setFamilyIsLoading(false)
                 break;
+            case "rpgitem":
+                setExactResults(returnData);
+                setExactIsLoading(returnData)
+                break;
             default:
                 break;
         }
@@ -43,8 +49,8 @@ export default function Search({searchResult, setSearchResult, searchChoice, set
       }
 
     const handleSystem = (e) => {
-        let search_type = "family"
-        let search_term = e.target.id
+        const search_type = "family"
+        const search_term = e.target.id
         setFamilyIsLoading(true)
         console.log(e.target.id);
         api_call(search_type, search_term)
@@ -74,7 +80,7 @@ export default function Search({searchResult, setSearchResult, searchChoice, set
             {searchChoice=="system_search"?<SystemSearch searchResult = {searchResult} setSearchResult={setSearchResult} handleSubmit={handleSubmit} />:searchChoice=="book_search"?<BookSearch handleSearch={handleSubmit} />: <></>}
         </div>
         {/* TODO: UGLY NESTED TERNARY, need a better option. */}
-        <div>Your results: {searchIsLoading?"They are loading":searchIsLoading == false?<SearchResults apiResponse = {apiResponse} setApiResponse = {setApiResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} handleSystem={handleSystem}/>:<></>}</div>
+        <div>Your results: {searchIsLoading?"They are loading":searchIsLoading == false?<SearchResults apiResponse = {apiResponse} setApiResponse = {setApiResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} handleSystem={handleSystem} exactIsLoading={exactIsLoading} exactResults={exactResults}/>:<></>}</div>
         </>
     )
 
@@ -101,7 +107,7 @@ function BookSearch() {
     )
 }
 
-function SearchResults({apiResponse, familyResults, familyIsLoading, setFamilyIsLoading, handleSystem}) {
+function SearchResults({apiResponse, familyResults, familyIsLoading, setFamilyIsLoading, handleSystem, exactIsLoading, exactResults}) {
 // If there are results, provide them in easy-to-read format.
 // On select, we then want to create the Python object to access details, library, and also create the SQL entry for it.
 
@@ -122,15 +128,28 @@ function SearchResults({apiResponse, familyResults, familyIsLoading, setFamilyIs
             </div>
             <div>
             {familyIsLoading?<p>Loading</p>:familyIsLoading == false?
-                <FamilyResults familyResults={familyResults} familyIsLoading = {familyIsLoading} setFamilyIsLoading = {setFamilyIsLoading} />: <></>
+                <FamilyResults familyResults={familyResults} familyIsLoading = {familyIsLoading} setFamilyIsLoading = {setFamilyIsLoading} exactIsLoading={exactIsLoading} exactResults={exactResults} />: <></>
             }
             </div>
         </>
     )
 }
 
-function FamilyResults({familyResults}) {
-    console.log(familyResults)
+function FamilyResults({familyResults,familyIsLoading, setFamilyIsLoading, exactIsLoading, exactResults}) {
+    console.log(JSON.parse(familyResults))
+    const familyLibrary = []
+    familyResults['link'].map((items, i) =>{
+        
+        if(items['@type'] === "rpg") {
+        
+            familyLibrary[i] = {
+            "id": items['@id'],
+            "title": items['@value']
+        }}
+    })
+    console.log(familyLibrary)
+
+
     // const family_display = []
     // familyResults.map((item => {
     //     if(item['name'].length >= 1) {

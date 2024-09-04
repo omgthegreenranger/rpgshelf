@@ -1,0 +1,226 @@
+{
+    "@type": "rpgissue",
+    "@id": "231389",
+    "thumbnail": "https://cf.geekdo-images.com/60nsNEPoBB7HRLRZ90bn8Q__thumb/img/alVDnLyHmzuciwUL_B73jJxssG8=/fit-in/200x150/filters:strip_icc()/pic3636593.jpg",
+    "image": "https://cf.geekdo-images.com/60nsNEPoBB7HRLRZ90bn8Q__original/img/b0fGD5RE5fBeyV6sMMk9Sw3v014=/0x0/filters:format(jpeg)/pic3636593.jpg",
+    "name": {
+        "@type": "primary",
+        "@sortindex": "1",
+        "@value": "Alarums & Excursions (Issue 223 - Mar 1994)"
+    },
+    "datepublished": {
+        "@value": "1994-03-00"
+    },
+    "issueindex": {
+        "@value": "223"
+    },
+    "link": [
+        {
+            "@type": "rpgissue",
+            "@id": "1494",
+            "@value": "Alarums & Excursions",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "22304",
+            "@value": "Richard Bark"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "24088",
+            "@value": "Patrick Brady"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "17697",
+            "@value": "Alison Brooks"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "56233",
+            "@value": "John M. Burt"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "15181",
+            "@value": "Michael Cule"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "70103",
+            "@value": "Don Del Grande"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "19983",
+            "@value": "David Flin"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "24579",
+            "@value": "Steve Gilham"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "13226",
+            "@value": "Lee Gold"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "42876",
+            "@value": "Mark Goldberg"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "43625",
+            "@value": "Jenny Hein"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "43412",
+            "@value": "Peter Hildreth"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "16847",
+            "@value": "Michael Hopcroft"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "45302",
+            "@value": "Colin Ingham"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "42073",
+            "@value": "Daniel James"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "13339",
+            "@value": "Spike Y. Jones"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "36048",
+            "@value": "Alan Kellogg"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "29001",
+            "@value": "John R. Kingsbury"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "6676",
+            "@value": "Robin D. Laws"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "41203",
+            "@value": "Jeffery May"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "7341",
+            "@value": "Christopher Murray"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "22472",
+            "@value": "Lisa Padol"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "43621",
+            "@value": "Nick Parenti"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "66221",
+            "@value": "Sid Ramage"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "13569",
+            "@value": "Scott Ruggels"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "43618",
+            "@value": "Mark S. Denman"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "21263",
+            "@value": "Edmund Shaw"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "4080",
+            "@value": "Curtis Taylor"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "888",
+            "@value": "Jonathan Tweet"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "43619",
+            "@value": "Douglas Warren"
+        },
+        {
+            "@type": "rpgdesigner",
+            "@id": "66793",
+            "@value": "Jonathan D. Woolley"
+        },
+        {
+            "@type": "rpgartist",
+            "@id": "94475",
+            "@value": "Susan Landerman"
+        },
+        {
+            "@type": "rpgproducer",
+            "@id": "13226",
+            "@value": "Lee Gold"
+        },
+        {
+            "@type": "rpgpublisher",
+            "@id": "4",
+            "@value": "(Self-Published)"
+        },
+        {
+            "@type": "rpg",
+            "@id": "201",
+            "@value": "GURPS (3rd Edition)"
+        },
+        {
+            "@type": "rpg",
+            "@id": "1309",
+            "@value": "Killer"
+        },
+        {
+            "@type": "rpg",
+            "@id": "762",
+            "@value": "RuneQuest (3rd Edition)"
+        },
+        {
+            "@type": "rpg",
+            "@id": "1063",
+            "@value": "TimeLords"
+        },
+        {
+            "@type": "rpg",
+            "@id": "491",
+            "@value": "Traveller (Classic)"
+        },
+        {
+            "@type": "rpg",
+            "@id": "514",
+            "@value": "Underground"
+        }
+    ],
+    "description": "Alarums &amp; Excursions&#10;Issue 223&#10;March 1994&#10;&#10;Published as PDF in 2016&#10;&#10;"
+}

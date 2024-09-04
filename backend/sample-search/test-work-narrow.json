@@ -1,0 +1,140 @@
+{
+    "@type": "rpg",
+    "@id": "1309",
+    "thumbnail": "https://cf.geekdo-images.com/jGPJlEAxllt3DMfTS0IeKw__thumb/img/oocIw6Afa_dkqzNxzXuOngARVH8=/fit-in/200x150/filters:strip_icc()/pic651103.jpg",
+    "image": "https://cf.geekdo-images.com/jGPJlEAxllt3DMfTS0IeKw__original/img/-XeBoAH2AEKDYwoZHcifJiAqz9A=/0x0/filters:format(jpeg)/pic651103.jpg",
+    "name": [
+        {
+            "@type": "primary",
+            "@sortindex": "1",
+            "@value": "Killer"
+        },
+        {
+            "@type": "alternate",
+            "@sortindex": "1",
+            "@value": "Assassin"
+        },
+        {
+            "@type": "alternate",
+            "@sortindex": "1",
+            "@value": "KAOS"
+        },
+        {
+            "@type": "alternate",
+            "@sortindex": "1",
+            "@value": "Killing As an Organised Sport"
+        },
+        {
+            "@type": "alternate",
+            "@sortindex": "1",
+            "@value": "Paranoia"
+        }
+    ],
+    "description": "\"Assassin (also Killer or Paranoia) is a live-action game. Players try to eliminate each other from the game using mock weapons in an effort to become the last surviving player.  Assassin is particularly popular on college campuses; several universities have a dedicated \"Assassins Guild\" society, which organizes games for their members. Game play occurs at all hours and in all places unless otherwise disallowed by the rules. Since an elimination attempt could occur at any time, successful players are obliged to develop a healthy degree of watchful paranoia.&quot;&#10;&#10;Source: Wikipedia, &quot;Assassin (game)&quot;, available under the CC-BY-SA License.&#10;&#10;",
+    "link": [
+        {
+            "@type": "rpg",
+            "@id": "46674",
+            "@value": "Killer",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpgmechanic",
+            "@id": "2657",
+            "@value": "Competitive (players compete against each other to win)"
+        },
+        {
+            "@type": "rpgmechanic",
+            "@id": "2109",
+            "@value": "Diceless (does not use dice or other randomizer)"
+        },
+        {
+            "@type": "rpgmechanic",
+            "@id": "2092",
+            "@value": "Free-form (minimal or no rules - think improv theatre)"
+        },
+        {
+            "@type": "rpgmechanic",
+            "@id": "2093",
+            "@value": "LARP (Live-Action-Role-Playing)"
+        },
+        {
+            "@type": "rpg",
+            "@id": "231389",
+            "@value": "Alarums & Excursions (Issue 223 - Mar 1994)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "161397",
+            "@value": "Anonima Gidierre (Numero 10 - Gennaio/Febbraio 1997)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "162989",
+            "@value": "Anonima Gidierre (Numero 85 - Luglio/Settembre 2014)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "391899",
+            "@value": "Casus Belli (Special Issue 4 - 1992)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "362927",
+            "@value": "The Intermountain Matrix (Volume 1, Issue 1 - May 1990)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "125897",
+            "@value": "Líder (2ᵃ Época, Número 24 - Julio 1991)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "125930",
+            "@value": "Líder (2ᵃ Época, Número 32 - Diciembre 1992)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "306078",
+            "@value": "Lokasenna (Issue 14 - Jul 1984)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "68246",
+            "@value": "Pseudo-Dragen (Issue 8 - 1987)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "157893",
+            "@value": "Riimukiwi (Issue #3 - 1989)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "65892",
+            "@value": "The Space Gamer (Issue 43 - Sep 1981)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "65893",
+            "@value": "The Space Gamer (Issue 44 - Oct 1981)",
+            "@inbound": "true"
+        },
+        {
+            "@type": "rpg",
+            "@id": "306105",
+            "@value": "Vienna (Issue 4 - Nov 1984)",
+            "@inbound": "true"
+        }
+    ]
+}

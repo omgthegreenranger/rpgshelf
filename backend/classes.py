@@ -11,7 +11,7 @@ class systemObj():
             # self.gid = 
             self.system = []
             for x in data['link'] :
-                if x['@type'] == 'rpgsystem' :
+                if x['@type'] == 'rpgmechanic' :
                     self.system = x['@value']
             self.description = data['description']
         if method == "db" :
@@ -34,6 +34,7 @@ class systemObj():
         return
 
     def addBook(self, book) : # to add a new book to the object's library
+        print("Here we go!")
         publishers = []
         designers = []
         artists = []
@@ -68,7 +69,7 @@ class systemObj():
                 "designers": designers,
                 "artists": artists,
                 "producers": producers,
-                "year": book['yearpublished']['@value'],
+                #"year": book['yearpublished']['@value'],
                 "description": book['description']
             }
             ]

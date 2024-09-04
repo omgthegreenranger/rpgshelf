@@ -4,7 +4,8 @@ import fs
 from fs.osfs import OSFS
 import os
 from flask_cors import CORS
-from apiSearch import broadSearch, narrowSearch, exactSearch
+from apiSearch import broadSearch, narrowSearch, exactSearch, familyJSON
+#from helpers import familyJSON
 #from flask_vite import Vite
 
 app = Flask(__name__)
@@ -28,14 +29,23 @@ def read_file():
 def search():
     search_type = request.args.get('search_type')
     search_string = request.args.get('search_string')
-    print(search_type, search_string)
+    print("API is called", search_type, search_string)
     if (search_type == "system") :        
         search_result = broadSearch("search", "0", search_string)
     if (search_type == "family") :
-        search_result = narrowSearch("family", 0, search_string)
-    print(search_result)
+    #    search_result = narrowSearch("family", 0, search_string)
+        search_result = familyJSON("family", 0, search_string)
+    # if (search_type == "rpgitem") :
+    #    search_result = exactSearch(search_string, "0", "rpgitem")
+    # print(search_result)
     response = make_response(
         jsonify(search_result)
     )
     response.headers.add('access-control-allow-origin', '*')
     return response
+
+
+# process for API call to get the details of your search:
+# 1. search for the broadsearch - this is the system (though we can expand to include the book as well, perhaps)
+# 2. select broad System
+#   a. provide details of System - this will include the link details.
