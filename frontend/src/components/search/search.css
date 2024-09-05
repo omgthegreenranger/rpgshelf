@@ -1,0 +1,9 @@
+.library-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5px, 1fr))
+}
+
+.library-column {
+    display: flex;
+    flex-direction: column;
+}

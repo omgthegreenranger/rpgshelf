@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 //import { api_call } from '../../scripts/api';
 import axios from 'axios';
+import './search.css';
 
 const API_ENDPOINT = 'http://127.0.0.1:5000'
 
@@ -111,19 +112,24 @@ function SearchResults({apiResponse, familyResults, familyIsLoading, setFamilyIs
 // If there are results, provide them in easy-to-read format.
 // On select, we then want to create the Python object to access details, library, and also create the SQL entry for it.
 
-
-    const responseTable = apiResponse['item'].map((item => {
-
-        return(
-                <li key={item['@id']} id={item['@id']}>{item['name']['@value']}</li>
-    )}))
-
+    var responseTable =  []
+    if(apiResponse['@total'] === '1') {
+        responseTable[0] = apiResponse['item']
+    }    
+    if(apiResponse['@total'] > '1') {
+        apiResponse['item'].map((item, i) => {
+        responseTable[i] = item; 
+    })}
+    console.log(responseTable)
     return (
         <>
             <p>TABLE TO BE</p>
             <div>
             <ul onClick={handleSystem}>
-            {responseTable}
+            {responseTable.map(item => {
+                return(
+                    <li key={item['@id']} id={item['@id']}>{item['name']['@value']}</li>
+        )})}
             </ul>
             </div>
             <div>
@@ -137,42 +143,25 @@ function SearchResults({apiResponse, familyResults, familyIsLoading, setFamilyIs
 
 function FamilyResults({familyResults,familyIsLoading, setFamilyIsLoading, exactIsLoading, exactResults}) {
     console.log(JSON.parse(familyResults))
-    const familyLibrary = []
-    familyResults['link'].map((items, i) =>{
-        
-        if(items['@type'] === "rpg") {
-        
-            familyLibrary[i] = {
-            "id": items['@id'],
-            "title": items['@value']
-        }}
-    })
+    const familyLibrary = JSON.parse(familyResults)
+    // familyResults['library'].map((items, i) =>{
+    //         familyLibrary[i] = {
+    //         "id": items['@id'],
+    //         "title": items['@value']
+    //     }})
     console.log(familyLibrary)
 
 
-    // const family_display = []
-    // familyResults.map((item => {
-    //     if(item['name'].length >= 1) {
-    //         item['name'].map((item_name =>
-    //             console.log(item_name)
-    //     ))}
-    //     // family_display[i] = {
-    //     //     "name": 
-    //         // }
-    //     })
-    //     )
             return(
                 <>
                  <div>
-                     {familyResults['name']['@value']}
+                     {familyLibrary['name']}
                  </div>
-                 <div><img src={familyResults['image']}/></div>
-                 <div>
-                    <ul>
-                    {familyResults['link'].map((items, i) =>{
-                        return(<li key={i} id={items['@id']}>{items['@value']}</li>)
+                 <div><img src={familyLibrary['image']}/></div>
+                 <div className="library-column">
+                    {familyLibrary['library'].map((items, i) =>{
+                        return(<div className="library-row" key={i}><img src={items['thumbnail']}/><div>{items['bid']}</div><div>{items['name']}</div><div>{items['publisher']}</div><div>{items['series'][0]}</div><div>{items['series'][1]}</div></div>)
                     })}
-                    </ul>
                  </div>
                 </>
             )

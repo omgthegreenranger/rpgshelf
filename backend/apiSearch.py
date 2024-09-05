@@ -47,16 +47,8 @@ def narrowSearch(args):
     args = {"id" : args[2], "type": searchParams[args[1]]}
     print("Narrow Search Begins")
     rpgg = requests.get(search, params=args)
-    #print("Narrow", rpgg.url)
-    # print(rpgg.text)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]["item"]
-    #rpg_response = helpers.clean_names(rpg_dict)
     rpg_json_parse = json.dumps(rpg_dict)
-
-    # Exported to JSON for a missing list or testing
-    # rpgjson = open("JSONnarrowtest.json", "w")
-    # rpgjson.write(json.dumps(rsearched))
-    # rpgjson.close()
     print(rpg_dict)
     return rpg_dict
 
@@ -67,8 +59,9 @@ def exactSearch(*args) :
     eargs = {"id" : args[0], type : args[2]}
     e_rpg = requests.get(search, params=eargs)
     print(e_rpg.url)
-    e_rpg_dict = xmltodict.parse(e_rpg.text)["items"]["item"]
-    print(e_rpg_dict)
+    e_rpg_dict = xmltodict.parse(e_rpg.text)
+    e_rpg_dict_items = e_rpg_dict['items']['item']
+    print(e_rpg_dict_items)
     # e_rpg_json_parse = json.dumps(e_rpg_dict)
 
     # Uncomment this if you want all results exported to JSON for a missing list
@@ -76,29 +69,56 @@ def exactSearch(*args) :
     # rpgjson.write(e_rpg_json_parse)
     # rpgjson.close()
     # print(e_rpg_dict)
-    return e_rpg_dict
+    return e_rpg_dict_items
 
 # let's make this script to be able to put the data together into a single JSON for us.
 
 def familyJSON(*args) :
     print("Family search - narrow begins")
     systems = narrowSearch(args)
-    print(systems['link'])
     # for book in systems['link'] :
     #     print("HERE IS THE ITEM", book)
     #     asset = exactSearch(book['@id'], "0", "rpgitem")
         
     #     return asset
     systemLibrary = classes.systemObj(systems, "api")
-    for book in systems['link'] :
-        print("HERE IS THE ITEM", book)
-        if(book['@type'] == "rpg"): 
-            asset = exactSearch(book['@id'], "0", "rpgitem")
-            systemLibrary.addBook(asset)
-            print("Exact Search complete", systemLibrary.__dict__)
-        else :
-            continue
-        continue
+    search_list = []
+
+    if (len(systems['link']) < 20 ):
+        j = len(systems['link'])
+    else :
+        j = 20 
+    i = 0
+    
+    # for book in systems['link'] :
+       
+        # print("HERE IS THE ITEM", book, i)
+
+    print(len(systems['link']))
+    
+    while i < j :
+        print("HERE IT IS", systems['link'][i]['@id'], i)
+        search_list.append(systems['link'][i]['@id'])
+        i += 1
+        # if(book['@type'] == "rpg"): 
+        #     asset = exactSearch(book['@id'], "0", "rpgitem")
+        #     systemLibrary.addBook(asset)
+        #     print("Exact Search complete")
+        # else :
+        #     continue
+        # continue
+    else :
+        print("We're done!")
+    
+    search_id_string = ",".join(search_list)
+    assets = exactSearch(search_id_string, "0", "rpgitem")
+    for item in assets :
+        print("asset", item)
+        systemLibrary.addBook(item)
+    print("Exact Search complete")
+    
+
+    print("Search with", assets)
         
     # args - narrowSearch result in proper form
     # plus each "rpg" link has details from exactSearch

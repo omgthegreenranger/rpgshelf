@@ -4,16 +4,22 @@ import db.sqlite_scripts
 
 class systemObj():
     def __init__(self, data, method):
+        # print(data['name'])
+        # print(isinstance(data['name'],list))
         if method == "api" :
-            self.name = data['name'][0]['@value']
+            if(isinstance(data['name'],list)) :
+                self.name = data['name'][0]['@value']
+            else :
+                self.name = data['name']['@value']
             self.rid = data['@id']
             self.library = []
             # self.gid = 
             self.system = []
             for x in data['link'] :
-                if x['@type'] == 'rpgmechanic' :
+                if x['@type'] == 'rpgsystem' :
                     self.system = x['@value']
             self.description = data['description']
+            self.image = data['image']
         if method == "db" :
             self.name = data["game"]["name"]
             self.rid = data["game"]["rid"]
@@ -21,6 +27,7 @@ class systemObj():
             # self.gid = 
             self.system = data["game"]["system"]
             self.description = data['description']
+            self.image = data['image']
         return
     
     def systemGet(self) : # access the system data from the library, if present
@@ -34,7 +41,7 @@ class systemObj():
         return
 
     def addBook(self, book) : # to add a new book to the object's library
-        print("Here we go!")
+        #print("Here we go!", book)
         publishers = []
         designers = []
         artists = []
@@ -61,18 +68,20 @@ class systemObj():
             bookName = book['name']['@value']
 
         self.library.append(
-            [{
+            {
                 "rid" : self.rid,
                 "name": bookName,
                 "bid": book['@id'],
+                "series": book['seriescode']['@value'].rsplit(" ", 1),
                 "publisher": publishers,
                 "designers": designers,
                 "artists": artists,
                 "producers": producers,
-                #"year": book['yearpublished']['@value'],
-                "description": book['description']
+                "year": book['yearpublished']['@value'],
+                "description": book['description'],
+                "image": book['image'],
+                "thumbnail": book['thumbnail']
             }
-            ]
         )
 
 
