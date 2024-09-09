@@ -1,0 +1,9 @@
+.title-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title-word {
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+}

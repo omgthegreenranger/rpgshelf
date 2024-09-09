@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "backend": "cd backend && flask run",
     "frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"cd backend && flask run\" \"cd frontend && npm run dev\""
+    "dev": "concurrently \"cd backend && flask --debug run\" \"cd frontend && npm run dev\""
     
   },
   "author": "",

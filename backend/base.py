@@ -1,17 +1,25 @@
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, make_response, session
+from flask_caching import Cache
 import pikepdf
 import fs
 from fs.osfs import OSFS
 import os
 from flask_cors import CORS
 from apiSearch import broadSearch, narrowSearch, exactSearch, familyJSON
-#from helpers import familyJSON
-#from flask_vite import Vite
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
-#vite = Vite()
-#vite.init_app(app)
+
+config = {
+    "DEBUG": True,          # some Flask specific configs
+    "CACHE_TYPE": "SimpleCache",  # Flask-Caching related configs
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
+app.config.from_mapping(config)
+cache = Cache(app)
+app.secret_key = os.getenv("SECRET_KEY")
 
 @app.route('/readfile', methods=["POST"])
 def read_file():
@@ -25,18 +33,23 @@ def read_file():
     response.headers.add('access-control-allow-origin', '*')
     return response
 
-@app.route('/search', methods=["GET"])
+@app.route('/search', methods=["GET", "POST"])
 def search():
     search_type = request.args.get('search_type')
     search_string = request.args.get('search_string')
     print("API is called", search_type, search_string)
     if (search_type == "system") :        
         search_result = broadSearch("search", "0", search_string)
+    if (search_type == "narrow") :
+        search_result = narrowSearch("family", 0, search_string)
     if (search_type == "family") :
-    #    search_result = narrowSearch("family", 0, search_string)
+        # if (session['system']['@id'] == search_string) :
+        #     print("Yes!")
+        #     system_data = session['system']
+        # else :
+        #     print("No!")
         search_result = familyJSON("family", 0, search_string)
-    # if (search_type == "rpgitem") :
-    #    search_result = exactSearch(search_string, "0", "rpgitem")
+
     # print(search_result)
     response = make_response(
         jsonify(search_result)

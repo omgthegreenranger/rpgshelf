@@ -1,29 +1,31 @@
-import {useState, useEffect} from 'react';
-//import { api_call } from '../../scripts/api';
+import { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
 import './search.css';
+import 'bootstrap'
 
 const API_ENDPOINT = 'http://127.0.0.1:5000'
 
-export default function Search({searchResult, setSearchResult, searchChoice, setSearchChoice}) {
+export default function Search({ searchResult, setSearchResult, searchChoice, setSearchChoice }) {
     const [searchIsLoading, setSearchIsLoading] = useState();
     const [apiResponse, setApiResponse] = useState({});
     const [familyResults, setFamilyResults] = useState({});
     const [familyIsLoading, setFamilyIsLoading] = useState();
-    const [exactIsLoading, setExactIsLoading] = useState();
-    const [exactResults, setExactResults] = useState({});
+    const [narrowIsLoading, setNarrowIsLoading] = useState();
+    const [narrowResults, setNarrowResults] = useState({});
 
-    async function api_call (search_type, search_term) {
-        const returnData = await axios.get(API_ENDPOINT + "/search?" + "search_type=" + search_type + "&search_string=" + search_term)
-        .then(function (response) {
-             console.log(response.data);
-            return response.data
-         })
-         .catch(function (error) {
-             console.log(error);
-         })
+    async function api_call(search_type, search_term) {
+        const returnData = await axios.post(API_ENDPOINT + "/search?" + "search_type=" + search_type + "&search_string=" + search_term)
+            .then(function (response) {
+                console.log(response.data);
+                return response.data
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
         console.log(search_type)
-        switch(search_type) {
+        switch (search_type) {
             case "system":
                 setApiResponse(returnData);
                 setSearchIsLoading(false)
@@ -32,9 +34,9 @@ export default function Search({searchResult, setSearchResult, searchChoice, set
                 setFamilyResults(returnData);
                 setFamilyIsLoading(false)
                 break;
-            case "rpgitem":
-                setExactResults(returnData);
-                setExactIsLoading(returnData)
+            case "narrow":
+                setNarrowResults(returnData);
+                setNarrowIsLoading(false)
                 break;
             default:
                 break;
@@ -47,13 +49,22 @@ export default function Search({searchResult, setSearchResult, searchChoice, set
         setSearchIsLoading(true)
         api_call(search_type, search_term)
         e.preventDefault();
-      }
+    }
+
+    const handleNarrow = (e) => {
+        const search_type = "narrow"
+        const search_term = e.target.id
+        setNarrowIsLoading(true)
+        api_call(search_type, search_term)
+        e.preventDefault();
+    }
 
     const handleSystem = (e) => {
+        console.log(narrowResults)
         const search_type = "family"
         const search_term = e.target.id
         setFamilyIsLoading(true)
-        console.log(e.target.id);
+        setNarrowIsLoading()
         api_call(search_type, search_term)
         e.preventDefault();
     }
@@ -67,81 +78,140 @@ export default function Search({searchResult, setSearchResult, searchChoice, set
 
     console.log(searchResult)
 
-    return(
+    return (
         <>
-        <div>
-            <ul 
-                onClick={searchClick}
+            <div className="search-menu">
+                <ul
+                    onClick={searchClick}
+                    className="search-menu"
                 >
-                <li id="system_search">Search for a system</li>
-                <li id="book_search">Search for a book by title</li>
-            </ul>
-        </div>
-        <div>
-            {searchChoice=="system_search"?<SystemSearch searchResult = {searchResult} setSearchResult={setSearchResult} handleSubmit={handleSubmit} />:searchChoice=="book_search"?<BookSearch handleSearch={handleSubmit} />: <></>}
-        </div>
-        {/* TODO: UGLY NESTED TERNARY, need a better option. */}
-        <div>Your results: {searchIsLoading?"They are loading":searchIsLoading == false?<SearchResults apiResponse = {apiResponse} setApiResponse = {setApiResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} handleSystem={handleSystem} exactIsLoading={exactIsLoading} exactResults={exactResults}/>:<></>}</div>
+                    <li id="system_search">Search for a system</li>
+                    <li id="book_search">Search for a book by title</li>
+                </ul>
+            </div>
+            <div>
+                {searchChoice == "system_search" ? <SystemSearch searchResult={searchResult} setSearchResult={setSearchResult} handleSubmit={handleSubmit} /> : searchChoice == "book_search" ? <BookSearch handleSearch={handleSubmit} /> : <></>}
+            </div>
+            {/* TODO: UGLY NESTED TERNARY, need a better option. */}
+            <div>Your results: {searchIsLoading ? "They are loading" : searchIsLoading == false ? <SearchResults apiResponse={apiResponse} setApiResponse={setApiResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} handleSystem={handleSystem} narrowIsLoading={narrowIsLoading} narrowResults={narrowResults} searchIsLoading={searchIsLoading} handleNarrow={handleNarrow} /> : <></>}</div>
         </>
     )
 
 }
 
 function SystemSearch({ searchResult, handleSubmit }) {
-    return(
+    return (
         <>
-        <p>{searchResult}</p>
-        <p>SYSTEM SEARCH</p>
-        <form onSubmit={handleSubmit}>
-            <label id="system">System Name:
-            <input type="text" id="system_search_term" name="search_term"></input>
-            </label>
-            <button type="submit">Submit this</button>
-        </form>
+            <form onSubmit={handleSubmit}>
+                <label id="system">System Name:
+                    <input type="text" id="system_search_term" name="search_term"></input>
+                </label>
+                <button type="submit">Submit this</button>
+            </form>
         </>
     )
 }
 
 function BookSearch() {
-    return(
+    return (
         <p>BOOK SEARCH</p>
     )
 }
 
-function SearchResults({apiResponse, familyResults, familyIsLoading, setFamilyIsLoading, handleSystem, exactIsLoading, exactResults}) {
-// If there are results, provide them in easy-to-read format.
-// On select, we then want to create the Python object to access details, library, and also create the SQL entry for it.
+function SearchResults({ apiResponse, searchIsLoading, familyResults, familyIsLoading, setFamilyIsLoading, handleSystem, narrowIsLoading, narrowResults, handleNarrow }) {
+    // If there are results, provide them in easy-to-read format.
+    // On select, we then want to create the Python object to access details, library, and also create the SQL entry for it.
+    const [resultTab, setResultTab] = useState();
+    const [showModal, setShowModal] = useState(false);
 
-    var responseTable =  []
-    if(apiResponse['@total'] === '1') {
+    // if(searchIsLoading && !familyIsLoading) {
+    //     setResultTab("system")
+    // }
+    // if(!searchIsLoading && familyIsLoading) {
+    //     setResultTab("family")
+    // }
+
+    var responseTable = []
+    if (apiResponse['@total'] === '1') {
         responseTable[0] = apiResponse['item']
-    }    
-    if(apiResponse['@total'] > '1') {
+    }
+    if (apiResponse['@total'] > '1') {
         apiResponse['item'].map((item, i) => {
-        responseTable[i] = item; 
-    })}
-    console.log(responseTable)
+            responseTable[i] = item;
+        })
+    }
+
+
     return (
-        <>
-            <p>TABLE TO BE</p>
-            <div>
-            <ul onClick={handleSystem}>
-            {responseTable.map(item => {
-                return(
-                    <li key={item['@id']} id={item['@id']}>{item['name']['@value']}</li>
-        )})}
-            </ul>
+        <div className="results-window">
+            <div className="system-tab">
+                <ul onClick={handleNarrow}>
+                    {responseTable.map(item => {
+                        return (
+                            <li key={item['@id']} id={item['@id']}>{item['name']['@value']}</li>
+                        )
+                    })}
+                </ul>
             </div>
-            <div>
-            {familyIsLoading?<p>Loading</p>:familyIsLoading == false?
-                <FamilyResults familyResults={familyResults} familyIsLoading = {familyIsLoading} setFamilyIsLoading = {setFamilyIsLoading} exactIsLoading={exactIsLoading} exactResults={exactResults} />: <></>
-            }
+            {narrowIsLoading ? <p>Loading</p> : narrowIsLoading == false ? <div className="narrow-tab"><NarrowTab narrowResults={narrowResults} handleSystem = {handleSystem} /></div> : <></>}
+            <div className="family-tab">
+                <div className="return-button" onClick={() => setResultTab("system")}>Back</div>
+                {familyIsLoading ? <p>Loading</p> : familyIsLoading == false ?
+                    <FamilyResults familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} narrowIsLoading={narrowIsLoading} narrowResults={narrowResults} /> : <></>
+                }
             </div>
-        </>
+        </div>
+
     )
 }
 
-function FamilyResults({familyResults,familyIsLoading, setFamilyIsLoading, exactIsLoading, exactResults}) {
+function NarrowTab({narrowResults, handleSystem}) {
+    console.log(Array.isArray(narrowResults['name']))
+    const nameList = {"primary": "",
+        "alternates": []
+    }
+    console.log(nameList)
+    if(Array.isArray(narrowResults['name'])) {
+        narrowResults['name'].map((name, i) => {
+            console.log(name)
+            if(name['@type'] == "primary") {
+                nameList['primary'] = name['@value']
+                return
+            } else if(name['@type'] == "alternate") {
+                nameList['alternates'].push(name['@value'])
+            } else {
+                return
+            }
+        })
+    } else {
+        nameList['primary'] = narrowResults['name']['@value']
+    }
+    console.log(nameList['primary'])
+    const narrowDetails = {
+      'name': nameList['primary'],
+      'image': narrowResults['image'],
+      'desc': narrowResults['description'],
+      'books': narrowResults['link'],
+      'id': narrowResults['@id']
+    }
+    console.log(narrowDetails)
+    return (
+        <div>
+        <div>
+            <p>{narrowDetails['name']}</p>
+            <p>{narrowDetails['desc']}</p>
+            <p>Number of assets: {narrowDetails['books'].length}</p>
+        </div>
+        <div>
+            <button type="button" className="btn btn-primary" id={narrowDetails['id']} onClick={handleSystem}>Select this book</button>
+        </div>
+        <div><button type="button" className="btn btn-danger">Back</button></div>
+        </div>
+    )
+}
+
+
+function FamilyResults({ familyResults, familyIsLoading, setFamilyIsLoading, narrowIsLoading, narrowResults }) {
     console.log(JSON.parse(familyResults))
     const familyLibrary = JSON.parse(familyResults)
     // familyResults['library'].map((items, i) =>{
@@ -152,17 +222,17 @@ function FamilyResults({familyResults,familyIsLoading, setFamilyIsLoading, exact
     console.log(familyLibrary)
 
 
-            return(
-                <>
-                 <div>
-                     {familyLibrary['name']}
-                 </div>
-                 <div><img src={familyLibrary['image']}/></div>
-                 <div className="library-column">
-                    {familyLibrary['library'].map((items, i) =>{
-                        return(<div className="library-row" key={i}><img src={items['thumbnail']}/><div>{items['bid']}</div><div>{items['name']}</div><div>{items['publisher']}</div><div>{items['series'][0]}</div><div>{items['series'][1]}</div></div>)
-                    })}
-                 </div>
-                </>
-            )
+    return (
+        <>
+            <div>
+                {familyLibrary['name']}
+            </div>
+            <div><img src={familyLibrary['image']} /></div>
+            <div className="library-column">
+                {familyLibrary['library'].map((items, i) => {
+                    return (<div className="library-row" key={i}><img src={items['thumbnail']} /><div>{items['bid']}</div><div>{items['name']}</div><div>{items['publisher']}</div><div>{items['series'][0]}</div><div>{items['series'][1]}</div></div>)
+                })}
+            </div>
+        </>
+    )
 }

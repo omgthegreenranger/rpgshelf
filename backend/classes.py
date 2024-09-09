@@ -4,7 +4,7 @@ import db.sqlite_scripts
 
 class systemObj():
     def __init__(self, data, method):
-        # print(data['name'])
+        print("Object data", data)
         # print(isinstance(data['name'],list))
         if method == "api" :
             if(isinstance(data['name'],list)) :
