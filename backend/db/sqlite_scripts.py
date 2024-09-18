@@ -39,6 +39,11 @@ def addGame(args):
     print(args)
     print("*** Adding to database")
     add = cur.execute("INSERT INTO games (gid,name,rid,system,rules,description,publisher,year) VALUES (?,?,?,?,?,?,?,?)")
-
     return
+
+def addSystem(*args) :
+    # Add the system to the database and start load of all books.
+    print(args)
+    return
+
 

@@ -72,15 +72,15 @@ class systemObj():
                 "rid" : self.rid,
                 "name": bookName,
                 "bid": book['@id'],
-                "series": book['seriescode']['@value'].rsplit(" ", 1),
+                #"series": book['seriescode']['@value'].rsplit(" ", 1),
                 "publisher": publishers,
                 "designers": designers,
                 "artists": artists,
                 "producers": producers,
                 "year": book['yearpublished']['@value'],
                 "description": book['description'],
-                "image": book['image'],
-                "thumbnail": book['thumbnail']
+                #"image": book['image'],
+                #"thumbnail": book['thumbnail']
             }
         )
 

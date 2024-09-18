@@ -48,14 +48,14 @@ def narrowSearch(*args):
     print("Narrow Search Begins")
     rpgg = requests.get(search, params=args)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]["item"]
-    #rpg_json_parse = json.dumps(rpg_dict)
-    #print(rpg_dict)
+    rpg_json_parse = json.dumps(rpg_dict,ensure_ascii=False)
+    print("JSON PARSE", rpg_json_parse)
     global systemData
-    systemData = rpg_dict
-    return rpg_dict
+    systemData = rpg_json_parse
+    return rpg_json_parse
 
 def exactSearch(*args) : 
-    print("Exact Search begins")
+    print("Exact Search begins", args)
     # TODO: FIX THIS API CALL to match with the others - let's keep it clean, people.
     search = search_path + searchParams[3]
     eargs = {"id" : args[0], type : args[2]}
@@ -80,35 +80,49 @@ def familyJSON(*args) :
     print("The ARGS", args[2])
     systemLibrary = classes.systemObj(systemData, "api")
     search_list = []
-
-    if (len(systemData['link']) < 20 ):
-        j = len(systemData['link'])
-    else :
-        j = 20 
-    i = 0
-    
     # for book in systemData['link'] :
        
         # print("HERE IS THE ITEM", book, i)
 
-    print(len(systemData['link']))
+    # print(len(systemData['link']))
     
-    while i < j :
-        print("HERE IT IS", systemData['link'][i]['@id'], i)
-        search_list.append(systemData['link'][i]['@id'])
-        i += 1
-    else :
-        print("We're done!")
+    i = 0
+    j = 20 
+    while i < len(systemData['link']):
+        while i < j :
+            if i == len(systemData['link']) :
+                #print(search_list)
+                break
+            print("HERE IT IS", i, j)
+            search_list.append(systemData['link'][i]['@id'])
+            i += 1
+        search_id_string = ",".join(search_list)
+        assets = exactSearch(search_id_string, "0", "rpgitem")
+        for item in assets :
+            systemLibrary.addBook(item)
+        # print(search_list)
+        search_list = []
+        if i == len(systemData['link']) :
+            return
+        else :
+            j += 20
+        return
+        #     j += 20
+        #     i == i
+        # elif i == len(systemData['link']) :
+        #     break
+
+            
     
-    search_id_string = ",".join(search_list)
-    assets = exactSearch(search_id_string, "0", "rpgitem")
-    for item in assets :
-        print("asset", item)
-        systemLibrary.addBook(item)
+    # search_id_string = ",".join(search_list)
+    # assets = exactSearch(search_id_string, "0", "rpgitem")
+    # for item in assets :
+    #     print("asset", item)
+    #     systemLibrary.addBook(item)
     print("Exact Search complete")
     
 
-    print("Search with", assets)
+    # print("Search with", assets)
         
     # args - narrowSearch result in proper form
     # plus each "rpg" link has details from exactSearch

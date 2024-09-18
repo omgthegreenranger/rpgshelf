@@ -1,19 +1,31 @@
--- CREATE TABLE games(
---     gid uniqueidentifier, 
---     name varchar(255), 
---     rid int, 
---     system varchar(255), 
---     rules varchar(255),
---     description text,
---     publisher varchar(255), 
---     year YEAR)
+CREATE TABLE system(
+    system_name text,
+    altname text,
+    altname2 text,
+    rid int,
+    lsid int uniqueidentifier,
+    system text,
+    description text,
+    image text,
+    thumbnail text
+    );
 
 CREATE TABLE library(
-    gid int, 
+    lsid int,
     bid uniqueidentifier,
-    brid int,
-    type varchar(255),
+    rbid int,
+    title text,
+    publishers array,
+    series text,
+    publisher blob,
+    designers blob,
+    artists blob,
+    producers blob,
+    year int,
     description text,
-    path varchar,
-    image text
-    )
+    image text,
+    thumbnail text,
+    FOREIGN KEY(lsid) REFERENCES system(lsid)
+    );
+
+-- DROP TABLE library;

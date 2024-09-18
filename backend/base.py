@@ -15,7 +15,8 @@ CORS(app)
 config = {
     "DEBUG": True,          # some Flask specific configs
     "CACHE_TYPE": "SimpleCache",  # Flask-Caching related configs
-    "CACHE_DEFAULT_TIMEOUT": 300
+    "CACHE_DEFAULT_TIMEOUT": 300,
+    "ensure_ascii": False
 }
 app.config.from_mapping(config)
 cache = Cache(app)
@@ -43,19 +44,22 @@ def search():
     if (search_type == "narrow") :
         search_result = narrowSearch("family", 0, search_string)
     if (search_type == "family") :
-        # if (session['system']['@id'] == search_string) :
-        #     print("Yes!")
-        #     system_data = session['system']
-        # else :
-        #     print("No!")
         search_result = familyJSON("family", 0, search_string)
-
-    # print(search_result)
     response = make_response(
-        jsonify(search_result)
+        #jsonify(search_result)
+        search_result
     )
     response.headers.add('access-control-allow-origin', '*')
     return response
+
+@app.route('/db', methods=["GET"])
+def db_add():
+    submit_details = request.args.get('submit_details')
+    print("DETAILS!", request.args.get('submit_details'))
+    # response.headers.add('access-control-allow-origin', '*')    
+    #print("RESPONSE", response)
+    # Add system to database
+    return submit_details
 
 
 # process for API call to get the details of your search:

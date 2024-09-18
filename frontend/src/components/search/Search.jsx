@@ -18,13 +18,13 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
     async function api_call(search_type, search_term) {
         const returnData = await axios.post(API_ENDPOINT + "/search?" + "search_type=" + search_type + "&search_string=" + search_term)
             .then(function (response) {
-                console.log(response.data);
+                //console.log(response.data);
                 return response.data
             })
             .catch(function (error) {
                 console.log(error);
             })
-        console.log(search_type)
+        //console.log(search_type)
         switch (search_type) {
             case "system":
                 setApiResponse(returnData);
@@ -43,6 +43,36 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
         }
     }
 
+    async function api_add(submit_details, submit_type) {
+        console.log(submit_details)
+        const returnData = await axios.get(API_ENDPOINT + "/db?" + "submit_details=" + submit_details + "&submit_type=" + submit_type)
+            .then(function (response) {
+                console.log(JSON.parse(response.data.submit_details));
+                return response.data
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        //console.log(search_type)
+        // switch (search_type) {
+        //     case "system":
+        //         setApiResponse(returnData);
+        //         setSearchIsLoading(false)
+        //         break;
+        //     case "family":
+        //         setFamilyResults(returnData);
+        //         setFamilyIsLoading(false)
+        //         break;
+        //     case "narrow":
+        //         setNarrowResults(returnData);
+        //         setNarrowIsLoading(false)
+        //         break;
+        //     default:
+        //         break;
+        // }
+        return returnData
+    }
+
     const handleSubmit = (e) => {
         const search_term = document.getElementById("system_search_term").value
         const search_type = e.target.firstChild.id
@@ -59,24 +89,29 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
         e.preventDefault();
     }
 
-    const handleSystem = (e) => {
-        console.log(narrowResults)
-        const search_type = "family"
-        const search_term = e.target.id
-        setFamilyIsLoading(true)
-        setNarrowIsLoading()
-        api_call(search_type, search_term)
-        e.preventDefault();
+    const handleSystem = (details) => {
+        // console.log(e)
+        console.log(details)
+        const submit_details = JSON.stringify(details)
+        const submit_type = "system"
+        // console.log(narrowResults)
+        // const search_type = "family"
+        // const search_term = e.target.id
+        // setFamilyIsLoading(true)
+        // setNarrowIsLoading()
+        console.log(api_add(submit_details, submit_type))
+
+        event.preventDefault();
     }
 
     const searchClick = (e) => {
-        console.log(e.target.id)
+        //console.log(e.target.id)
         setSearchChoice(e.target.id)
     }
 
     // const searchDisplay = () => {}
 
-    console.log(searchResult)
+    //console.log(searchResult)
 
     return (
         <>
@@ -86,18 +121,22 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
                     className="search-menu"
                 >
                     <li id="system_search">Search for a system</li>
-                    <li id="book_search">Search for a book by title</li>
+                    {/* <li id="book_search">Search for a book by title</li> */}
                 </ul>
             </div>
             <div>
                 {searchChoice == "system_search" ? <SystemSearch searchResult={searchResult} setSearchResult={setSearchResult} handleSubmit={handleSubmit} /> : searchChoice == "book_search" ? <BookSearch handleSearch={handleSubmit} /> : <></>}
             </div>
             {/* TODO: UGLY NESTED TERNARY, need a better option. */}
-            <div>Your results: {searchIsLoading ? "They are loading" : searchIsLoading == false ? <SearchResults apiResponse={apiResponse} setApiResponse={setApiResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} handleSystem={handleSystem} narrowIsLoading={narrowIsLoading} narrowResults={narrowResults} searchIsLoading={searchIsLoading} handleNarrow={handleNarrow} /> : <></>}</div>
+            {searchIsLoading ? <div className="loading"></div>: searchIsLoading == false ? <SearchResults apiResponse={apiResponse} setApiResponse={setApiResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} handleSystem={handleSystem} narrowIsLoading={narrowIsLoading} narrowResults={narrowResults} searchIsLoading={searchIsLoading} handleNarrow={handleNarrow} /> : <></>}
         </>
     )
 
 }
+
+
+
+
 
 function SystemSearch({ searchResult, handleSubmit }) {
     return (
@@ -153,10 +192,10 @@ function SearchResults({ apiResponse, searchIsLoading, familyResults, familyIsLo
                     })}
                 </ul>
             </div>
-            {narrowIsLoading ? <p>Loading</p> : narrowIsLoading == false ? <div className="narrow-tab"><NarrowTab narrowResults={narrowResults} handleSystem = {handleSystem} /></div> : <></>}
+            {narrowIsLoading ? <div className="loading" /> : narrowIsLoading == false ? <div className="narrow-tab"><NarrowTab narrowResults={narrowResults} handleSystem = {handleSystem} /></div> : <></>}
             <div className="family-tab">
                 <div className="return-button" onClick={() => setResultTab("system")}>Back</div>
-                {familyIsLoading ? <p>Loading</p> : familyIsLoading == false ?
+                {familyIsLoading ? <div className="loading" /> : familyIsLoading == false ?
                     <FamilyResults familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} narrowIsLoading={narrowIsLoading} narrowResults={narrowResults} /> : <></>
                 }
             </div>
@@ -166,14 +205,14 @@ function SearchResults({ apiResponse, searchIsLoading, familyResults, familyIsLo
 }
 
 function NarrowTab({narrowResults, handleSystem}) {
-    console.log(Array.isArray(narrowResults['name']))
+    //console.log(Array.isArray(narrowResults['name']))
     const nameList = {"primary": "",
         "alternates": []
     }
-    console.log(nameList)
+    //console.log(nameList)
     if(Array.isArray(narrowResults['name'])) {
         narrowResults['name'].map((name, i) => {
-            console.log(name)
+            //console.log(name)
             if(name['@type'] == "primary") {
                 nameList['primary'] = name['@value']
                 return
@@ -186,15 +225,17 @@ function NarrowTab({narrowResults, handleSystem}) {
     } else {
         nameList['primary'] = narrowResults['name']['@value']
     }
-    console.log(nameList['primary'])
+    //console.log(nameList['primary'])
+    let desc = narrowResults['description'];
+    desc = desc.replaceAll("&#10;", "\n");
     const narrowDetails = {
       'name': nameList['primary'],
       'image': narrowResults['image'],
-      'desc': narrowResults['description'],
+      'desc': desc, //narrowResults['description'],
       'books': narrowResults['link'],
       'id': narrowResults['@id']
     }
-    console.log(narrowDetails)
+    // console.log(narrowDetails)
     return (
         <div>
         <div>
@@ -203,7 +244,7 @@ function NarrowTab({narrowResults, handleSystem}) {
             <p>Number of assets: {narrowDetails['books'].length}</p>
         </div>
         <div>
-            <button type="button" className="btn btn-primary" id={narrowDetails['id']} onClick={handleSystem}>Select this book</button>
+            <button type="button" className="btn btn-primary" id={narrowDetails['id']} onClick={() => handleSystem(narrowDetails)}>Select this book</button>
         </div>
         <div><button type="button" className="btn btn-danger">Back</button></div>
         </div>
@@ -212,14 +253,14 @@ function NarrowTab({narrowResults, handleSystem}) {
 
 
 function FamilyResults({ familyResults, familyIsLoading, setFamilyIsLoading, narrowIsLoading, narrowResults }) {
-    console.log(JSON.parse(familyResults))
+    // console.log(JSON.parse(familyResults))
     const familyLibrary = JSON.parse(familyResults)
     // familyResults['library'].map((items, i) =>{
     //         familyLibrary[i] = {
     //         "id": items['@id'],
     //         "title": items['@value']
     //     }})
-    console.log(familyLibrary)
+    //console.log(familyLibrary)
 
 
     return (
@@ -230,7 +271,10 @@ function FamilyResults({ familyResults, familyIsLoading, setFamilyIsLoading, nar
             <div><img src={familyLibrary['image']} /></div>
             <div className="library-column">
                 {familyLibrary['library'].map((items, i) => {
-                    return (<div className="library-row" key={i}><img src={items['thumbnail']} /><div>{items['bid']}</div><div>{items['name']}</div><div>{items['publisher']}</div><div>{items['series'][0]}</div><div>{items['series'][1]}</div></div>)
+                    return (<div className="library-row" key={i}>
+                        <div className="form-check">
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+</div><img src={items['thumbnail']} /><div>{items['bid']}</div><div>{items['name']}</div><div>{items['publisher']}</div><div>{items['series'][0]}</div><div>{items['series'][1]}</div></div>)
                 })}
             </div>
         </>
