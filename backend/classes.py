@@ -4,8 +4,8 @@ import db.sqlite_scripts
 
 class systemObj():
     def __init__(self, data, method):
-        print("Object data", data)
-        # print(isinstance(data['name'],list))
+        print("Object data", data['name'])
+        print(isinstance(data['name'],list))
         if method == "api" :
             if(isinstance(data['name'],list)) :
                 self.name = data['name'][0]['@value']
@@ -83,7 +83,6 @@ class systemObj():
                 #"thumbnail": book['thumbnail']
             }
         )
-
 
         return
 

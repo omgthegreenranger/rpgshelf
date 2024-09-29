@@ -12,6 +12,7 @@ import xml
 import db.sqlite_scripts
 import classes
 import helpers
+from flask import session
 
 global rpg_json_parse
 global rpg_dict
@@ -48,11 +49,11 @@ def narrowSearch(*args):
     print("Narrow Search Begins")
     rpgg = requests.get(search, params=args)
     rpg_dict = xmltodict.parse(rpgg.text)["items"]["item"]
-    rpg_json_parse = json.dumps(rpg_dict,ensure_ascii=False)
-    print("JSON PARSE", rpg_json_parse)
+    #rpg_json_parse = json.dumps(rpg_dict,ensure_ascii=False)
+    #print("JSON PARSE", rpg_json_parse)
     global systemData
-    systemData = rpg_json_parse
-    return rpg_json_parse
+    systemData = rpg_dict
+    return rpg_dict
 
 def exactSearch(*args) : 
     print("Exact Search begins", args)
@@ -63,72 +64,59 @@ def exactSearch(*args) :
     # print(e_rpg.url)
     e_rpg_dict = xmltodict.parse(e_rpg.text)
     e_rpg_dict_items = e_rpg_dict['items']['item']
-    # print(e_rpg_dict_items)
-    # e_rpg_json_parse = json.dumps(e_rpg_dict)
-    
-    # Uncomment this if you want all results exported to JSON for a missing list
-    # rpgjson = open("JSONexacttest.json", "w")
-    # rpgjson.write(e_rpg_json_parse)
-    # rpgjson.close()
-    # print(e_rpg_dict)
+    #print("DICT_ITEMS", e_rpg_dict_items)
     return e_rpg_dict_items
 
 # let's make this script to be able to put the data together into a single JSON for us.
 # this should also add the system to the database
 def familyJSON(*args) :
+    print(systemData)
     print("Family search - narrow begins")
     print("The ARGS", args[2])
     systemLibrary = classes.systemObj(systemData, "api")
     search_list = []
+    #print("System Object", systemLibrary.__dict__)
     # for book in systemData['link'] :
        
         # print("HERE IS THE ITEM", book, i)
 
-    # print(len(systemData['link']))
+    #print(systemData)
     
     i = 0
     j = 20 
     while i < len(systemData['link']):
         while i < j :
             if i == len(systemData['link']) :
-                #print(search_list)
-                break
-            print("HERE IT IS", i, j)
+                print("breaking")
+                continue
+            print("HERE IT IS", i, j,systemData['link'][i]['@id'])
             search_list.append(systemData['link'][i]['@id'])
             i += 1
         search_id_string = ",".join(search_list)
         assets = exactSearch(search_id_string, "0", "rpgitem")
+        # print("ASSETS", assets)
         for item in assets :
             systemLibrary.addBook(item)
+            print(systemLibrary.__dict__)
         # print(search_list)
         search_list = []
         if i == len(systemData['link']) :
+            print("LINK LENGTH")
             return
         else :
             j += 20
-        return
+            return
         #     j += 20
         #     i == i
         # elif i == len(systemData['link']) :
-        #     break
+        #     nreak
+        print(i, j)
 
-            
-    
-    # search_id_string = ",".join(search_list)
-    # assets = exactSearch(search_id_string, "0", "rpgitem")
-    # for item in assets :
-    #     print("asset", item)
-    #     systemLibrary.addBook(item)
+        
     print("Exact Search complete")
     
 
     # print("Search with", assets)
-        
-    # args - narrowSearch result in proper form
-    # plus each "rpg" link has details from exactSearch
-    # JSON format:
-    # Item: Name, Image, ID, [Mechanics]
-
-
-    print("System Object", systemLibrary.__dict__)
+    # print("System Object", systemLibrary.__dict__)
+    session['systemLibrary'] = systemLibrary
     return json.dumps(systemLibrary.__dict__)

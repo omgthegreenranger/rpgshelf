@@ -9,7 +9,7 @@ const API_ENDPOINT = 'http://127.0.0.1:5000'
 
 export default function Search({ searchResult, setSearchResult, searchChoice, setSearchChoice }) {
     const [searchIsLoading, setSearchIsLoading] = useState();
-    const [apiResponse, setApiResponse] = useState({});
+    const [systemsResponse, setSystemsResponse] = useState({});
     const [familyResults, setFamilyResults] = useState({});
     const [familyIsLoading, setFamilyIsLoading] = useState();
     const [narrowIsLoading, setNarrowIsLoading] = useState();
@@ -18,7 +18,7 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
     async function api_call(search_type, search_term) {
         const returnData = await axios.post(API_ENDPOINT + "/search?" + "search_type=" + search_type + "&search_string=" + search_term)
             .then(function (response) {
-                //console.log(response.data);
+                console.log(response.data);
                 return response.data
             })
             .catch(function (error) {
@@ -27,7 +27,7 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
         //console.log(search_type)
         switch (search_type) {
             case "system":
-                setApiResponse(returnData);
+                setSystemsResponse(returnData);
                 setSearchIsLoading(false)
                 break;
             case "family":
@@ -35,6 +35,8 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
                 setFamilyIsLoading(false)
                 break;
             case "narrow":
+                //returnData.replaceAll("&quot;", "\"");
+                // text = text.replaceAll("&quot;", "\"")
                 setNarrowResults(returnData);
                 setNarrowIsLoading(false)
                 break;
@@ -44,10 +46,10 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
     }
 
     async function api_add(submit_details, submit_type) {
-        console.log(submit_details)
-        const returnData = await axios.get(API_ENDPOINT + "/db?" + "submit_details=" + submit_details + "&submit_type=" + submit_type)
+        console.log(submit_type)
+        const returnData = await axios.get(API_ENDPOINT + "/db?" + "select_details=" + submit_details + "&select_type=" + submit_type)
             .then(function (response) {
-                console.log(JSON.parse(response.data.submit_details));
+                console.log(response.data);
                 return response.data
             })
             .catch(function (error) {
@@ -56,7 +58,7 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
         //console.log(search_type)
         // switch (search_type) {
         //     case "system":
-        //         setApiResponse(returnData);
+        //         setSystemsResponse(returnData);
         //         setSearchIsLoading(false)
         //         break;
         //     case "family":
@@ -89,19 +91,18 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
         e.preventDefault();
     }
 
-    const handleSystem = (details) => {
-        // console.log(e)
-        console.log(details)
-        const submit_details = JSON.stringify(details)
-        const submit_type = "system"
+    const selectSystem = (e) => {
+        console.log(narrowResults[0]['@id'])
+        const select_details = narrowResults[0]['@id']
+        const select_type = true
         // console.log(narrowResults)
         // const search_type = "family"
         // const search_term = e.target.id
         // setFamilyIsLoading(true)
         // setNarrowIsLoading()
-        console.log(api_add(submit_details, submit_type))
+        api_add(select_details, select_type)
 
-        event.preventDefault();
+        e.preventDefault();
     }
 
     const searchClick = (e) => {
@@ -128,15 +129,11 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
                 {searchChoice == "system_search" ? <SystemSearch searchResult={searchResult} setSearchResult={setSearchResult} handleSubmit={handleSubmit} /> : searchChoice == "book_search" ? <BookSearch handleSearch={handleSubmit} /> : <></>}
             </div>
             {/* TODO: UGLY NESTED TERNARY, need a better option. */}
-            {searchIsLoading ? <div className="loading"></div>: searchIsLoading == false ? <SearchResults apiResponse={apiResponse} setApiResponse={setApiResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} handleSystem={handleSystem} narrowIsLoading={narrowIsLoading} narrowResults={narrowResults} searchIsLoading={searchIsLoading} handleNarrow={handleNarrow} /> : <></>}
+            {searchIsLoading ? <div className="loading"></div>: searchIsLoading == false ? <SearchResults systemsResponse={systemsResponse} setSystemsResponse={setSystemsResponse} api_call={api_call} familyResults={familyResults} familyIsLoading={familyIsLoading} setFamilyIsLoading={setFamilyIsLoading} selectSystem={selectSystem} narrowIsLoading={narrowIsLoading} narrowResults={narrowResults} searchIsLoading={searchIsLoading} handleNarrow={handleNarrow} /> : <></>}
         </>
     )
 
 }
-
-
-
-
 
 function SystemSearch({ searchResult, handleSubmit }) {
     return (
@@ -157,7 +154,7 @@ function BookSearch() {
     )
 }
 
-function SearchResults({ apiResponse, searchIsLoading, familyResults, familyIsLoading, setFamilyIsLoading, handleSystem, narrowIsLoading, narrowResults, handleNarrow }) {
+function SearchResults({ systemsResponse, searchIsLoading, familyResults, familyIsLoading, setFamilyIsLoading, selectSystem, narrowIsLoading, narrowResults, handleNarrow }) {
     // If there are results, provide them in easy-to-read format.
     // On select, we then want to create the Python object to access details, library, and also create the SQL entry for it.
     const [resultTab, setResultTab] = useState();
@@ -171,11 +168,11 @@ function SearchResults({ apiResponse, searchIsLoading, familyResults, familyIsLo
     // }
 
     var responseTable = []
-    if (apiResponse['@total'] === '1') {
-        responseTable[0] = apiResponse['item']
+    if (systemsResponse[0]['@total'] === '1') {
+        responseTable[0] = systemsResponse[0]['item']
     }
-    if (apiResponse['@total'] > '1') {
-        apiResponse['item'].map((item, i) => {
+    if (systemsResponse[0]['@total'] > '1') {
+        systemsResponse[0]['item'].map((item, i) => {
             responseTable[i] = item;
         })
     }
@@ -192,7 +189,7 @@ function SearchResults({ apiResponse, searchIsLoading, familyResults, familyIsLo
                     })}
                 </ul>
             </div>
-            {narrowIsLoading ? <div className="loading" /> : narrowIsLoading == false ? <div className="narrow-tab"><NarrowTab narrowResults={narrowResults} handleSystem = {handleSystem} /></div> : <></>}
+            {narrowIsLoading ? <div className="loading" /> : narrowIsLoading == false ? <div className="narrow-tab"><NarrowTab narrowResults={narrowResults} selectSystem = {selectSystem} /></div> : <></>}
             <div className="family-tab">
                 <div className="return-button" onClick={() => setResultTab("system")}>Back</div>
                 {familyIsLoading ? <div className="loading" /> : familyIsLoading == false ?
@@ -204,14 +201,15 @@ function SearchResults({ apiResponse, searchIsLoading, familyResults, familyIsLo
     )
 }
 
-function NarrowTab({narrowResults, handleSystem}) {
+function NarrowTab({narrowResults, selectSystem}) {
     //console.log(Array.isArray(narrowResults['name']))
     const nameList = {"primary": "",
         "alternates": []
     }
-    //console.log(nameList)
-    if(Array.isArray(narrowResults['name'])) {
-        narrowResults['name'].map((name, i) => {
+    console.log(narrowResults)
+    
+    if(Array.isArray(narrowResults[0]['name'])) {
+        narrowResults[0]['name'].map((name, i) => {
             //console.log(name)
             if(name['@type'] == "primary") {
                 nameList['primary'] = name['@value']
@@ -223,17 +221,18 @@ function NarrowTab({narrowResults, handleSystem}) {
             }
         })
     } else {
-        nameList['primary'] = narrowResults['name']['@value']
+        nameList['primary'] = narrowResults[0]['name']['@value']
     }
     //console.log(nameList['primary'])
-    let desc = narrowResults['description'];
-    desc = desc.replaceAll("&#10;", "\n");
+    let desc = narrowResults[0]['description'];
+    desc = desc.replaceAll("&#10;", "\n\n");
+    desc = desc.replaceAll("&quot;", "\"")
     const narrowDetails = {
       'name': nameList['primary'],
-      'image': narrowResults['image'],
+      'image': narrowResults[0]['image'],
       'desc': desc, //narrowResults['description'],
-      'books': narrowResults['link'],
-      'id': narrowResults['@id']
+      'books': narrowResults[0]['link'],
+      'id': narrowResults[0]['@id']
     }
     // console.log(narrowDetails)
     return (
@@ -244,7 +243,7 @@ function NarrowTab({narrowResults, handleSystem}) {
             <p>Number of assets: {narrowDetails['books'].length}</p>
         </div>
         <div>
-            <button type="button" className="btn btn-primary" id={narrowDetails['id']} onClick={() => handleSystem(narrowDetails)}>Select this book</button>
+            <button type="button" className="btn btn-primary" id={narrowDetails['id']} onClick={() => selectSystem(narrowDetails)}>Select this book</button>
         </div>
         <div><button type="button" className="btn btn-danger">Back</button></div>
         </div>

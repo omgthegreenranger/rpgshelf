@@ -19,3 +19,7 @@ def familyJSON(*args) :
 
     print(data)
     return data
+
+def clean_Strings(data):
+    data
+    return

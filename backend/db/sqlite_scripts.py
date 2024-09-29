@@ -1,6 +1,8 @@
 import sqlite3
 import json
 import classes
+import sqlalchemy
+from flask import session
 
 sqlcon = sqlite3.connect("rpgshelf.db")
 cur = sqlcon.cursor()
@@ -43,7 +45,9 @@ def addGame(args):
 
 def addSystem(*args) :
     # Add the system to the database and start load of all books.
-    print(args)
-    return
+    print(systemLibrary.__dict__)
+    print("System Add \n", args)
+    confirm = "Confirmed"
+    return confirm
 
 
