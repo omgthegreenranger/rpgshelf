@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, make_response, session
+from flask import Flask, request, jsonify, make_response, session, g, current_app
 from flask_caching import Cache
 import pikepdf
 import fs
@@ -8,7 +8,7 @@ from flask_cors import CORS
 from apiSearch import broadSearch, narrowSearch, exactSearch, familyJSON
 from dotenv import load_dotenv
 from db.sqlite_scripts import addSystem
-from flask_sqlalchemy import SQLAlchemy
+from db.models import db
 import classes
 
 load_dotenv()
@@ -26,7 +26,7 @@ config = {
 app.config.from_mapping(config)
 cache = Cache(app)
 app.secret_key = os.getenv("SECRET_KEY")
-db = SQLAlchemy(app)
+db.init_app(app)
 
 
 @app.route('/readfile', methods=["POST"])
@@ -85,9 +85,10 @@ def system_object_cache(submit_details, submit_type):
 @app.route('/db', methods=["GET"])
 # Gets confirmation of the book selection - send the global object.
 def db_add():
+    print(g)
     submitData = request.args.get('select_details')
     select_type = request.args.get('select_type')
-    #print("DETAILS!", request.args.get('select_details'), select_type)
+    print("DETAILS!", request.args.get('select_details'), select_type, systemLibrary.__dict__)
     addSystem(submitData); 
     # Add system to database
     response = make_response(

@@ -102,7 +102,7 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
         // setNarrowIsLoading()
         api_add(select_details, select_type)
 
-        e.preventDefault();
+        //e.preventDefault();
     }
 
     const searchClick = (e) => {

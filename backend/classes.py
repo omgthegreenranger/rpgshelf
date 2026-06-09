@@ -12,7 +12,7 @@ class systemObj():
             else :
                 self.name = data['name']['@value']
             self.rid = data['@id']
-            self.library = []
+            self.library = data['link']
             # self.gid = 
             self.system = []
             for x in data['link'] :
@@ -30,24 +30,75 @@ class systemObj():
             self.image = data['image']
         return
     
-    def systemGet(self) : # access the system data from the library, if present
+    # def systemGet(self) : # access the system data from the library, if present
         return
 
-    def bookGet(self) : #use this to retrive library for game
+    # def bookGet(self) : #use this to retrive library for game
         return
 
-    def systemAdd(self, data) : # to add a new game system/create new object
+    # def systemAdd(self, data) : # to add a new game system/create new object
         # this requires all of the data to add the new system.
         return
 
-    def addBook(self, book) : # to add a new book to the object's library
-        #print("Here we go!", book)
+    # def addBook(self, book) : # to add a new book to the object's library
+    #     #print("Here we go!", book)
+    #     publishers = []
+    #     designers = []
+    #     artists = []
+    #     producers = []
+    #     bookName = ""
+    #     for bookData in book['link'] :
+    #         if bookData['@type'] == 'rpgpublisher' :
+    #             publishers.append(bookData['@value'])
+    #         if bookData['@type'] == 'rpgdesigner' :
+    #             designers.append(bookData['@value'])
+    #         if bookData['@type'] == 'rpgartist' :
+    #             artists.append(bookData['@value'])
+    #         if bookData['@type'] == 'rpgproducer' :
+    #             producers.append(bookData['@value'])
+
+    #     # Do a check in case the book has alternate titles
+    #     # TODO FOR UI: allow for selection of title to use.
+
+    #     if isinstance(book['name'], list) == True :
+    #         for bookData in book['name'] :
+    #             if bookData['@type'] == 'primary' :
+    #                 bookName = bookData['@value']
+    #     if isinstance(book['name'], list) == False : 
+    #         bookName = book['name']['@value']
+
+    #     self.library.append(
+    #         {
+    #             "rid" : self.rid,
+    #             "name": bookName,
+    #             "bid": book['@id'],
+    #             #"series": book['seriescode']['@value'].rsplit(" ", 1),
+    #             "publisher": publishers,
+    #             "designers": designers,
+    #             "artists": artists,
+    #             "producers": producers,
+    #             "year": book['yearpublished']['@value'],
+    #             "description": book['description'],
+    #             #"image": book['image'],
+    #             #"thumbnail": book['thumbnail']
+    #         }
+    #     )
+
+        #return
+# class campaignObj(): #TODO: this is the object created for whatever campaign is being used.
+#     return
+
+
+
+class Book() : # to add a new book to the object's library
+    def __init__(self, data):
+        print("Here we go!", data)
         publishers = []
         designers = []
         artists = []
         producers = []
         bookName = ""
-        for bookData in book['link'] :
+        for bookData in data['link'] :
             if bookData['@type'] == 'rpgpublisher' :
                 publishers.append(bookData['@value'])
             if bookData['@type'] == 'rpgdesigner' :
@@ -60,31 +111,27 @@ class systemObj():
         # Do a check in case the book has alternate titles
         # TODO FOR UI: allow for selection of title to use.
 
-        if isinstance(book['name'], list) == True :
-            for bookData in book['name'] :
+        if isinstance(data['name'], list) == True :
+            for bookData in data['name'] :
                 if bookData['@type'] == 'primary' :
                     bookName = bookData['@value']
-        if isinstance(book['name'], list) == False : 
-            bookName = book['name']['@value']
+        if isinstance(data['name'], list) == False : 
+            bookName = data['name']['@value']
 
         self.library.append(
             {
                 "rid" : self.rid,
                 "name": bookName,
-                "bid": book['@id'],
+                "bid": data['@id'],
                 #"series": book['seriescode']['@value'].rsplit(" ", 1),
                 "publisher": publishers,
                 "designers": designers,
                 "artists": artists,
                 "producers": producers,
-                "year": book['yearpublished']['@value'],
-                "description": book['description'],
-                #"image": book['image'],
-                #"thumbnail": book['thumbnail']
+                "year": data['yearpublished']['@value'],
+                "description": data['description'],
+                "image": data['image'],
+                "thumbnail": data['thumbnail']
             }
         )
-
         return
-
-# class campaignObj(): #TODO: this is the object created for whatever campaign is being used.
-#     return

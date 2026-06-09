@@ -1,10 +1,13 @@
 from sqlalchemy import ForeignKey
 from sqlalchemy import String
-from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
-from sqlalchemy.orm import relationship
-from base import db
+# from sqlalchemy.orm import DeclarativeBase
+# from sqlalchemy.orm import Mapped
+# from sqlalchemy.orm import mapped_column
+# from sqlalchemy.orm import relationship
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
 
 class System(db.Model) :
     name = db.Column(db.String(255), unique=False, nullable=False)

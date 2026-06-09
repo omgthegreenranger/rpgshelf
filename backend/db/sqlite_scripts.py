@@ -45,7 +45,7 @@ def addGame(args):
 
 def addSystem(*args) :
     # Add the system to the database and start load of all books.
-    print(systemLibrary.__dict__)
+    #print(systemLibrary.__dict_)
     print("System Add \n", args)
     confirm = "Confirmed"
     return confirm

@@ -9,10 +9,12 @@ import requests
 import xmltodict
 import json
 import xml
-import db.sqlite_scripts
+#import db.sqlite_scripts
 import classes
 import helpers
 from flask import session
+from db.models import System, Library
+#from base import g
 
 global rpg_json_parse
 global rpg_dict
@@ -51,8 +53,9 @@ def narrowSearch(*args):
     rpg_dict = xmltodict.parse(rpgg.text)["items"]["item"]
     #rpg_json_parse = json.dumps(rpg_dict,ensure_ascii=False)
     #print("JSON PARSE", rpg_json_parse)
-    global systemData
     systemData = rpg_dict
+    #systemLibrary = classes.systemObj(systemData, "api")
+    #print("System Object", systemLibrary.__dict__)
     return rpg_dict
 
 def exactSearch(*args) : 
@@ -74,6 +77,7 @@ def familyJSON(*args) :
     print("Family search - narrow begins")
     print("The ARGS", args[2])
     systemLibrary = classes.systemObj(systemData, "api")
+    # systemLibrary = System(systemData)
     search_list = []
     #print("System Object", systemLibrary.__dict__)
     # for book in systemData['link'] :
@@ -95,9 +99,9 @@ def familyJSON(*args) :
         search_id_string = ",".join(search_list)
         assets = exactSearch(search_id_string, "0", "rpgitem")
         # print("ASSETS", assets)
-        for item in assets :
-            systemLibrary.addBook(item)
-            print(systemLibrary.__dict__)
+        # for item in assets :
+        #     systemLibrary.addBook(item)
+        #     print(systemLibrary.__dict__)
         # print(search_list)
         search_list = []
         if i == len(systemData['link']) :
@@ -117,6 +121,6 @@ def familyJSON(*args) :
     
 
     # print("Search with", assets)
-    # print("System Object", systemLibrary.__dict__)
-    session['systemLibrary'] = systemLibrary
+    print("System Object", systemLibrary.__dict__)
+    #session['systemLibrary'] = systemLibrary
     return json.dumps(systemLibrary.__dict__)
