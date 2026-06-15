@@ -8,11 +8,10 @@
     "backend": "cd backend && flask run",
     "frontend": "cd frontend && npm run dev",
     "dev": "concurrently \"cd backend && flask --debug run\" \"cd frontend && npm run dev\""
-    
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "10.0.3"
   }
 }

@@ -9,6 +9,7 @@ from apiSearch import broadSearch, narrowSearch, exactSearch, familyJSON
 from dotenv import load_dotenv
 from db.sqlite_scripts import addSystem
 from db.models import db
+import file_search
 import classes
 
 load_dotenv()
@@ -29,15 +30,23 @@ app.secret_key = os.getenv("SECRET_KEY")
 db.init_app(app)
 
 
-@app.route('/readfile', methods=["POST"])
+@app.route('/readfile', methods=['GET', 'POST'])
 def read_file():
-    print('path')
-    pdfPath = request.json['path']
-    pdf = pikepdf.open(pdfPath)
-    meta = pdf.open_metadata()
-    response = make_response( 
-        jsonify({'title': meta['dc:title']})
-    )
+#    print(request.method, 'path')
+    if request.method == 'GET':
+        get_files = file_search.file_list()
+        # print("Get the list of files from folder")
+        print(get_files)
+        response = make_response(
+             jsonify({'GET REQUEST': get_files})
+             )
+    if request.method == 'POST':
+        pdfPath = request.json['path']
+        pdf = pikepdf.open(pdfPath)
+        meta = pdf.open_metadata()
+        response = make_response( 
+            jsonify({'title': meta['dc:title']})
+        )
     response.headers.add('access-control-allow-origin', '*')
     return response
 
