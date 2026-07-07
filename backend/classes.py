@@ -1,5 +1,6 @@
 import db.sqlite_scripts
-
+import globals
+import json
 #this is the game (i.e. the actual system) being used.
 
 class systemObj():
@@ -134,4 +135,27 @@ class Book() : # to add a new book to the object's library
                 "thumbnail": data['thumbnail']
             }
         )
+        return
+
+class Directory(): #for the file searching
+    def __init__(self, data):
+        print(data, "THIS IS THE DATA")
+            # parent_root = str("/home/shaggy/Documents/RPG_Library/Gamma World")
+        parent_root = globals.scan
+        # files = Path(globals.scan).walk(top_down=True, on_error=print)
+        # results = DirectoryTree(files)
+        # results = []
+        # print(files)
+        for root, dirs, files in data:
+            if(str(root) == parent_root):
+                filenames = []
+                for file in files:
+                    filenames.append(str(root) + "/" + file)
+                dirnames = []
+                for direc in dirs:
+                    dirnames.append(str(root) + "/" + direc)
+                self.name = str(root.name)
+                self.parent = str(root.parent)
+                # results.append({str(root.name):{"Subdirs": dirnames, "Files": filenames }})
+        print(self)    
         return

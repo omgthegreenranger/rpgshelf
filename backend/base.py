@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, make_response, session, g, current_app
+from flask import Flask, request, jsonify, make_response, session, g, current_app, send_file, send_from_directory
 from flask_caching import Cache
 import pikepdf
 import fs
@@ -11,8 +11,12 @@ from db.sqlite_scripts import addSystem
 from db.models import db
 import file_search
 import classes
+import read_config
+import json
 
 load_dotenv()
+
+
 
 app = Flask(__name__)
 CORS(app)
@@ -30,25 +34,24 @@ app.secret_key = os.getenv("SECRET_KEY")
 db.init_app(app)
 
 
-@app.route('/readfile', methods=['GET', 'POST'])
+@app.route('/readfile', methods=['GET'])
 def read_file():
-#    print(request.method, 'path')
-    if request.method == 'GET':
-        get_files = file_search.file_list()
-        # print("Get the list of files from folder")
-        print(get_files)
-        response = make_response(
-             jsonify({'GET REQUEST': get_files})
-             )
-    if request.method == 'POST':
-        pdfPath = request.json['path']
-        pdf = pikepdf.open(pdfPath)
-        meta = pdf.open_metadata()
-        response = make_response( 
-            jsonify({'title': meta['dc:title']})
-        )
+    get_files = file_search.file_list()
+    print("Get the list of files from folder")
+    response = make_response(
+        get_files)
     response.headers.add('access-control-allow-origin', '*')
     return response
+
+@app.route('/getfile', methods=['GET'])
+def get_file():
+    pathway = request.args.get('path')
+    response = send_from_directory(
+        pathway,
+        
+    )
+    print(path)
+    return
 
 @app.route('/search', methods=["GET", "POST"])
 def search():

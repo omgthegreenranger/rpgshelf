@@ -1,4 +1,3 @@
-# import urllib
 import read_config
 import os
 from pathlib import Path
@@ -6,27 +5,30 @@ import requests
 import xmltodict
 import json
 import xml
-import classes
+from classes import Directory
 import helpers
-from flask import session
+from flask import session, jsonify
 from db.models import System, Library
-#from base import g
+import globals
 
 def file_list():
-    paths = read_config.import_config('Paths')
-    scan = paths["scanpath"]
-    library = paths['librarypath']
-    returns = []
-    files = Path(scan).iterdir()
-    print(files)
-    for file in files:
-        # returns.append(file.stat())
-        if file.is_dir():
-            print("Dir")
-            returns.append({"Name": file.name, "Type": "directory"})
-        if file.is_file():
-            print("File")
-            returns.append({"Name": file.name, "Type": "file"})
-    print(returns)
-    return returns
+    def dict_to_dir(path):
+        """Convert directory tree to nested dictionary."""
+        p = Path(path)
+        node = {p.name: []}
+        
+        try:
+            for item in sorted(p.iterdir()):
+                if item.is_dir():
+                    node[p.name].append(dict_to_dir(item))
+                else:
+                    node[p.name].append({"name": item.name, "type": item.suffix, "size": item.stat().st_size, "path": str(item)})
+        except PermissionError:
+            node["error"] = "Access Denied"
+        
+        return node
+        #return results
+    
+    result = dict_to_dir(globals.scan)
+    return result
     

@@ -1,7 +1,7 @@
 import configparser
 
 def import_config(sections):
-    print(sections)
+    #print(sections)
     config = configparser.ConfigParser()
     config.read('settings.ini')
     find_section = config[sections]
