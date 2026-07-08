@@ -15,14 +15,14 @@ def file_list():
     def dict_to_dir(path):
         """Convert directory tree to nested dictionary."""
         p = Path(path)
-        node = {p.name: []}
-        
+        node = []
+        # node = {p: []}
         try:
             for item in sorted(p.iterdir()):
                 if item.is_dir():
-                    node[p.name].append(dict_to_dir(item))
+                    node.append({"dir": "true", "name": item.name, "path": str(item), "files": dict_to_dir(item)})
                 else:
-                    node[p.name].append({"name": item.name, "type": item.suffix, "size": item.stat().st_size, "path": str(item)})
+                    node.append({"dir": "false", "name": item.name, "type": item.suffix, "size": item.stat().st_size, "path": str(item)})
         except PermissionError:
             node["error"] = "Access Denied"
         

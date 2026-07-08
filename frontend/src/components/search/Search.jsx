@@ -15,6 +15,18 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
     const [narrowIsLoading, setNarrowIsLoading] = useState();
     const [narrowResults, setNarrowResults] = useState({});
 
+    // async function file_api_call(search_type, search_term) {
+    //     const returnData = await axios.get(API_ENDPOINT + "/readfile")
+    //         .then(function (response) {
+    //             console.log(response.data);
+    //             setSearchResult(response.data)
+    //             return response.data
+    //         })
+    //         .catch(function (error) {
+    //             console.log(error);
+    //         })
+    // }
+
     async function api_call(search_type, search_term) {
         const returnData = await axios.post(API_ENDPOINT + "/search?" + "search_type=" + search_type + "&search_string=" + search_term)
             .then(function (response) {
@@ -108,6 +120,8 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
     const searchClick = (e) => {
         //console.log(e.target.id)
         setSearchChoice(e.target.id)
+        e.target.id == "file_search" ? file_api_call("file_search", "None") : "";
+        console.log(searchChoice)
     }
 
     // const searchDisplay = () => {}
@@ -121,8 +135,9 @@ export default function Search({ searchResult, setSearchResult, searchChoice, se
                     onClick={searchClick}
                     className="search-menu"
                 >
-                    <li id="system_search">Search for a system</li>
+                    <Button id="system_search">Search for a system</Button>
                     {/* <li id="book_search">Search for a book by title</li> */}
+                    <Button id="file_search">Search files</Button>
                 </ul>
             </div>
             <div>
